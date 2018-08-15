@@ -113,6 +113,41 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &422755347 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1013526323077174, guid: eabe59dfb89aceb42a282aa9b559f295,
+    type: 2}
+  m_PrefabInternal: {fileID: 1135819997}
+--- !u!114 &422755351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 422755347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa596cd06d81b2640b7797bc957be981, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceOfHook: 0.9
+  manualMovement: 1
+  angle: 0
+  hook: {fileID: 712762826}
+--- !u!58 &422755352
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 422755347}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,6 +393,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &712762826 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1100742239174230, guid: eabe59dfb89aceb42a282aa9b559f295,
+    type: 2}
+  m_PrefabInternal: {fileID: 1135819997}
 --- !u!1 &757715388
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,7 +587,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114566909814814850, guid: eabe59dfb89aceb42a282aa9b559f295,
+        type: 2}
+      propertyPath: manualMovement
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1100742239174230, guid: eabe59dfb89aceb42a282aa9b559f295, type: 2}
+      propertyPath: m_Name
+      value: Hook-Aim
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114466851507131336, guid: eabe59dfb89aceb42a282aa9b559f295, type: 2}
+    - {fileID: 114566909814814850, guid: eabe59dfb89aceb42a282aa9b559f295, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: eabe59dfb89aceb42a282aa9b559f295, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1191708456
@@ -699,6 +750,7 @@ GameObject:
   - component: {fileID: 1448003444}
   - component: {fileID: 1448003443}
   - component: {fileID: 1448003442}
+  - component: {fileID: 1448003445}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -730,7 +782,7 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1448003440}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -801,6 +853,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &1448003445
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1448003440}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &1465043069
 GameObject:
   m_ObjectHideFlags: 0
