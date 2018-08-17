@@ -5,6 +5,8 @@ using UnityEngine;
 public class AsteroidBehavior : MonoBehaviour {
 
     public float speed = 30f;
+    public bool clockwise = true;
+    public bool rotating = true;
 
 	// Use this for initialization
 	void Start () {
@@ -13,6 +15,18 @@ public class AsteroidBehavior : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.Rotate(Vector3.forward * Time.deltaTime * speed);
-	}
+
+        if (rotating)
+        {
+            if (!clockwise)
+            {
+                transform.Rotate(Vector3.forward * Time.deltaTime * speed);
+            }
+            else
+            {
+                transform.Rotate(Vector3.forward * Time.deltaTime * -speed);
+
+            }
+        }
+    }
 }
