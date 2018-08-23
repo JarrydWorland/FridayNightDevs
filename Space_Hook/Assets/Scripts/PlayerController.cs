@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        
+        state = "aim";
     }
 	
 	// Update is called once per frame
