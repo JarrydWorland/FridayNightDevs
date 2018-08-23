@@ -37,6 +37,7 @@ public class AsteroidBehavior : MonoBehaviour {
         if(hookAttatch.activeInHierarchy)
         {
             playerC.state = "attatch";
+            playerC.hookAttatch = hookAttatch;
         }
     }
 }
