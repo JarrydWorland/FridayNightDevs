@@ -7,10 +7,15 @@ public class AsteroidBehavior : MonoBehaviour {
     public float speed = 30f;
     public bool clockwise = true;
     public bool rotating = true;
+    public GameObject hookAttatch;
+    public GameObject player;
+    private PlayerController playerC;
 
 	// Use this for initialization
 	void Start () {
-		
+        hookAttatch.SetActive(false);
+        playerC = player.GetComponent<PlayerController>();
+
 	}
 	
 	// Update is called once per frame
@@ -27,6 +32,11 @@ public class AsteroidBehavior : MonoBehaviour {
                 transform.Rotate(Vector3.forward * Time.deltaTime * -speed);
 
             }
+        }
+
+        if(hookAttatch)
+        {
+            playerC.state = "attatch";
         }
     }
 }

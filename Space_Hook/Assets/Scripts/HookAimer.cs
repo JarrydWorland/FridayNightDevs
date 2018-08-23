@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HookPosition : MonoBehaviour
+public class HookAimer : MonoBehaviour
 {
     public GameObject hookShot;
     public GameObject playerChar;
@@ -12,13 +12,16 @@ public class HookPosition : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        transform.position = playerChar.transform.position + new Vector3(0, 0.9f, 0);
-        hookShot.SetActive(false);
+        ResetPosition();
     }
-
+    void ResetPosition()
+    {
+        transform.position = playerChar.transform.position + new Vector3(0, 0.9f, 0);
+    }
     // Update is called once per frame
     void Update()
     {
+        playerChar.GetComponent<PlayerController>().state = "aim";
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         hookDirection = new Vector2(mousePosition.x - playerChar.transform.position.x, mousePosition.y - playerChar.transform.position.y).normalized;
@@ -27,9 +30,5 @@ public class HookPosition : MonoBehaviour
 
         transform.RotateAround(playerChar.transform.position, transform.forward, angle);
 
-        if(Input.GetMouseButton(0))
-        {
-            hookShot.SetActive(true);
-        }
     }
 }
