@@ -19,11 +19,13 @@ public class PlayerController : MonoBehaviour {
     public float thrust;
 
     private Vector2 direction;
+    private Rope rope;
 
 
     // Use this for initialization
-    void Start () {
-        
+    void Start ()
+    {
+        rope = GetComponentInChildren<Rope>();
     }
 	
 	// Update is called once per frame
