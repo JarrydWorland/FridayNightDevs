@@ -17,10 +17,11 @@ public class PlayerController : MonoBehaviour {
     private Vector3 initialPlayerPos;
     public string state = "";
     public float thrust;
+    public float reel;
 
     private Vector2 direction;
     private Rope rope;
-
+    private Vector2 shootDirection;
 
     // Use this for initialization
     void Start ()
@@ -38,14 +39,15 @@ public class PlayerController : MonoBehaviour {
                 hookAim.SetActive(true);
                 hookShot.SetActive(false);
                 hookAttatch.SetActive(false);
+
             }
             else if (state == "aim")
             {
                 hookAim.SetActive(false);
                 hookShot.GetComponent<HookShoot>().ResetPosition();
                 hookShot.SetActive(true);
-                direction = new Vector2(hookShot.transform.position.x - transform.position.x, hookShot.transform.position.y - transform.position.y).normalized;
-                hookShot.GetComponent<HookShoot>().hookrb.AddForce(direction * thrust);
+                shootDirection = new Vector2(hookShot.transform.position.x - transform.position.x, hookShot.transform.position.y - transform.position.y).normalized;
+                hookShot.GetComponent<HookShoot>().hookrb.AddForce(shootDirection * thrust);
                 hookAttatch.SetActive(false);
             }
             else if (state == "shoot")
@@ -57,7 +59,14 @@ public class PlayerController : MonoBehaviour {
 
         }
 
-        initialPlayerPos = transform.position;
+        if (state == "attatch")
+        {
+            Vector2 pullDirection = new Vector2(hookAttatch.transform.position.x - transform.position.x, hookAttatch.transform.position.y - transform.position.y).normalized;
+
+            rb2d.AddForce(pullDirection * reel);
+        }
+
+            initialPlayerPos = transform.position;
 
         
 
