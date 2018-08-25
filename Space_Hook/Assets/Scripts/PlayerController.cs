@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour {
     public string state = "";
     public float thrust;
     public float reel;
+    public float scroll = 0f;
 
     private Vector2 direction;
     private Rope rope;
@@ -65,6 +66,9 @@ public class PlayerController : MonoBehaviour {
         if (state == "attatch")
         {
             Vector2 pullDirection = new Vector2(hookAttatch.transform.position.x - transform.position.x, hookAttatch.transform.position.y - transform.position.y).normalized;
+                        
+            scroll = Input.GetAxis("Mouse ScrollWheel");
+            transform.position += (Vector3)pullDirection * scroll * reel;
 
             //rb2d.AddForce(pullDirection * reel);
             if (Input.GetButtonDown("Fire2"))
@@ -73,6 +77,9 @@ public class PlayerController : MonoBehaviour {
             }
             rope.AttachPlayer();
             rope.ChangeHook(hookAttatch);
+
+           // transform.RotateAround(/*transformaround*/, transform.forward, angle);
+            /* rb2d.AddForce(pullDirection * reel);*/ // this is magnetic pull in direction of hook.
         }
         else if (state == "shoot")
 	    {
