@@ -32,13 +32,14 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (Input.GetButtonUp("Fire1"))
+        if (Input.GetButtonDown("Fire1"))
         {
             if (state == "attatch")
             {
                 hookAim.SetActive(true);
                 hookShot.SetActive(false);
                 hookAttatch.SetActive(false);
+                rope.DestoryRope();
 
             }
             else if (state == "aim")
@@ -46,6 +47,7 @@ public class PlayerController : MonoBehaviour {
                 hookAim.SetActive(false);
                 hookShot.GetComponent<HookShoot>().ResetPosition();
                 hookShot.SetActive(true);
+                state = "shoot";
                 shootDirection = new Vector2(hookShot.transform.position.x - transform.position.x, hookShot.transform.position.y - transform.position.y).normalized;
                 hookShot.GetComponent<HookShoot>().hookrb.AddForce(shootDirection * thrust);
                 hookAttatch.SetActive(false);
@@ -59,14 +61,29 @@ public class PlayerController : MonoBehaviour {
 
         }
 
+
         if (state == "attatch")
         {
             Vector2 pullDirection = new Vector2(hookAttatch.transform.position.x - transform.position.x, hookAttatch.transform.position.y - transform.position.y).normalized;
 
-            rb2d.AddForce(pullDirection * reel);
+            //rb2d.AddForce(pullDirection * reel);
+            if (Input.GetButtonDown("Fire2"))
+            {
+                rope.Reelin();
+            }
+            rope.AttachPlayer();
+            rope.ChangeHook(hookAttatch);
         }
+        else if (state == "shoot")
+	    {
+	            rope.Unreal(hookShot);
+	    }
+        else if (state == "aim")
+	    {
 
-            initialPlayerPos = transform.position;
+	    }
+
+	    initialPlayerPos = transform.position;
 
         
 
