@@ -19,7 +19,6 @@ public class PlayerController : MonoBehaviour {
     public float thrust;
     public float reel;
     public float scroll = 0f;
-
     private Vector2 shootDirection;
 
 
@@ -34,14 +33,14 @@ public class PlayerController : MonoBehaviour {
 
         if (Input.GetButtonUp("Fire1"))
         {
-            if (state == "attatch")
+            if (state == "attatch")//unhooks
             {
                 hookAim.SetActive(true);
                 hookShot.SetActive(false);
                 hookAttatch.SetActive(false);
 
             }
-            else if (state == "aim")
+            else if (state == "aim") //shoots
             {
                 hookAim.SetActive(false);
                 hookShot.GetComponent<HookShoot>().ResetPosition();
@@ -50,11 +49,13 @@ public class PlayerController : MonoBehaviour {
                 hookShot.GetComponent<HookShoot>().hookrb.AddForce(shootDirection * thrust);
                 hookAttatch.SetActive(false);
             }
-            else if (state == "shoot")
+            else if (state == "shoot")//resets shot
             {
                 hookAim.SetActive(true);
                 hookShot.SetActive(false);
                 hookAttatch.SetActive(false);
+
+
             }
 
         }
