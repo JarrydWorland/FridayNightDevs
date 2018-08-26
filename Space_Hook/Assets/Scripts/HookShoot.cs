@@ -15,8 +15,6 @@ public class HookShoot : MonoBehaviour {
     public float hookDistance = 0;
     public Vector2 initialPos;
     public Vector2 nextPos;
-    public Vector3 ropeLinkStartPos;
-    public Quaternion ropeLinkStartRot;
 
 
 
@@ -24,8 +22,6 @@ public class HookShoot : MonoBehaviour {
     void Start () {
         playerCont = playerChar.GetComponent<PlayerController>();
         ropeD = ropeLink.GetComponent<CircleCollider2D>().radius * 2;
-        ropeLinkStartPos = ropeLink.transform.position;
-        ropeLinkStartRot = ropeLink.transform.rotation;
     }
 	
 	// Update is called once per frame
@@ -36,11 +32,6 @@ public class HookShoot : MonoBehaviour {
 
         hookDistance = Vector2.Distance(initialPos, nextPos);
 
-        if(hookDistance >= ropeD)
-        {
-            GenerateRope();
-            hookDistance = 0;
-        }
 
         /*  if(hookrb.constraints == RigidbodyConstraints2D.FreezeAll)
           {
@@ -48,12 +39,7 @@ public class HookShoot : MonoBehaviour {
           }*/
 
     }
-
-    public void GenerateRope()
-    {
-        Instantiate(ropeLink, ropeLinkStartPos, ropeLinkStartRot, ropeLink.transform);
-    }
-
+    
     public void ResetPosition()
     {
         transform.position = hookAim.transform.position;

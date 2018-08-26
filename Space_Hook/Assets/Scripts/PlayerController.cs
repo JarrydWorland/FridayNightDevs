@@ -19,12 +19,9 @@ public class PlayerController : MonoBehaviour {
     public float thrust;
     public float reel;
     public float scroll = 0f;
-<<<<<<< HEAD
-=======
 
     private Vector2 direction;
     private Rope rope;
->>>>>>> ec42125c47fd80e7089b38e72b2398fa61077f6e
     private Vector2 shootDirection;
 
     // Use this for initialization
@@ -35,6 +32,11 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (manualMovement)
+        {
+            MovePlayer();
+            changeInPlayerPos = transform.position;
+        }
 
         if (Input.GetButtonDown("Fire1"))
         {
@@ -61,7 +63,7 @@ public class PlayerController : MonoBehaviour {
                 hookAim.SetActive(true);
                 hookShot.SetActive(false);
                 hookAttatch.SetActive(false);
-
+                rope.DestoryRope();
 
             }
 
@@ -80,6 +82,7 @@ public class PlayerController : MonoBehaviour {
             {
                 rope.Reelin();
             }
+            rope.SwitchAttach(hookAttatch);
             rope.AttachPlayer();
             rope.ChangeHook(hookAttatch);
 
@@ -99,11 +102,7 @@ public class PlayerController : MonoBehaviour {
 
         
 
-        if (manualMovement)
-        {
-            MovePlayer();
-            changeInPlayerPos = transform.position;
-        }
+       
        
     }
 

@@ -9,7 +9,9 @@ public class AsteroidBehavior : MonoBehaviour {
     public bool rotating = true;
     public GameObject hookAttatch;
     public GameObject player;
+    
     private PlayerController playerC;
+    
 
 	// Use this for initialization
 	void Start () {
@@ -36,8 +38,14 @@ public class AsteroidBehavior : MonoBehaviour {
 
         if(hookAttatch.activeInHierarchy)
         {
-            playerC.state = "attatch";
-            playerC.hookAttatch = hookAttatch;
+            if(playerC.state != "attatch")
+            {
+                playerC.state = "attatch";
+
+                playerC.hookAttatch = hookAttatch;
+            }
+            
+            
         }
     }
 }
