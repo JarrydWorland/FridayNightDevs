@@ -19,25 +19,31 @@ public class PlayerController : MonoBehaviour {
     public float thrust;
     public float reel;
     public float scroll = 0f;
-    private Vector2 shootDirection;
+<<<<<<< HEAD
+=======
 
+    private Vector2 direction;
+    private Rope rope;
+>>>>>>> ec42125c47fd80e7089b38e72b2398fa61077f6e
+    private Vector2 shootDirection;
 
     // Use this for initialization
     void Start ()
     {
-
+        rope = GetComponentInChildren<Rope>();
     }
 	
 	// Update is called once per frame
 	void Update () {
 
-        if (Input.GetButtonUp("Fire1"))
+        if (Input.GetButtonDown("Fire1"))
         {
             if (state == "attatch")//unhooks
             {
                 hookAim.SetActive(true);
                 hookShot.SetActive(false);
                 hookAttatch.SetActive(false);
+                rope.DestoryRope();
 
             }
             else if (state == "aim") //shoots
@@ -45,6 +51,7 @@ public class PlayerController : MonoBehaviour {
                 hookAim.SetActive(false);
                 hookShot.GetComponent<HookShoot>().ResetPosition();
                 hookShot.SetActive(true);
+                state = "shoot";
                 shootDirection = new Vector2(hookShot.transform.position.x - transform.position.x, hookShot.transform.position.y - transform.position.y).normalized;
                 hookShot.GetComponent<HookShoot>().hookrb.AddForce(shootDirection * thrust);
                 hookAttatch.SetActive(false);
@@ -60,6 +67,7 @@ public class PlayerController : MonoBehaviour {
 
         }
 
+
         if (state == "attatch")
         {
             Vector2 pullDirection = new Vector2(hookAttatch.transform.position.x - transform.position.x, hookAttatch.transform.position.y - transform.position.y).normalized;
@@ -67,12 +75,27 @@ public class PlayerController : MonoBehaviour {
             scroll = Input.GetAxis("Mouse ScrollWheel");
             transform.position += (Vector3)pullDirection * scroll * reel;
 
+            //rb2d.AddForce(pullDirection * reel);
+            if (Input.GetButtonDown("Fire2"))
+            {
+                rope.Reelin();
+            }
+            rope.AttachPlayer();
+            rope.ChangeHook(hookAttatch);
 
            // transform.RotateAround(/*transformaround*/, transform.forward, angle);
             /* rb2d.AddForce(pullDirection * reel);*/ // this is magnetic pull in direction of hook.
         }
+        else if (state == "shoot")
+	    {
+	            rope.Unreal(hookShot);
+	    }
+        else if (state == "aim")
+	    {
 
-            initialPlayerPos = transform.position;
+	    }
+
+	    initialPlayerPos = transform.position;
 
         
 
