@@ -51,7 +51,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75a44dbb84386d642a93ff21dd443887, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RopeSegmentPrefab: {fileID: 1608598555921630, guid: 2d5ad85050de81f4d89915e5923b2e3e,
-    type: 2}
+  RopeSegmentPrefab: {fileID: 0}
+  slippery: {fileID: 0}
   ReelinSpeed: 10
   RopeAttachedToPlayer: 0
+  jointMass: 0
+  jointSize: 0
