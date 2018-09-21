@@ -137,4 +137,16 @@ public class PlayerController : MonoBehaviour {
         xVel = rb2d.velocity.x;
         yVel = rb2d.velocity.y;
     }
+
+    public void Reset()
+    {
+        // When the player die reset things the player needs.
+        state = "aim";
+        hookAim.SetActive(true);
+        hookShot.SetActive(false);
+        forcfield.SetActive(false);
+        attatchedTo.GetComponent<AsteroidBehavior>().imAttatched = false;
+        attatchedTo = null;
+        rb2d.velocity = Vector2.zero;
+    }
 }

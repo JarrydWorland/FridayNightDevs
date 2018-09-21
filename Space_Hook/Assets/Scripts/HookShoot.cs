@@ -68,7 +68,8 @@ public class HookShoot : MonoBehaviour {
 
             if (playerCont.rb2d.velocity.x >= playerCont.rb2d.velocity.y)
             {
-                if ((playerCont.rb2d.velocity.x > 0 && playerCont.transform.position.y <= asteroid.forcfield.transform.position.y) || (playerCont.rb2d.velocity.x < 0 && playerCont.transform.position.y > asteroid.forcfield.transform.position.y))//if previous x movement is + and position is <= forcf y position, then counterclockwise
+                if ((playerCont.rb2d.velocity.x > 0 && playerCont.transform.position.y <= asteroid.forcfield.transform.position.y) 
+                    || (playerCont.rb2d.velocity.x < 0 && playerCont.transform.position.y > asteroid.forcfield.transform.position.y))//if previous x movement is + and position is <= forcf y position, then counterclockwise
                 {
                     playerCont.rb2d.velocity = Vector3.zero;
                     playerCont.rb2d.AddForce(forceDirection * 5 * v);
