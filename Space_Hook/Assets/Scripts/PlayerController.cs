@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour {
+public class PlayerController : MonoBehaviour
+{
 
     private Ray ray;
     private RaycastHit2D hit;
@@ -18,11 +19,11 @@ public class PlayerController : MonoBehaviour {
     private Vector2 shootDirection;
 
     // Use this for initialization
-    void Start ()
+    void Start()
     {
     }
 
-   public Vector2 Rotate( Vector2 v, float degrees)
+    public Vector2 Rotate(Vector2 v, float degrees)
     {
         float sin = Mathf.Sin(degrees * Mathf.Deg2Rad);
         float cos = Mathf.Cos(degrees * Mathf.Deg2Rad);
@@ -47,13 +48,14 @@ public class PlayerController : MonoBehaviour {
             }
         }
     }
-	// Update is called once per frame
-    
+    // Update is called once per frame
+
     void FreeFall()
     {
-        
+
     }
-	void Update () {
+    void Update()
+    {
 
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (attatched)
@@ -69,9 +71,7 @@ public class PlayerController : MonoBehaviour {
     public void Reset()
     {
         // When the player die reset things the player needs.
-        state = "aim";
-        hookAim.SetActive(true);
-        hookShot.SetActive(false);
+        attatched = false;
         forcfield.SetActive(false);
         attatchedTo.GetComponent<AsteroidBehavior>().imAttatched = false;
         attatchedTo = null;
