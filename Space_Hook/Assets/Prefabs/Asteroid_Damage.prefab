@@ -20,10 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4007935094718018}
   - component: {fileID: 114447900879147264}
-  - component: {fileID: 114579093163021452}
   - component: {fileID: 50012454974422716}
   - component: {fileID: 58911565759781416}
   - component: {fileID: 252554054314753534}
+  - component: {fileID: 114643533122708290}
   m_Layer: 0
   m_Name: Asteroid_Damage
   m_TagString: attatch
@@ -54,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1047327299046692}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 22, y: -13, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 4610292158994580}
@@ -128,7 +128,7 @@ MonoBehaviour:
   player: {fileID: 0}
   imAttatched: 0
   myCol: {fileID: 0}
---- !u!114 &114579093163021452
+--- !u!114 &114643533122708290
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
