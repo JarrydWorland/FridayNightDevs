@@ -9,12 +9,12 @@ public class AsteroidBehavior : MonoBehaviour {
     public bool rotating = true;
     public GameObject attatchedTo;
     public GameObject forcfield;
-    public GameObject hookAttatch;
     public GameObject player;
     public float maxDistance;
     public bool imAttatched;
     
     private PlayerController playerC;
+    public Collider2D myCol;
     
 
 	// Use this for initialization
@@ -23,10 +23,21 @@ public class AsteroidBehavior : MonoBehaviour {
         imAttatched = false;
         playerC = player.GetComponent<PlayerController>();
         maxDistance = 0;
+        myCol = attatchedTo.GetComponent<Collider2D>();
 	}
-	
-	// Update is called once per frame
-	void Update () {
+    void OnMouseDown()
+    {
+        if(playerC.attatchedTo != null)
+        {
+            playerC.attatchedTo.GetComponent<AsteroidBehavior>().imAttatched = false;
+        }
+        playerC.attatchedTo = attatchedTo;
+        imAttatched = true;
+        forcfield.SetActive(true);
+        forcfield.transform.position = transform.position;
+    }
+    // Update is called once per frame
+    void Update () {
         if(imAttatched == false)
         {
             maxDistance = 0;
@@ -46,28 +57,16 @@ public class AsteroidBehavior : MonoBehaviour {
 
         if(imAttatched)
         {
-            if(playerC.state != "attatch")
+            if(!playerC.attatched)
             {
-                playerC.state = "attatch";
+                playerC.attatched = true;
                 playerC.attatchedTo = attatchedTo;
                 if(maxDistance == 0)
                 {
                     maxDistance = (playerC.transform.position - forcfield.transform.position).magnitude;
                 }
-                
             }
-            if (maxDistance < 2.3)
-            {
-                maxDistance = 2.3f;
-            }
-
             forcfield.GetComponent<DistanceJoint2D>().distance = maxDistance;
-
-            Vector2 hookDirection = new Vector2(playerC.transform.position.x - forcfield.transform.position.x, playerC.transform.position.y - forcfield.transform.position.y).normalized;
-            Vector2 currentHookDirection = new Vector2(hookAttatch.transform.position.x - forcfield.transform.position.x, hookAttatch.transform.position.y - forcfield.transform.position.y);
-            float angle = Vector2.SignedAngle(currentHookDirection, hookDirection);
-
-            hookAttatch.transform.RotateAround(forcfield.transform.position, transform.forward, angle);
         }
     }
 }
