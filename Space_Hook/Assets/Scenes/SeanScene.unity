@@ -1050,11 +1050,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 422755347}
   pullForce: 30
+  clockwise: 1
+  checkRot: 1
   startCurve: 20
   endCurve: 2
   howClose: 0
   degreeChange: 0
   distBW: 0
+  angle: 0
 --- !u!50 &1055510396
 Rigidbody2D:
   serializedVersion: 4
