@@ -10,7 +10,6 @@ public class AsteroidBehavior : MonoBehaviour {
     public GameObject attatchedTo;
     public GameObject forcfield;
     public GameObject player;
-    public float maxDistance;
     public bool imAttatched;
     
     private PlayerController playerC;
@@ -22,7 +21,6 @@ public class AsteroidBehavior : MonoBehaviour {
         forcfield.SetActive(false);
         imAttatched = false;
         playerC = player.GetComponent<PlayerController>();
-        maxDistance = 0;
         myCol = attatchedTo.GetComponent<Collider2D>();
 	}
     void OnMouseDown()
@@ -38,10 +36,6 @@ public class AsteroidBehavior : MonoBehaviour {
     }
     // Update is called once per frame
     void Update () {
-        if(imAttatched == false)
-        {
-            maxDistance = 0;
-        }
         if (rotating)
         {
             if (!clockwise)
@@ -57,16 +51,11 @@ public class AsteroidBehavior : MonoBehaviour {
 
         if(imAttatched)
         {
-            if(!playerC.attatched)
+            if (!playerC.attatched)
             {
                 playerC.attatched = true;
                 playerC.attatchedTo = attatchedTo;
-                if(maxDistance == 0)
-                {
-                    maxDistance = (playerC.transform.position - forcfield.transform.position).magnitude;
-                }
             }
-            forcfield.GetComponent<DistanceJoint2D>().distance = maxDistance;
         }
     }
 }
