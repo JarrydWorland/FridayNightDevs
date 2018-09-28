@@ -6,11 +6,12 @@ public class ForcefieldPull : MonoBehaviour {
 
     
     public GameObject player;
-    public float pullForce;
+    
 
     private Vector2 betweenFP;
     private Vector2 pullDirection;
     private PlayerController playerC;
+    private float pullForce;
 
     public bool clockwise = true;
     public bool checkRot = true;
@@ -69,6 +70,8 @@ public class ForcefieldPull : MonoBehaviour {
     }
 	// Update is called once per frame
 	void Update () {
+
+        pullForce = player.GetComponent<ConstantSpeed>().Speed * 5;
         betweenFP = ((Vector2)transform.position - (Vector2)player.transform.position);
         pullDirection = betweenFP.normalized;
         distBW = Mathf.Abs(betweenFP.magnitude);
