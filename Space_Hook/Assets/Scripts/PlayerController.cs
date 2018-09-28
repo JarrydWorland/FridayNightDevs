@@ -8,8 +8,6 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public GameObject forcfield;
     
-    
-
     //Below is public for testing in Unity, otherwise would be private
     public GameObject attatchedTo;
     public bool attatched = false;
@@ -24,9 +22,10 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Fire1")) //unhooks
         {
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            if (!attatchedTo.GetComponent<AsteroidBehavior>().myCol.bounds.Contains(mousePos))
+            if (!attatchedTo.GetComponent<Collider2D>().bounds.Contains(mousePos))
             {
                 forcfield.SetActive(false);
+                forcfield.GetComponent<ForcefieldPull>().checkRot = true;
                 attatchedTo.GetComponent<AsteroidBehavior>().imAttatched = false;
                 attatchedTo = null;
                 attatched = false;

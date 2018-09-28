@@ -12,22 +12,78 @@ public class ForcefieldPull : MonoBehaviour {
     private Vector2 pullDirection;
     private PlayerController playerC;
 
+    public bool clockwise = true;
+    public bool checkRot = true;
     //variables to play with
     public float startCurve = 6, endCurve = 3;
     public float howClose;
     public float degreeChange;
     public float distBW;
+    public float angle;
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         playerC = player.GetComponent<PlayerController>();
-	}
+    }
 	
+    void CheckRotation()
+    {
+        if (player.transform.position.x <= transform.position.x)//left - mid
+        {
+            if (player.transform.position.y >= transform.position.y) //top-mid
+            {
+                if (angle >= 0 && angle <= 180)
+                {
+                    clockwise = false;
+                }
+                else clockwise = true;
+            }
+            else//bot
+            {
+                if (angle >= 0 && angle <= 180)
+                {
+                    clockwise = false;
+                }
+                else clockwise = true;
+            }
+        }
+        else//right
+        {
+            if (player.transform.position.y >= transform.position.y) //top-mid
+            {
+                if (angle >= 0 && angle <= 180)
+                {
+                    clockwise = false;
+                }
+                else clockwise = true;
+            }
+            else//bot
+            {
+                if (angle >= 0 && angle <= 180)
+                {
+                    clockwise = false;
+                }
+                else clockwise = true;
+            }
+        }
+    }
 	// Update is called once per frame
 	void Update () {
         betweenFP = ((Vector2)transform.position - (Vector2)player.transform.position);
         pullDirection = betweenFP.normalized;
         distBW = Mathf.Abs(betweenFP.magnitude);
-        Pull();
+
+        Vector2 currentD = playerC.rb2d.velocity.normalized;
+        angle = Vector2.SignedAngle(currentD, pullDirection);
+
+        if (checkRot)
+        {
+            CheckRotation();
+            checkRot = false;
+        }
+       
+
+    Pull();
 	}
 
     void Pull()
@@ -46,6 +102,8 @@ public class ForcefieldPull : MonoBehaviour {
         {
             howClose = 1-((distBW-endCurve)/(startCurve-endCurve)); //percentage in decimal of how far between the start and end point you are
             degreeChange = 90*howClose;
+            if(!clockwise)
+            { degreeChange *= -1; }
             Vector2 newPullDirection = playerC.Rotate(pullDirection, degreeChange);
             playerC.rb2d.velocity = Vector2.zero;
             playerC.rb2d.AddForce(pullForce * newPullDirection);
