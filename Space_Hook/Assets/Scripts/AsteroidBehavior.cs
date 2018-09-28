@@ -18,9 +18,6 @@ public class AsteroidBehavior : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-        // Gets a reference to the player and the forcfield
-		playerC = FindObjectOfType<PlayerController>();
-        forcfield = FindObjectOfType<ForcefieldPull>().gameObject;
 
         forcfield.SetActive(false);
         imAttatched = false;
