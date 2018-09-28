@@ -94,6 +94,7 @@ public class ForcefieldPull : MonoBehaviour {
         
         if (distBW > startCurve)
         {
+            playerC.rb2d.velocity = Vector2.zero;
             playerC.rb2d.AddForce(pullForce * pullDirection);
         }
         else if(distBW <= endCurve)
