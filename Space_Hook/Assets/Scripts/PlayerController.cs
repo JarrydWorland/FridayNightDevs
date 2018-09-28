@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
             if (!attatchedTo.GetComponent<Collider2D>().bounds.Contains(mousePos))
             {
                 forcfield.SetActive(false);
+                forcfield.GetComponent<ForcefieldPull>().checkRot = true;
                 attatchedTo.GetComponent<AsteroidBehavior>().imAttatched = false;
                 attatchedTo = null;
                 attatched = false;
