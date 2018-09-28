@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Fire1")) //unhooks
         {
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            if (!attatchedTo.GetComponent<AsteroidBehavior>().myCol.bounds.Contains(mousePos))
+            if (!attatchedTo.GetComponent<Collider2D>().bounds.Contains(mousePos))
             {
                 forcfield.SetActive(false);
                 forcfield.GetComponent<ForcefieldPull>().checkRot = true;
