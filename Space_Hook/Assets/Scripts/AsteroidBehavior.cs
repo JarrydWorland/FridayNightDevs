@@ -18,7 +18,6 @@ public class AsteroidBehavior : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-
         forcfield.SetActive(false);
         imAttatched = false;
         playerC = player.GetComponent<PlayerController>();
@@ -30,6 +29,7 @@ public class AsteroidBehavior : MonoBehaviour {
         {
             playerC.attatchedTo.GetComponent<AsteroidBehavior>().imAttatched = false;
         }
+
         playerC.attatchedTo = attatchedTo;
         imAttatched = true;
         forcfield.SetActive(true);
