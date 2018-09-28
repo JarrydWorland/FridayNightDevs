@@ -4,37 +4,21 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
-    private Ray ray;
-    private RaycastHit2D hit;
     public Rigidbody2D rb2d;
-    public float distanceOfHook = 0.9f;
-    private int rotationSpeed = 100;
-    private float movementSpeed = 1f;
+    public float speed;
     public GameObject forcfield;
+    
+    
+
+    //Below is public for testing in Unity, otherwise would be private
     public GameObject attatchedTo;
     public bool attatched = false;
-    private float distanceOfReel;
-    private Vector2 direction;
-    private Vector2 shootDirection;
-
-    // Use this for initialization
+    public float playerVelocity;
+    
     void Start()
     {
+        rb2d.AddForce(Vector2.right * 5f);
     }
-
-    public Vector2 Rotate(Vector2 v, float degrees)
-    {
-        float sin = Mathf.Sin(degrees * Mathf.Deg2Rad);
-        float cos = Mathf.Cos(degrees * Mathf.Deg2Rad);
-
-        float tx = v.x;
-        float ty = v.y;
-        v.x = (cos * tx) - (sin * ty);
-        v.y = (sin * tx) + (cos * ty);
-        return v;
-    }
-
     void Attatched()
     {
         if (Input.GetButtonDown("Fire1")) //unhooks
@@ -45,10 +29,10 @@ public class PlayerController : MonoBehaviour
                 forcfield.SetActive(false);
                 attatchedTo.GetComponent<AsteroidBehavior>().imAttatched = false;
                 attatchedTo = null;
+                attatched = false;
             }
         }
     }
-    // Update is called once per frame
 
     void FreeFall()
     {
@@ -56,8 +40,6 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
-
-        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (attatched)
         {
             Attatched();
@@ -66,6 +48,10 @@ public class PlayerController : MonoBehaviour
         {
             FreeFall();
         }
+    }
+    private void FixedUpdate()
+    {
+        playerVelocity = rb2d.velocity.magnitude;
     }
 
     public void Reset()
@@ -77,4 +63,17 @@ public class PlayerController : MonoBehaviour
         attatchedTo = null;
         rb2d.velocity = Vector2.zero;
     }
+    
+    public Vector2 Rotate(Vector2 v, float degrees)
+    {
+        float sin = Mathf.Sin(degrees * Mathf.Deg2Rad);
+        float cos = Mathf.Cos(degrees * Mathf.Deg2Rad);
+
+        float tx = v.x;
+        float ty = v.y;
+        v.x = (cos * tx) - (sin * ty);
+        v.y = (sin * tx) + (cos * ty);
+        return v;
+    }
+    
 }
