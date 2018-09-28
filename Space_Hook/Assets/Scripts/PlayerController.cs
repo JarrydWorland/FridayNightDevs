@@ -8,8 +8,6 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public GameObject forcfield;
     
-    
-
     //Below is public for testing in Unity, otherwise would be private
     public GameObject attatchedTo;
     public bool attatched = false;
