@@ -27,6 +27,7 @@ public class AsteroidBehavior : MonoBehaviour {
     {
         if(playerC.attatchedTo != null)
         {
+            forcfield.GetComponent<ForcefieldPull>().checkRot = true;
             playerC.attatchedTo.GetComponent<AsteroidBehavior>().imAttatched = false;
         }
         playerC.attatchedTo = attatchedTo;
