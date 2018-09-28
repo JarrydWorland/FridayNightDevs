@@ -19,9 +19,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4354849241332058}
+  - component: {fileID: 114942090765846632}
   - component: {fileID: 50464083541487388}
   - component: {fileID: 58079592184287038}
-  - component: {fileID: 114942090765846632}
   - component: {fileID: 114305289768106106}
   m_Layer: 0
   m_Name: Player
@@ -55,7 +55,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4462352055839326}
   - component: {fileID: 212507345651521742}
-  - component: {fileID: 114810087620450926}
   - component: {fileID: 50265068266984604}
   - component: {fileID: 60386200819556938}
   m_Layer: 0
@@ -91,7 +90,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4224518841191098}
   - component: {fileID: 212689459772094872}
-  - component: {fileID: 114423531686356238}
   m_Layer: 0
   m_Name: Hook-Aim
   m_TagString: Untagged
@@ -177,7 +175,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -188,7 +186,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7.21
+  orthographic size: 18.6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -305,29 +303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc64c7216d5aba94d94ac949a711230f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 8
---- !u!114 &114423531686356238
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1652110682408866}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114810087620450926
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1435767644902136}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  Speed: 15
 --- !u!114 &114942090765846632
 MonoBehaviour:
   m_ObjectHideFlags: 1
