@@ -14,10 +14,11 @@ public class AsteroidBehavior : MonoBehaviour {
     
     private PlayerController playerC;
     public Collider2D myCol;
-    
 
 	// Use this for initialization
 	void Start () {
+
+
         forcfield.SetActive(false);
         imAttatched = false;
         playerC = player.GetComponent<PlayerController>();
