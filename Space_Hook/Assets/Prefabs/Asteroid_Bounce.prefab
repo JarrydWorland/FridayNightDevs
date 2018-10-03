@@ -42,7 +42,7 @@ GameObject:
   m_Layer: 0
   m_Name: Asteroid_Bounce
   m_TagString: attatch
-  m_Icon: {fileID: -982381405332843317, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -53,7 +53,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1550160652160278}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 19.86, y: 18.23, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 4883626144507194}
@@ -123,8 +123,8 @@ MonoBehaviour:
   clockwise: 1
   rotating: 0
   attatchedTo: {fileID: 1550160652160278}
-  forcfield: {fileID: 1900121849366980, guid: 8b5ce33b1d409b542b205b0f28a4dbb7, type: 2}
-  player: {fileID: 1075453135683366, guid: eabe59dfb89aceb42a282aa9b559f295, type: 2}
+  forcfield: {fileID: 0}
+  player: {fileID: 0}
   imAttatched: 0
   myCol: {fileID: 0}
 --- !u!212 &212540846156227946
@@ -159,8 +159,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 2052522789
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 659d76a9154b07f4e9f82349fb07bd76, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
