@@ -867,16 +867,6 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 330239673}
-    - target: {fileID: 114870728197549292, guid: 8b5ce33b1d409b542b205b0f28a4dbb7,
-        type: 2}
-      propertyPath: startCurve
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 114870728197549292, guid: 8b5ce33b1d409b542b205b0f28a4dbb7,
-        type: 2}
-      propertyPath: endCurve
-      value: 3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b5ce33b1d409b542b205b0f28a4dbb7, type: 2}
   m_IsPrefabAsset: 0
