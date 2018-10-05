@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 50012454974422716}
   - component: {fileID: 58911565759781416}
   - component: {fileID: 252554054314753534}
-  - component: {fileID: 114643533122708290}
   m_Layer: 0
   m_Name: Asteroid_Damage
   m_TagString: Damage
@@ -103,7 +102,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.016131401, y: 0}
@@ -128,17 +127,6 @@ MonoBehaviour:
   player: {fileID: 0}
   imAttatched: 0
   myCol: {fileID: 0}
---- !u!114 &114643533122708290
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1047327299046692}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bd6194e6eafc5543888de53ba9ea070, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &212407956804359152
 SpriteRenderer:
   m_ObjectHideFlags: 1

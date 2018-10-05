@@ -70,7 +70,7 @@ public class ForcefieldPull : MonoBehaviour {
     }
 	void Update () {
 
-        pullForce = playerC.SpeedConst * 5;
+        pullForce = player.GetComponent<ConstantSpeed>().Speed * 5;
         betweenFP = ((Vector2)transform.position - (Vector2)player.transform.position);
         pullDirection = betweenFP.normalized;
         distBW = Mathf.Abs(betweenFP.magnitude);
