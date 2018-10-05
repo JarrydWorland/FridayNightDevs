@@ -22,6 +22,10 @@ public class AsteroidBehavior : MonoBehaviour {
         imAttatched = false;
         playerC = player.GetComponent<PlayerController>();
         myCol = attatchedTo.GetComponent<Collider2D>();
+
+
+        float randomSize = Random.Range(2, 5);
+        transform.localScale = new Vector3(randomSize, randomSize, randomSize);
 	}
     void OnMouseDown()
     {
