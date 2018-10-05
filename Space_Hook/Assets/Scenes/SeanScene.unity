@@ -10953,12 +10953,22 @@ Prefab:
     - target: {fileID: 114303877497695588, guid: eabe59dfb89aceb42a282aa9b559f295,
         type: 2}
       propertyPath: Speed
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 114942090765846632, guid: eabe59dfb89aceb42a282aa9b559f295,
         type: 2}
       propertyPath: speed
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114303877497695588, guid: eabe59dfb89aceb42a282aa9b559f295,
+        type: 2}
+      propertyPath: min
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114303877497695588, guid: eabe59dfb89aceb42a282aa9b559f295,
+        type: 2}
+      propertyPath: max
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eabe59dfb89aceb42a282aa9b559f295, type: 2}
