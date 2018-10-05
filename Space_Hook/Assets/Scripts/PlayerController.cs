@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D rb2d;
+    
     public float speed;
     public GameObject forcfield;
     
@@ -17,25 +18,31 @@ public class PlayerController : MonoBehaviour
     {
         rb2d.AddForce(Vector2.right * 5f);
     }
+    public void Detatch()
+    {
+        forcfield.SetActive(false);
+        forcfield.GetComponent<ForcefieldPull>().checkRot = true;
+        attatchedTo.GetComponent<AsteroidBehavior>().imAttatched = false;
+        attatchedTo = null;
+        attatched = false;
+        this.GetComponent<ConstantSpeed>().Speed += 3;
+
+    }
     void Attatched()
     {
-        if (Input.GetButtonDown("Fire1")) //unhooks
+        if (Input.GetButtonDown("Fire1")) //dettaches
         {
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             if (!attatchedTo.GetComponent<Collider2D>().bounds.Contains(mousePos))
             {
-                forcfield.SetActive(false);
-                forcfield.GetComponent<ForcefieldPull>().checkRot = true;
-                attatchedTo.GetComponent<AsteroidBehavior>().imAttatched = false;
-                attatchedTo = null;
-                attatched = false;
+                Detatch();
             }
         }
     }
 
     void FreeFall()
     {
-
+        this.GetComponent<ConstantSpeed>().Speed -= 0.02f;
     }
     void Update()
     {
