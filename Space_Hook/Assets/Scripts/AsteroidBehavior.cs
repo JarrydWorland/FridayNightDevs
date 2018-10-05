@@ -29,12 +29,32 @@ public class AsteroidBehavior : MonoBehaviour {
         {
             forcfield.GetComponent<ForcefieldPull>().checkRot = true;
             playerC.attatchedTo.GetComponent<AsteroidBehavior>().imAttatched = false;
+
+            if (playerC.attatchedTo != attatchedTo)
+            {
+                playerC.attatchedTo = attatchedTo;
+                imAttatched = true;
+                forcfield.SetActive(true);
+                forcfield.transform.position = transform.position;
+            }
+            else
+            {
+                forcfield.SetActive(false);
+                forcfield.GetComponent<ForcefieldPull>().checkRot = true;
+                playerC.attatchedTo.GetComponent<AsteroidBehavior>().imAttatched = false;
+                playerC.attatchedTo = null;
+                playerC.attatched = false;
+            }
+        }
+        else
+        {
+            playerC.attatchedTo = attatchedTo;
+            imAttatched = true;
+            forcfield.SetActive(true);
+            forcfield.transform.position = transform.position;
         }
 
-        playerC.attatchedTo = attatchedTo;
-        imAttatched = true;
-        forcfield.SetActive(true);
-        forcfield.transform.position = transform.position;
+       
     }
     // Update is called once per frame
     void Update () {
