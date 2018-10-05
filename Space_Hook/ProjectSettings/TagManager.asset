@@ -6,6 +6,7 @@ TagManager:
   tags:
   - attatch
   - Manager
+  - item
   layers:
   - Default
   - TransparentFX
