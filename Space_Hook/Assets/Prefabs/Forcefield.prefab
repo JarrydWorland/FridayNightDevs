@@ -153,17 +153,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3018bf6327f895446b2029c285e5fcdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
   player: {fileID: 1075453135683366, guid: eabe59dfb89aceb42a282aa9b559f295, type: 2}
   clockwise: 1
   checkRot: 1
-  startCurve: 20
-=======
-  player: {fileID: 0}
-  clockwise: 1
-  checkRot: 1
   startCurve: 100
->>>>>>> a3ae5e0a042c2309f037d7ae88b9b2323e30aec7
   endCurve: 2
   howClose: 0
   degreeChange: 0
