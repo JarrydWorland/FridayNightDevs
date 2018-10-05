@@ -68,7 +68,6 @@ public class ForcefieldPull : MonoBehaviour {
             }
         }
     }
-	// Update is called once per frame
 	void Update () {
 
         pullForce = player.GetComponent<ConstantSpeed>().Speed * 5;
@@ -91,7 +90,6 @@ public class ForcefieldPull : MonoBehaviour {
 
     void Pull()
     {
-        
         if (distBW > startCurve)
         {
             playerC.rb2d.velocity = Vector2.zero;
@@ -113,4 +111,5 @@ public class ForcefieldPull : MonoBehaviour {
             playerC.rb2d.AddForce(pullForce * newPullDirection);
         }
     }
+
 }
