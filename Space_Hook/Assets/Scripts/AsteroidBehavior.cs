@@ -23,30 +23,51 @@ public class AsteroidBehavior : MonoBehaviour {
         playerC = player.GetComponent<PlayerController>();
         myCol = attatchedTo.GetComponent<Collider2D>();
 	}
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.collider.gameObject.tag == "Player")
+        {
+            
+            if(playerC.attatchedTo!= null)
+            { playerC.Detatch(); }
+            
+
+            if (attatchedTo.tag == "Bouncy")
+            {
+                //Bounce();
+                player.GetComponent<ConstantSpeed>().Speed += 2;
+            }
+            if (attatchedTo.tag == "Damage")
+            {
+                //Damage();
+                player.GetComponent<ConstantSpeed>().Speed -= 4;
+                Destroy(attatchedTo);
+            }
+        }
+    }
+
     void OnMouseDown()
     {
-        if(playerC.attatchedTo != null)
+        if(playerC.attatchedTo != null) //your already attatched
         {
             forcfield.GetComponent<ForcefieldPull>().checkRot = true;
             playerC.attatchedTo.GetComponent<AsteroidBehavior>().imAttatched = false;
 
-            if (playerC.attatchedTo != attatchedTo)
+            if (playerC.attatchedTo != attatchedTo) //if what this object is not what youre currently attatched to
             {
+                player.GetComponent<ConstantSpeed>().Speed += 3f;
                 playerC.attatchedTo = attatchedTo;
                 imAttatched = true;
                 forcfield.SetActive(true);
                 forcfield.transform.position = transform.position;
             }
-            else
+            else //if youre attacthed to this object and then click it - detatches
             {
-                forcfield.SetActive(false);
-                forcfield.GetComponent<ForcefieldPull>().checkRot = true;
-                playerC.attatchedTo.GetComponent<AsteroidBehavior>().imAttatched = false;
-                playerC.attatchedTo = null;
-                playerC.attatched = false;
+                playerC.Detatch();
             }
         }
-        else
+        else //if in free fall - attatch
         {
             playerC.attatchedTo = attatchedTo;
             imAttatched = true;
@@ -73,6 +94,7 @@ public class AsteroidBehavior : MonoBehaviour {
 
         if(imAttatched)
         {
+            player.GetComponent<ConstantSpeed>().Speed -= 0.02f;
             if (!playerC.attatched)
             {
                 playerC.attatched = true;
