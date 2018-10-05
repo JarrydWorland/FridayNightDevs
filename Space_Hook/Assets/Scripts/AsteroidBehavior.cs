@@ -22,6 +22,10 @@ public class AsteroidBehavior : MonoBehaviour {
         imAttatched = false;
         playerC = player.GetComponent<PlayerController>();
         myCol = attatchedTo.GetComponent<Collider2D>();
+
+
+        float randomSize = Random.Range(2, 5);
+        transform.localScale = new Vector3(randomSize, randomSize, randomSize);
 	}
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -78,7 +82,8 @@ public class AsteroidBehavior : MonoBehaviour {
        
     }
     // Update is called once per frame
-    void Update () {
+    void Update ()
+    {
         if (rotating)
         {
             if (!clockwise)
@@ -88,7 +93,6 @@ public class AsteroidBehavior : MonoBehaviour {
             else
             {
                 transform.Rotate(Vector3.forward * Time.deltaTime * -speed);
-
             }
         }
 

@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 114942090765846632}
   - component: {fileID: 50464083541487388}
   - component: {fileID: 58079592184287038}
-  - component: {fileID: 114305289768106106}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -292,18 +291,6 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1569389115983156}
   m_Enabled: 1
---- !u!114 &114305289768106106
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1075453135683366}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc64c7216d5aba94d94ac949a711230f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 15
 --- !u!114 &114942090765846632
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -316,8 +303,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb2d: {fileID: 50464083541487388}
-  speed: 0
   forcfield: {fileID: 0}
+  SpeedConst: 25
   attatchedTo: {fileID: 0}
   attatched: 0
   playerVelocity: 0

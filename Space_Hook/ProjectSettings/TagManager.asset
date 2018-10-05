@@ -6,8 +6,7 @@ TagManager:
   tags:
   - attatch
   - Manager
-  - Damage
-  - Bouncy
+  - item
   layers:
   - Default
   - TransparentFX
@@ -17,8 +16,8 @@ TagManager:
   - UI
   - 
   - 
-  - Background
-  - Background2
+  - 
+  - 
   - 
   - 
   - 
@@ -47,15 +46,6 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 2555855981
-    locked: 0
-  - name: Background2
-    uniqueID: 522091353
-    locked: 0
-  - name: Background3
-    uniqueID: 3568151909
-    locked: 0
-  - name: Background4
-    uniqueID: 237382541
     locked: 0
   - name: 1st
     uniqueID: 2052522789
