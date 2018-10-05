@@ -751,10 +751,9 @@ MonoBehaviour:
   rotating: 0
   attatchedTo: {fileID: 286379505}
   forcfield: {fileID: 1055510392}
-  hookAttatch: {fileID: 1708092296}
   player: {fileID: 422755347}
-  maxDistance: 0
   imAttatched: 0
+  myCol: {fileID: 0}
 --- !u!212 &286379511
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1071,7 +1070,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 422755347}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.8, y: 3.6700006, z: 0}
+  m_LocalPosition: {x: -1.44, y: 4.86, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 712762827}
@@ -1156,19 +1155,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb2d: {fileID: 422755349}
-  distanceOfHook: 0.9
-  hookAim: {fileID: 712762826}
-  hookShot: {fileID: 827540644}
   forcfield: {fileID: 1055510392}
-  hookAttatch: {fileID: 1708092296}
+  SpeedConst: 0
   attatchedTo: {fileID: 0}
-  state: 
-  thrust: 1000
-  reel: 40
-  scroll: 0
-  speed: 0
-  xVel: 0
-  yVel: 0
+  attatched: 0
+  playerVelocity: 0
 --- !u!58 &422755352
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1190,12 +1181,12 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 422755347}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc64c7216d5aba94d94ac949a711230f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 8
+  Speed: 6
 --- !u!1 &435667504
 GameObject:
   m_ObjectHideFlags: 0
@@ -1559,10 +1550,9 @@ MonoBehaviour:
   rotating: 0
   attatchedTo: {fileID: 593704446}
   forcfield: {fileID: 1055510392}
-  hookAttatch: {fileID: 1708092296}
   player: {fileID: 422755347}
-  maxDistance: 0
   imAttatched: 0
+  myCol: {fileID: 0}
 --- !u!212 &593704452
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1858,9 +1848,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cecee0375579c524b8484d85ff636bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hookShot: {fileID: 827540644}
-  playerChar: {fileID: 422755347}
-  angle: 0
 --- !u!1 &719885506
 GameObject:
   m_ObjectHideFlags: 0
@@ -1963,10 +1950,9 @@ MonoBehaviour:
   rotating: 0
   attatchedTo: {fileID: 719885506}
   forcfield: {fileID: 1055510392}
-  hookAttatch: {fileID: 1708092296}
   player: {fileID: 422755347}
-  maxDistance: 0
   imAttatched: 0
+  myCol: {fileID: 0}
 --- !u!212 &719885512
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2467,16 +2453,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd41d2508508f2e4099143c403effbd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hookAim: {fileID: 712762826}
-  attachment: {fileID: 0}
-  playerChar: {fileID: 422755347}
-  angle: 1
-  hookrb: {fileID: 827540647}
-  ropeLink: {fileID: 0}
-  ropeD: 0
-  hookDistance: 0
-  initialPos: {x: 0, y: 0}
-  nextPos: {x: 0, y: 0}
 --- !u!212 &827540649
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2848,24 +2824,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!232 &1055510395
-DistanceJoint2D:
+--- !u!114 &1055510395
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1055510392}
   m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 422755349}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
-  m_AutoConfigureDistance: 0
-  m_Distance: 1
-  m_MaxDistanceOnly: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3018bf6327f895446b2029c285e5fcdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 422755347}
+  pullForce: 30
+  startCurve: 20
+  endCurve: 1.6
+  howClose: 0
+  degreeChange: 0
+  distBW: 0
 --- !u!50 &1055510396
 Rigidbody2D:
   serializedVersion: 4
@@ -2988,10 +2964,9 @@ MonoBehaviour:
   rotating: 0
   attatchedTo: {fileID: 1080721522}
   forcfield: {fileID: 1055510392}
-  hookAttatch: {fileID: 1708092296}
   player: {fileID: 422755347}
-  maxDistance: 0
   imAttatched: 0
+  myCol: {fileID: 0}
 --- !u!212 &1080721528
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3630,10 +3605,9 @@ MonoBehaviour:
   rotating: 0
   attatchedTo: {fileID: 1324328993}
   forcfield: {fileID: 1055510392}
-  hookAttatch: {fileID: 1708092296}
   player: {fileID: 422755347}
-  maxDistance: 0
   imAttatched: 0
+  myCol: {fileID: 0}
 --- !u!212 &1324328999
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3705,7 +3679,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1448003440}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.47, y: 3.56, z: 9.917969}
+  m_LocalPosition: {x: -7.34, y: 1.68, z: 9.917969}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 128251570}
@@ -3748,10 +3722,9 @@ MonoBehaviour:
   rotating: 0
   attatchedTo: {fileID: 1448003440}
   forcfield: {fileID: 1055510392}
-  hookAttatch: {fileID: 1708092296}
   player: {fileID: 422755347}
-  maxDistance: 0
   imAttatched: 0
+  myCol: {fileID: 0}
 --- !u!212 &1448003444
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4380,10 +4353,9 @@ MonoBehaviour:
   rotating: 0
   attatchedTo: {fileID: 1711792659}
   forcfield: {fileID: 1055510392}
-  hookAttatch: {fileID: 1708092296}
   player: {fileID: 422755347}
-  maxDistance: 0
   imAttatched: 0
+  myCol: {fileID: 0}
 --- !u!212 &1711792665
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4428,6 +4400,110 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &1741107662
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1741107666}
+  - component: {fileID: 1741107665}
+  - component: {fileID: 1741107664}
+  - component: {fileID: 1741107663}
+  m_Layer: 0
+  m_Name: Shard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!58 &1741107663
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1741107662}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.85
+--- !u!114 &1741107664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1741107662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f52b7b8ca3a84d045b9fe8bf981d6aea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateSpeed: 30
+  distance: 6
+  player: {fileID: 422755351}
+--- !u!212 &1741107665
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1741107662}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 5cc8930aa1451ca4cbc423e49ec6c449, type: 3}
+  m_Color: {r: 0.1273789, g: 0.8793072, b: 0.9117647, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+--- !u!4 &1741107666
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1741107662}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.72, y: 5.53, z: -0.016685855}
+  m_LocalScale: {x: 0.2, y: 0.4, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1756276495
 GameObject:
   m_ObjectHideFlags: 0
@@ -4603,10 +4679,9 @@ MonoBehaviour:
   rotating: 0
   attatchedTo: {fileID: 1827598697}
   forcfield: {fileID: 1055510392}
-  hookAttatch: {fileID: 1708092296}
   player: {fileID: 422755347}
-  maxDistance: 0
   imAttatched: 0
+  myCol: {fileID: 0}
 --- !u!212 &1827598703
 SpriteRenderer:
   m_ObjectHideFlags: 0

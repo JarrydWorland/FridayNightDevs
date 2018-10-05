@@ -23,7 +23,8 @@ public class ForcefieldPull : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
         betweenFP = ((Vector2)transform.position - (Vector2)player.transform.position);
         pullDirection = betweenFP.normalized;
         distBW = Mathf.Abs(betweenFP.magnitude);
@@ -32,7 +33,6 @@ public class ForcefieldPull : MonoBehaviour {
 
     void Pull()
     {
-        
         if (distBW > startCurve)
         {
             playerC.rb2d.AddForce(pullForce * pullDirection);
@@ -51,4 +51,5 @@ public class ForcefieldPull : MonoBehaviour {
             playerC.rb2d.AddForce(pullForce * newPullDirection);
         }
     }
+
 }

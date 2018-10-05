@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D rb2d;
-    public float speed;
     public GameObject forcfield;
+    public float SpeedConst;
     
     
 
@@ -51,6 +51,7 @@ public class PlayerController : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        ConastSpeed();
         playerVelocity = rb2d.velocity.magnitude;
     }
 
@@ -59,7 +60,10 @@ public class PlayerController : MonoBehaviour
         // When the player die reset things the player needs.
         attatched = false;
         forcfield.SetActive(false);
-        attatchedTo.GetComponent<AsteroidBehavior>().imAttatched = false;
+        if (attatchedTo != null)
+        {
+            attatchedTo.GetComponent<AsteroidBehavior>().imAttatched = false;
+        }
         attatchedTo = null;
         rb2d.velocity = Vector2.zero;
     }
@@ -75,5 +79,12 @@ public class PlayerController : MonoBehaviour
         v.y = (sin * tx) + (cos * ty);
         return v;
     }
-    
+
+
+    void ConastSpeed()
+    {
+        Vector3 normalizedVel = rb2d.velocity.normalized;
+        rb2d.velocity = new Vector2(normalizedVel.x * SpeedConst, normalizedVel.y * SpeedConst);
+    }
+
 }

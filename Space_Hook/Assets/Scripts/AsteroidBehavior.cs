@@ -35,7 +35,8 @@ public class AsteroidBehavior : MonoBehaviour {
         forcfield.transform.position = transform.position;
     }
     // Update is called once per frame
-    void Update () {
+    void Update ()
+    {
         if (rotating)
         {
             if (!clockwise)
@@ -45,7 +46,6 @@ public class AsteroidBehavior : MonoBehaviour {
             else
             {
                 transform.Rotate(Vector3.forward * Time.deltaTime * -speed);
-
             }
         }
 
