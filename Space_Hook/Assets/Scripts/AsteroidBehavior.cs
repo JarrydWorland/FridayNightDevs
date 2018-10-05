@@ -14,10 +14,10 @@ public class AsteroidBehavior : MonoBehaviour {
     
     private PlayerController playerC;
     public Collider2D myCol;
-    
 
 	// Use this for initialization
 	void Start () {
+
         forcfield.SetActive(false);
         imAttatched = false;
         playerC = player.GetComponent<PlayerController>();
@@ -27,12 +27,34 @@ public class AsteroidBehavior : MonoBehaviour {
     {
         if(playerC.attatchedTo != null)
         {
+            forcfield.GetComponent<ForcefieldPull>().checkRot = true;
             playerC.attatchedTo.GetComponent<AsteroidBehavior>().imAttatched = false;
+
+            if (playerC.attatchedTo != attatchedTo)
+            {
+                playerC.attatchedTo = attatchedTo;
+                imAttatched = true;
+                forcfield.SetActive(true);
+                forcfield.transform.position = transform.position;
+            }
+            else
+            {
+                forcfield.SetActive(false);
+                forcfield.GetComponent<ForcefieldPull>().checkRot = true;
+                playerC.attatchedTo.GetComponent<AsteroidBehavior>().imAttatched = false;
+                playerC.attatchedTo = null;
+                playerC.attatched = false;
+            }
         }
-        playerC.attatchedTo = attatchedTo;
-        imAttatched = true;
-        forcfield.SetActive(true);
-        forcfield.transform.position = transform.position;
+        else
+        {
+            playerC.attatchedTo = attatchedTo;
+            imAttatched = true;
+            forcfield.SetActive(true);
+            forcfield.transform.position = transform.position;
+        }
+
+       
     }
     // Update is called once per frame
     void Update ()
