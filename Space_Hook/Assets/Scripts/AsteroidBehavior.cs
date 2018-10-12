@@ -37,7 +37,7 @@ public class AsteroidBehavior : MonoBehaviour {
         if(collision.collider.gameObject.tag == "Player")
         {
             if(playerC.attatchedTo!= null)
-            { playerC.Detatch(); }
+            { forcfield.GetComponent<ForcefieldPull>().clockwise = !forcfield.GetComponent<ForcefieldPull>().clockwise; }
             
 
             if (attatchedTo.tag == "Bouncy")
@@ -130,6 +130,8 @@ public class AsteroidBehavior : MonoBehaviour {
         }*/
         void OnMouseDown()
     {
+        sMan.PlaySound(sMan.Forcefield);
+
         if(playerC.attatchedTo != null) //your already attatched
         {
             forcfield.GetComponent<ForcefieldPull>().checkRot = true;

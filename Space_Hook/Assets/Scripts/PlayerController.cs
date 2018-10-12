@@ -28,8 +28,9 @@ public class PlayerController : MonoBehaviour
         attatchedTo.GetComponent<AsteroidBehavior>().imAttatched = false;
         attatchedTo = null;
         attatched = false;
-        this.GetComponent<ConstantSpeed>().Speed += 3;
+        GetComponent<ConstantSpeed>().Speed += 3;
         sMan.PlaySound(sMan.SpeedUp);
+        sMan.SecondsoundToPlay.clip = null;
     }
     void Attatched()
     {
@@ -69,7 +70,9 @@ public class PlayerController : MonoBehaviour
         // When the player die reset things the player needs.
         attatched = false;
         forcfield.SetActive(false);
-        attatchedTo.GetComponent<AsteroidBehavior>().imAttatched = false;
+        GetComponent<ConstantSpeed>().Speed = GetComponent<ConstantSpeed>().StartSpeed;
+        if (attatchedTo!= null)
+            attatchedTo.GetComponent<AsteroidBehavior>().imAttatched = false;
         attatchedTo = null;
         rb2d.velocity = Vector2.zero;
     }
