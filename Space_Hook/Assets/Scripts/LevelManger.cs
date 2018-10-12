@@ -17,4 +17,12 @@ public class LevelManger : MonoBehaviour
         player.Reset();
         player.transform.position = StartPoint;
     }
+
+    public void OnTriggerExit2D(Collider2D collider2D)
+    {
+        if (collider2D.GetComponent<PlayerController>())
+        {
+            ResetLevel();
+        }
+    }
 }

@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour
         // When the player die reset things the player needs.
         attatched = false;
         forcfield.SetActive(false);
-        attatchedTo.GetComponent<AsteroidBehavior>().imAttatched = false;
+        if(attatchedTo !=null) attatchedTo.GetComponent<AsteroidBehavior>().imAttatched = false;
         attatchedTo = null;
         rb2d.velocity = Vector2.zero;
     }
