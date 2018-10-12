@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     
     public float speed;
     public GameObject forcfield;
+    public GameObject SoundManager;
+    private SoundManager sMan;
     
     //Below is public for testing in Unity, otherwise would be private
     public GameObject attatchedTo;
@@ -16,6 +18,7 @@ public class PlayerController : MonoBehaviour
     
     void Start()
     {
+        sMan = SoundManager.GetComponent<SoundManager>();
         rb2d.AddForce(Vector2.right * 5f);
     }
     public void Detatch()
@@ -26,7 +29,7 @@ public class PlayerController : MonoBehaviour
         attatchedTo = null;
         attatched = false;
         this.GetComponent<ConstantSpeed>().Speed += 3;
-
+        sMan.PlaySound(sMan.SpeedUp);
     }
     void Attatched()
     {
@@ -42,7 +45,7 @@ public class PlayerController : MonoBehaviour
 
     void FreeFall()
     {
-        this.GetComponent<ConstantSpeed>().Speed -= 0.02f;
+        this.GetComponent<ConstantSpeed>().Speed -= 0.03f;
     }
     void Update()
     {
@@ -58,6 +61,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         playerVelocity = rb2d.velocity.magnitude;
+        sMan.ChangePitch((this.GetComponent<ConstantSpeed>().Speed / 10) - 0.5f);
     }
 
     public void Reset()
