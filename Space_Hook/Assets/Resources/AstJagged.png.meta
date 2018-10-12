@@ -1,0 +1,466 @@
+fileFormatVersion: 2
+guid: e7cf5f95aa0f7174a825caff2fe7bc71
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: AstJagged_0
+    21300002: AstJagged_1
+    21300004: AstJagged_2
+    21300006: AstJagged_3
+    21300008: AstJagged_4
+    21300010: AstJagged_5
+    21300012: AstJagged_6
+    21300014: AstJagged_7
+    21300016: AstJagged_8
+    21300018: AstJagged_9
+    21300020: AstJagged_10
+    21300022: AstJagged_11
+    21300024: AstJagged_12
+    21300026: AstJagged_13
+    21300028: AstJagged_14
+    21300030: AstJagged_15
+    21300032: AstJagged_16
+    21300034: AstJagged_17
+    21300036: AstJagged_18
+    21300038: AstJagged_19
+    21300040: AstJagged_20
+    21300042: AstJagged_21
+    21300044: AstJagged_22
+    21300046: AstJagged_23
+    21300048: AstJagged_24
+    21300050: AstJagged_25
+    21300052: AstJagged_26
+    21300054: AstJagged_27
+    21300056: AstJagged_28
+    21300058: AstJagged_29
+    21300060: AstJagged_30
+    21300062: AstJagged_31
+    21300064: AstJagged_32
+    21300066: AstJagged_33
+    21300068: AstJagged_34
+    21300070: AstJagged_35
+    21300072: AstJagged_36
+    21300074: AstJagged_37
+    21300076: AstJagged_38
+    21300078: AstJagged_39
+    21300080: AstJagged_40
+    21300082: AstJagged_41
+    21300084: AstJagged_42
+    21300086: AstJagged_43
+    21300088: AstJagged_44
+    21300090: AstJagged_45
+    21300092: AstJagged_46
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: AstJagged_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 170.25
+        width: 59
+        height: 56.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bfbccb7715c4374b9e7a694192da96a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AstJagged_1
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 170.25
+        width: 59
+        height: 56.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32355532a7a3c0e44977fb12c3af4dac
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AstJagged_2
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 170.25
+        width: 59
+        height: 56.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08cca715cd8b5524c9e9007634226b2c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AstJagged_3
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 170.25
+        width: 59
+        height: 56.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee871be961cb52743a3a5816674f6190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AstJagged_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 114.25
+        width: 59
+        height: 56.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 571b215b5f2ce6b4785c15502628e76f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AstJagged_5
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 114.25
+        width: 59
+        height: 56.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ee1ada539508e24aa812f3df5265868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AstJagged_6
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 114.25
+        width: 59
+        height: 56.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d6dae113bb40fc4a8524f56f74ec8ec
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AstJagged_7
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 114.25
+        width: 59
+        height: 56.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e19b380fa8832654785ade6b66c699e6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AstJagged_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 58.25
+        width: 59
+        height: 56.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5b538653a76ac843a0da4689a7aca1b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AstJagged_9
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 58.25
+        width: 59
+        height: 56.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64b061da26ffe8d4fa0aabe9adb5d044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AstJagged_10
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 58.25
+        width: 59
+        height: 56.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26404cd96a28cd74a9d6809e46531cc9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AstJagged_11
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 58.25
+        width: 59
+        height: 56.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f9eb2991e6b5d446a2de3857b38b24c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AstJagged_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2.25
+        width: 59
+        height: 56.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68fb24df22fe7944f9d43e0e5733fde4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AstJagged_13
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 2.25
+        width: 59
+        height: 56.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfb82d6b68919874f83ce2a56eb2342b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AstJagged_14
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 2.25
+        width: 59
+        height: 56.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6df7f8dcf873a00489069023fac30a05
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AstJagged_15
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 2.25
+        width: 59
+        height: 56.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc1287c4d01e3114c9281be943fdf21d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: bdfc8e081fbf18f4c8a2dd328b0ee565
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

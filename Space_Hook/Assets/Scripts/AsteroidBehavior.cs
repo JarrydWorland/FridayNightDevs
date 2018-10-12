@@ -11,12 +11,20 @@ public class AsteroidBehavior : MonoBehaviour {
     public GameObject forcfield;
     public GameObject player;
     public bool imAttatched;
-    
+    public GameObject SoundManager;
+    private SoundManager sMan;
+    public bool isMoving;
+   // public List<GameObject> astShards;
+  //  public Sprite[] shardSprites;
+   // public GameObject Shard;
+    private Rigidbody2D astShardsBod;
     private PlayerController playerC;
     public Collider2D myCol;
 
 	// Use this for initialization
 	void Start () {
+        sMan = SoundManager.GetComponent<SoundManager>();
+        //shardSprites = Resources.LoadAll<Sprite>("AstJagged");
 
         forcfield.SetActive(false);
         imAttatched = false;
@@ -28,7 +36,6 @@ public class AsteroidBehavior : MonoBehaviour {
     {
         if(collision.collider.gameObject.tag == "Player")
         {
-            
             if(playerC.attatchedTo!= null)
             { playerC.Detatch(); }
             
@@ -36,18 +43,92 @@ public class AsteroidBehavior : MonoBehaviour {
             if (attatchedTo.tag == "Bouncy")
             {
                 //Bounce();
+                sMan.PlaySound(sMan.bounceCol);
                 player.GetComponent<ConstantSpeed>().Speed += 2;
             }
             if (attatchedTo.tag == "Damage")
             {
                 //Damage();
-                player.GetComponent<ConstantSpeed>().Speed -= 4;
-                Destroy(attatchedTo);
+                sMan.PlaySound(sMan.dmgCol);
+                /*while(astShards.Count<16)
+                {
+                    CreateShard();
+                }
+                */
+
+                if (player.GetComponent<ConstantSpeed>().max - player.GetComponent<ConstantSpeed>().Speed < player.GetComponent<ConstantSpeed>().Speed)
+                {
+                    player.GetComponent<ConstantSpeed>().Speed = player.GetComponent<ConstantSpeed>().max - player.GetComponent<ConstantSpeed>().Speed;
+                }
+                else
+                {
+                    player.GetComponent<ConstantSpeed>().Speed = 10;
+                }
+              
+               // gameObject.SetActive(false);
             }
         }
     }
 
-    void OnMouseDown()
+    /*void CreateShard()
+    {
+        float j = -0.6f, k = 0;
+        
+        astShards.Add(Instantiate(Shard, transform.position, transform.rotation));
+        int i = astShards.Count;
+        astShards[i].AddComponent<AstShard>();
+        astShardsBod = astShards[i].GetComponent<Rigidbody2D>();
+            if (i < 4)
+            {
+                astShardsBod.AddForce(Vector2.up * player.GetComponent<ConstantSpeed>().Speed / 2);
+            }
+            else if (i < 8)
+            {
+                astShardsBod.AddForce(Vector2.up * player.GetComponent<ConstantSpeed>().Speed / 3);
+
+            }
+            else if (i < 12)
+            {
+                astShardsBod.AddForce(Vector2.down * player.GetComponent<ConstantSpeed>().Speed / 3);
+            }
+            else
+            {
+                astShardsBod.AddForce(Vector2.down * player.GetComponent<ConstantSpeed>().Speed / 3);
+            }
+
+            if ((i == 0) || (i == 4) || (i == 8) || (i == 12))
+            {
+                astShardsBod.AddForce(Vector2.right * -player.GetComponent<ConstantSpeed>().Speed / 2);
+
+            }
+            else if ((i == 1) || (i == 5) || (i == 9) || (i == 13))
+            {
+                astShardsBod.AddForce(Vector2.right * -player.GetComponent<ConstantSpeed>().Speed / 3);
+
+            }
+            else if ((i == 2) || (i == 6) || (i == 10) || (i == 14))
+            {
+                astShardsBod.AddForce(Vector2.right * player.GetComponent<ConstantSpeed>().Speed / 3);
+
+            }
+            else if ((i == 3) || (i == 7) || (i == 11) || (i == 15))
+            {
+                astShardsBod.AddForce(Vector2.right * player.GetComponent<ConstantSpeed>().Speed / 2);
+
+            }
+
+            if (j > 1.2f)
+            {
+                j = -0.6f;
+                k -= 0.6f;
+            }
+
+
+            astShards[i].transform.position = astShards[i].transform.position + new Vector3(j, k, 0);
+            j += 0.6f;
+
+        }*/
+        void OnMouseDown()
     {
         if(playerC.attatchedTo != null) //your already attatched
         {
@@ -61,6 +142,8 @@ public class AsteroidBehavior : MonoBehaviour {
                 imAttatched = true;
                 forcfield.SetActive(true);
                 forcfield.transform.position = transform.position;
+                sMan.PlaySound(sMan.SpeedUp);
+
             }
             else //if youre attacthed to this object and then click it - detatches
             {
@@ -94,7 +177,7 @@ public class AsteroidBehavior : MonoBehaviour {
 
         if(imAttatched)
         {
-            player.GetComponent<ConstantSpeed>().Speed -= 0.02f;
+            player.GetComponent<ConstantSpeed>().Speed += (0.1f * forcfield.GetComponent<ForcefieldPull>().howClose/2);
             if (!playerC.attatched)
             {
                 playerC.attatched = true;
