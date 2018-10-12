@@ -65,7 +65,7 @@ public class AsteroidBehavior : MonoBehaviour {
                     player.GetComponent<ConstantSpeed>().Speed = 10;
                 }
               
-               // gameObject.SetActive(false);
+                gameObject.SetActive(false);
             }
         }
     }
