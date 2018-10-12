@@ -47,6 +47,8 @@ public class PlayerController : MonoBehaviour
     void FreeFall()
     {
         this.GetComponent<ConstantSpeed>().Speed -= 0.03f;
+        forcfield.GetComponent<ForcefieldPull>().howClose = 0;
+
     }
     void Update()
     {

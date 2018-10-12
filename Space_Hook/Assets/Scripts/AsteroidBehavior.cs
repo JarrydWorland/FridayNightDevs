@@ -36,8 +36,10 @@ public class AsteroidBehavior : MonoBehaviour {
     {
         if(collision.collider.gameObject.tag == "Player")
         {
-            if(playerC.attatchedTo!= null)
-            { forcfield.GetComponent<ForcefieldPull>().clockwise = !forcfield.GetComponent<ForcefieldPull>().clockwise; }
+            if (playerC.attatchedTo != null)
+                if (forcfield.GetComponent<ForcefieldPull>().howClose > 0.8f)
+                { forcfield.GetComponent<ForcefieldPull>().clockwise = !forcfield.GetComponent<ForcefieldPull>().clockwise; }
+                else { playerC.Detatch(); }
             
 
             if (attatchedTo.tag == "Bouncy")
