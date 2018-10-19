@@ -90,9 +90,9 @@ public class ForcefieldPull : MonoBehaviour {
 
     private void LateUpdate()
     {
-        if(playerC.attatchedTo.GetComponent<AsteroidBehavior>().isMoving)
+        if (playerC.attatched)
         {
-            transform.position = playerC.attatchedTo.transform.position;     
+            transform.position = playerC.attatchedTo.transform.position;
         }
     }
 
