@@ -19,12 +19,12 @@ public class LevelManger : Singleton<LevelManger>
         Debug.Log("Level Reset");
         player.Reset();
         player.transform.position = StartPoint;
-        foreach(GameObject ast in Asteroids)
+        foreach(GameObject g in Asteroids)
         {
-            foreach(Transform t in ast.transform)
+            foreach (Transform t in g.transform)
             {
                 t.gameObject.SetActive(true);
-                t.position = t.gameObject.GetComponent<AsteroidBehavior>().startPosition ;
+                t.transform.position = t.gameObject.GetComponent<AsteroidBehavior>().startPosition;
             }
         }
     }
@@ -35,9 +35,9 @@ public class LevelManger : Singleton<LevelManger>
         {
             ResetLevel();
         }
-        /*if (collision.GetComponent<AsteroidBehavior>())
+        if (collision.GetComponent<AsteroidBehavior>())
         {
-            collision.gameObject.transform.position = transform.position + (transform.position - collision.gameObject.transform.position);
-        }*/
+            collision.gameObject.SetActive(false);
+        }
     }
 }

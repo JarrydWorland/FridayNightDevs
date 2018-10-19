@@ -9,7 +9,8 @@ public class AsteroidBehavior : MonoBehaviour {
     public bool rotating = true;
     public bool isMoving;
     public float movingSpeed = 100000;
-    
+
+    public SpriteRenderer mySprite; 
     public Directions startDirection;
     public GameObject attatchedTo;
 
@@ -34,6 +35,7 @@ public class AsteroidBehavior : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
+        mySprite = GetComponentInChildren<SpriteRenderer>();
         player = LevelManger.Instance.player;
         forcefield = LevelManger.Instance.ForceField;
         startPosition = transform.position;
@@ -89,6 +91,10 @@ public class AsteroidBehavior : MonoBehaviour {
             if (attatchedTo.tag == "Bouncy")
             {
                 //Bounce();
+                GameObject p = Instantiate(Resources.Load<GameObject>("BounceCol"), transform.position, transform.rotation);
+
+                p.GetComponent<ParticleSystem>().Play();
+
                 sMan.PlaySound(sMan.bounceCol);
                 player.GetComponent<ConstantSpeed>().Speed += 2;
             }
@@ -197,6 +203,8 @@ public class AsteroidBehavior : MonoBehaviour {
        
     }
     // Update is called once per frame
+
+    
     void Update () {
         if (rotating)
         {
