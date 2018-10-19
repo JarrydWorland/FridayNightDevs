@@ -8,10 +8,10 @@ public class AsteroidBehavior : MonoBehaviour {
     public bool clockwise = true;
     public bool rotating = true;
     public GameObject attatchedTo;
-    public GameObject forcfield;
+    private GameObject forcfield;
     public GameObject player;
     public bool imAttatched;
-    public GameObject SoundManager;
+    //public GameObject SoundManager;
     private SoundManager sMan;
     public bool isMoving;
    // public List<GameObject> astShards;
@@ -22,10 +22,11 @@ public class AsteroidBehavior : MonoBehaviour {
     public Collider2D myCol;
 
 	// Use this for initialization
-	void Start () {
-        sMan = SoundManager.GetComponent<SoundManager>();
+	void Start ()
+	{
+	    sMan = SoundManager.Instance;
         //shardSprites = Resources.LoadAll<Sprite>("AstJagged");
-
+	    forcfield = LevelManger.Instance.Forcefield;
         forcfield.SetActive(false);
         imAttatched = false;
         playerC = player.GetComponent<PlayerController>();

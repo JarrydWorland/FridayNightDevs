@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelManger : MonoBehaviour
+public class LevelManger : Singleton<LevelManger>
 {
     public PlayerController player;
+    public GameObject Forcefield;
     public Vector3 StartPoint;
     void Awake()
     {

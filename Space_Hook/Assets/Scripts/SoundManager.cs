@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoundManager : MonoBehaviour {
+public class SoundManager : Singleton<SoundManager> {
 
     public AudioClip dmgCol;
     public AudioClip bounceCol;
@@ -15,6 +15,10 @@ public class SoundManager : MonoBehaviour {
 	}
 	public void ChangePitch(float f)
     {
+        if (!soundToPlay && !SecondsoundToPlay)
+        {
+            return;
+        }
         soundToPlay.pitch = f;
     }
     public void PlaySound(AudioClip sound)
