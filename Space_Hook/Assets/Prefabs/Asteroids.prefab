@@ -3388,6 +3388,9 @@ MonoBehaviour:
   imAttatched: 0
   SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
+  shardPrefab: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
+    type: 2}
+  shard: {fileID: 0}
   myCol: {fileID: 0}
 --- !u!114 &114105348060056562
 MonoBehaviour:
@@ -3400,7 +3403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ebf2d393ace19344b2f602372f0d5e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 100
   clockwise: 1
   rotating: 1
   isMoving: 0
@@ -3412,6 +3415,9 @@ MonoBehaviour:
   imAttatched: 0
   SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
+  shardPrefab: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
+    type: 2}
+  shard: {fileID: 0}
   myCol: {fileID: 0}
 --- !u!114 &114126257783315550
 MonoBehaviour:
@@ -3436,6 +3442,9 @@ MonoBehaviour:
   imAttatched: 0
   SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
+  shardPrefab: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
+    type: 2}
+  shard: {fileID: 0}
   myCol: {fileID: 0}
 --- !u!114 &114140245623764210
 MonoBehaviour:
@@ -3482,6 +3491,8 @@ MonoBehaviour:
   imAttatched: 0
   SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
+  shardPrefab: {fileID: 0}
+  shard: {fileID: 0}
   myCol: {fileID: 0}
 --- !u!114 &114200599619276278
 MonoBehaviour:
@@ -3506,6 +3517,8 @@ MonoBehaviour:
   imAttatched: 0
   SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
+  shardPrefab: {fileID: 0}
+  shard: {fileID: 0}
   myCol: {fileID: 0}
 --- !u!114 &114246931905978994
 MonoBehaviour:
@@ -3530,6 +3543,8 @@ MonoBehaviour:
   imAttatched: 0
   SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
+  shardPrefab: {fileID: 0}
+  shard: {fileID: 0}
   myCol: {fileID: 0}
 --- !u!114 &114254077132214180
 MonoBehaviour:
@@ -3576,6 +3591,8 @@ MonoBehaviour:
   imAttatched: 0
   SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
+  shardPrefab: {fileID: 0}
+  shard: {fileID: 0}
   myCol: {fileID: 0}
 --- !u!114 &114321347078472148
 MonoBehaviour:
@@ -3600,6 +3617,9 @@ MonoBehaviour:
   imAttatched: 0
   SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
+  shardPrefab: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
+    type: 2}
+  shard: {fileID: 0}
   myCol: {fileID: 0}
 --- !u!114 &114347345725867584
 MonoBehaviour:
@@ -3624,6 +3644,8 @@ MonoBehaviour:
   imAttatched: 0
   SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
+  shardPrefab: {fileID: 0}
+  shard: {fileID: 0}
   myCol: {fileID: 0}
 --- !u!114 &114371889276796582
 MonoBehaviour:
@@ -3659,6 +3681,9 @@ MonoBehaviour:
   imAttatched: 0
   SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
+  shardPrefab: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
+    type: 2}
+  shard: {fileID: 0}
   myCol: {fileID: 0}
 --- !u!114 &114410952980867874
 MonoBehaviour:
@@ -3683,6 +3708,8 @@ MonoBehaviour:
   imAttatched: 0
   SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
+  shardPrefab: {fileID: 0}
+  shard: {fileID: 0}
   myCol: {fileID: 0}
 --- !u!114 &114441724296405332
 MonoBehaviour:
@@ -3707,6 +3734,9 @@ MonoBehaviour:
   imAttatched: 0
   SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
+  shardPrefab: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
+    type: 2}
+  shard: {fileID: 0}
   myCol: {fileID: 0}
 --- !u!114 &114467352441074630
 MonoBehaviour:
@@ -3731,6 +3761,9 @@ MonoBehaviour:
   imAttatched: 0
   SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
+  shardPrefab: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
+    type: 2}
+  shard: {fileID: 0}
   myCol: {fileID: 0}
 --- !u!114 &114470016556334406
 MonoBehaviour:
@@ -3755,6 +3788,8 @@ MonoBehaviour:
   imAttatched: 0
   SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
+  shardPrefab: {fileID: 0}
+  shard: {fileID: 0}
   myCol: {fileID: 0}
 --- !u!114 &114478537127165562
 MonoBehaviour:
@@ -3790,6 +3825,8 @@ MonoBehaviour:
   imAttatched: 0
   SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
+  shardPrefab: {fileID: 0}
+  shard: {fileID: 0}
   myCol: {fileID: 0}
 --- !u!114 &114503553992408274
 MonoBehaviour:
@@ -3814,6 +3851,9 @@ MonoBehaviour:
   imAttatched: 0
   SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
+  shardPrefab: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
+    type: 2}
+  shard: {fileID: 0}
   myCol: {fileID: 0}
 --- !u!114 &114512972355616804
 MonoBehaviour:
@@ -3860,6 +3900,8 @@ MonoBehaviour:
   imAttatched: 0
   SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
+  shardPrefab: {fileID: 0}
+  shard: {fileID: 0}
   myCol: {fileID: 0}
 --- !u!114 &114581276038077844
 MonoBehaviour:
@@ -3884,6 +3926,9 @@ MonoBehaviour:
   imAttatched: 0
   SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
+  shardPrefab: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
+    type: 2}
+  shard: {fileID: 0}
   myCol: {fileID: 0}
 --- !u!114 &114581773144574720
 MonoBehaviour:
@@ -3919,6 +3964,8 @@ MonoBehaviour:
   imAttatched: 0
   SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
+  shardPrefab: {fileID: 0}
+  shard: {fileID: 0}
   myCol: {fileID: 0}
 --- !u!114 &114594620212888594
 MonoBehaviour:
@@ -3954,6 +4001,8 @@ MonoBehaviour:
   imAttatched: 0
   SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
+  shardPrefab: {fileID: 0}
+  shard: {fileID: 0}
   myCol: {fileID: 0}
 --- !u!114 &114622474088788228
 MonoBehaviour:
@@ -3978,6 +4027,8 @@ MonoBehaviour:
   imAttatched: 0
   SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
+  shardPrefab: {fileID: 0}
+  shard: {fileID: 0}
   myCol: {fileID: 0}
 --- !u!114 &114634354505497932
 MonoBehaviour:
@@ -4002,6 +4053,8 @@ MonoBehaviour:
   imAttatched: 0
   SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
+  shardPrefab: {fileID: 0}
+  shard: {fileID: 0}
   myCol: {fileID: 0}
 --- !u!114 &114690575441522576
 MonoBehaviour:
@@ -4026,6 +4079,9 @@ MonoBehaviour:
   imAttatched: 0
   SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
+  shardPrefab: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
+    type: 2}
+  shard: {fileID: 0}
   myCol: {fileID: 0}
 --- !u!114 &114708814445821466
 MonoBehaviour:
@@ -4061,6 +4117,9 @@ MonoBehaviour:
   imAttatched: 0
   SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
+  shardPrefab: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
+    type: 2}
+  shard: {fileID: 0}
   myCol: {fileID: 0}
 --- !u!114 &114732501587425780
 MonoBehaviour:
@@ -4096,6 +4155,8 @@ MonoBehaviour:
   imAttatched: 0
   SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
+  shardPrefab: {fileID: 0}
+  shard: {fileID: 0}
   myCol: {fileID: 0}
 --- !u!114 &114769257031116640
 MonoBehaviour:
@@ -4131,6 +4192,9 @@ MonoBehaviour:
   imAttatched: 0
   SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
+  shardPrefab: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
+    type: 2}
+  shard: {fileID: 0}
   myCol: {fileID: 0}
 --- !u!114 &114798601612806092
 MonoBehaviour:
@@ -4155,6 +4219,8 @@ MonoBehaviour:
   imAttatched: 0
   SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
+  shardPrefab: {fileID: 0}
+  shard: {fileID: 0}
   myCol: {fileID: 0}
 --- !u!114 &114911343204269176
 MonoBehaviour:
@@ -4179,6 +4245,9 @@ MonoBehaviour:
   imAttatched: 0
   SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
+  shardPrefab: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
+    type: 2}
+  shard: {fileID: 0}
   myCol: {fileID: 0}
 --- !u!114 &114915833503334860
 MonoBehaviour:
@@ -4214,6 +4283,9 @@ MonoBehaviour:
   imAttatched: 0
   SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
+  shardPrefab: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
+    type: 2}
+  shard: {fileID: 0}
   myCol: {fileID: 0}
 --- !u!114 &114957298205397472
 MonoBehaviour:
@@ -4238,6 +4310,9 @@ MonoBehaviour:
   imAttatched: 0
   SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
+  shardPrefab: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
+    type: 2}
+  shard: {fileID: 0}
   myCol: {fileID: 0}
 --- !u!114 &114964326942711332
 MonoBehaviour:
@@ -4262,6 +4337,8 @@ MonoBehaviour:
   imAttatched: 0
   SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
+  shardPrefab: {fileID: 0}
+  shard: {fileID: 0}
   myCol: {fileID: 0}
 --- !u!114 &114971601689916614
 MonoBehaviour:
@@ -4308,6 +4385,9 @@ MonoBehaviour:
   imAttatched: 0
   SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
+  shardPrefab: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
+    type: 2}
+  shard: {fileID: 0}
   myCol: {fileID: 0}
 --- !u!212 &212031250845106502
 SpriteRenderer:

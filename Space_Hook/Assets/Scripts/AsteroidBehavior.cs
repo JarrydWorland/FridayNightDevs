@@ -16,6 +16,9 @@ public class AsteroidBehavior : MonoBehaviour {
     public bool imAttatched;
     private SoundManager sMan;
     public Vector3 startPosition;
+    public GameObject shardPrefab;
+    public GameObject shard;
+    private Rigidbody2D t;
     public Collider2D myCol;
 
     // public List<GameObject> astShards;
@@ -93,11 +96,8 @@ public class AsteroidBehavior : MonoBehaviour {
             {
                 //Damage();
                 sMan.PlaySound(sMan.dmgCol);
-                /*while(astShards.Count<16)
-                {
+               
                     CreateShard();
-                }
-                */
 
                 if (player.GetComponent<ConstantSpeed>().max - player.GetComponent<ConstantSpeed>().Speed < player.GetComponent<ConstantSpeed>().Speed)
                 {
@@ -113,64 +113,55 @@ public class AsteroidBehavior : MonoBehaviour {
         }
     }
 
-    /*void CreateShard()
+    void CreateShard()
     {
-        float j = -0.6f, k = 0;
+        int i = 0;
         
-        astShards.Add(Instantiate(Shard, transform.position, transform.rotation));
-        int i = astShards.Count;
-        astShards[i].AddComponent<AstShard>();
-        astShardsBod = astShards[i].GetComponent<Rigidbody2D>();
+        shard = (Instantiate(shardPrefab, transform.position, transform.rotation));
+
+        foreach(Transform t in shard.transform)
+        {
             if (i < 4)
             {
-                astShardsBod.AddForce(Vector2.up * player.GetComponent<ConstantSpeed>().Speed / 2);
+                t.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * player.GetComponent<ConstantSpeed>().Speed / 2);
             }
             else if (i < 8)
             {
-                astShardsBod.AddForce(Vector2.up * player.GetComponent<ConstantSpeed>().Speed / 3);
+                t.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * player.GetComponent<ConstantSpeed>().Speed / 3);
 
             }
             else if (i < 12)
             {
-                astShardsBod.AddForce(Vector2.down * player.GetComponent<ConstantSpeed>().Speed / 3);
+                t.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.down * player.GetComponent<ConstantSpeed>().Speed / 3);
             }
             else
             {
-                astShardsBod.AddForce(Vector2.down * player.GetComponent<ConstantSpeed>().Speed / 3);
+                t.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.down * player.GetComponent<ConstantSpeed>().Speed / 3);
             }
 
             if ((i == 0) || (i == 4) || (i == 8) || (i == 12))
             {
-                astShardsBod.AddForce(Vector2.right * -player.GetComponent<ConstantSpeed>().Speed / 2);
+                t.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.right * -player.GetComponent<ConstantSpeed>().Speed / 2);
 
             }
             else if ((i == 1) || (i == 5) || (i == 9) || (i == 13))
             {
-                astShardsBod.AddForce(Vector2.right * -player.GetComponent<ConstantSpeed>().Speed / 3);
+                t.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.right * -player.GetComponent<ConstantSpeed>().Speed / 3);
 
             }
             else if ((i == 2) || (i == 6) || (i == 10) || (i == 14))
             {
-                astShardsBod.AddForce(Vector2.right * player.GetComponent<ConstantSpeed>().Speed / 3);
+                t.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.right * player.GetComponent<ConstantSpeed>().Speed / 3);
 
             }
             else if ((i == 3) || (i == 7) || (i == 11) || (i == 15))
             {
-                astShardsBod.AddForce(Vector2.right * player.GetComponent<ConstantSpeed>().Speed / 2);
+                t.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.right * player.GetComponent<ConstantSpeed>().Speed / 2);
 
             }
-
-            if (j > 1.2f)
-            {
-                j = -0.6f;
-                k -= 0.6f;
-            }
-
-
-            astShards[i].transform.position = astShards[i].transform.position + new Vector3(j, k, 0);
-            j += 0.6f;
-
-        }*/
+            i++;
+        }
+    }
         void OnMouseDown()
     {
         sMan.PlaySound(sMan.Forcefield);
