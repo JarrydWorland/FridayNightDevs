@@ -3,26 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ShardScript : MonoBehaviour {
-
-
-    public GameObject SoundManager;
+    
     private SoundManager sMan;
+    public GameObject particles;
 
     // Use this for initialization
     void Start () {
-        sMan = SoundManager.GetComponent<SoundManager>();
+        sMan = SoundManager.Instance;
 	}
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.collider.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
             sMan.PlaySound(sMan.bounceCol);
+            GameObject p = Instantiate(Resources.Load<GameObject>("ShardCol"), transform.position, transform.rotation);
+
+            p.GetComponent<ParticleSystem>().Play();
             Destroy(this.gameObject);
         }
+        
     }
-
-            // Update is called once per frame
+      // Update is called once per frame
             void Update () {
 		
 	}

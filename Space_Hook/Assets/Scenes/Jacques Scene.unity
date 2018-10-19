@@ -113,6 +113,48 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &8622428
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4215724683913602, guid: 8b90a0a4cced73d48ae705fefda5aaf2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4215724683913602, guid: 8b90a0a4cced73d48ae705fefda5aaf2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4215724683913602, guid: 8b90a0a4cced73d48ae705fefda5aaf2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4215724683913602, guid: 8b90a0a4cced73d48ae705fefda5aaf2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4215724683913602, guid: 8b90a0a4cced73d48ae705fefda5aaf2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4215724683913602, guid: 8b90a0a4cced73d48ae705fefda5aaf2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4215724683913602, guid: 8b90a0a4cced73d48ae705fefda5aaf2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4215724683913602, guid: 8b90a0a4cced73d48ae705fefda5aaf2, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 8b90a0a4cced73d48ae705fefda5aaf2, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &455332617
 Prefab:
   m_ObjectHideFlags: 0
@@ -340,6 +382,8 @@ MonoBehaviour:
   attatchedTo: {fileID: 968588807}
   imAttatched: 0
   startPosition: {x: 0, y: 0, z: 0}
+  shardPrefab: {fileID: 0}
+  shard: {fileID: 0}
   myCol: {fileID: 0}
 --- !u!4 &968588813
 Transform:
@@ -631,6 +675,26 @@ Prefab:
       propertyPath: ForceField
       value: 
       objectReference: {fileID: 1240083770}
+    - target: {fileID: 61405197766079670, guid: e055b9b4012092e44baec97709eb7f23,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: -42.330353
+      objectReference: {fileID: 0}
+    - target: {fileID: 61405197766079670, guid: e055b9b4012092e44baec97709eb7f23,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 236.85211
+      objectReference: {fileID: 0}
+    - target: {fileID: 61405197766079670, guid: e055b9b4012092e44baec97709eb7f23,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -1.9157104
+      objectReference: {fileID: 0}
+    - target: {fileID: 61405197766079670, guid: e055b9b4012092e44baec97709eb7f23,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 206.59767
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e055b9b4012092e44baec97709eb7f23, type: 2}
   m_IsPrefabParent: 0
