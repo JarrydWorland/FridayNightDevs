@@ -53,6 +53,7 @@ public class SoundManager : Singleton<SoundManager> {
 
     public void StopSound(AudioSource soundSource)
     {
+        return;
         // TODO FIX THIS;
         if (soundSource.clip != null)
         {

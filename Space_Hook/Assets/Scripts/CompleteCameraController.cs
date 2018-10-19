@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CompleteCameraController : MonoBehaviour
+public class CompleteCameraController : Singleton<CompleteCameraController>
 {
 
     private PlayerController playerC; 
@@ -34,5 +34,10 @@ public class CompleteCameraController : MonoBehaviour
             transform.position += new Vector3((playerC.transform.position.x-transform.position.x)*transitionSpeed*2,(playerC.transform.position.y - transform.position.y) * transitionSpeed*2, 0f );
         }
 
+    }
+
+    public void MoveCameraTo(Vector2 tartgetPos)
+    {
+        transform.position = new Vector3(tartgetPos.x, tartgetPos.y, transform.position.z);
     }
 }
