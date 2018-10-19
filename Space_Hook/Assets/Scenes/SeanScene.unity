@@ -30652,6 +30652,11 @@ Prefab:
       propertyPath: transitionSpeed
       value: 0.04
       objectReference: {fileID: 0}
+    - target: {fileID: 20781828192473440, guid: 962b5ca10a2218847904b424b3ad685f,
+        type: 2}
+      propertyPath: orthographic size
+      value: 24.9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 962b5ca10a2218847904b424b3ad685f, type: 2}
   m_IsPrefabParent: 0
@@ -32460,102 +32465,6 @@ Prefab:
       propertyPath: SoundManager
       value: 
       objectReference: {fileID: 1542406525}
-    - target: {fileID: 114981784483815024, guid: cb1d51c33f6e33e45bbd85dccd75c73b,
-        type: 2}
-      propertyPath: shardPrefab
-      value: 
-      objectReference: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
-        type: 2}
-    - target: {fileID: 114690575441522576, guid: cb1d51c33f6e33e45bbd85dccd75c73b,
-        type: 2}
-      propertyPath: shardPrefab
-      value: 
-      objectReference: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
-        type: 2}
-    - target: {fileID: 114382244364123220, guid: cb1d51c33f6e33e45bbd85dccd75c73b,
-        type: 2}
-      propertyPath: shardPrefab
-      value: 
-      objectReference: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
-        type: 2}
-    - target: {fileID: 114503553992408274, guid: cb1d51c33f6e33e45bbd85dccd75c73b,
-        type: 2}
-      propertyPath: shardPrefab
-      value: 
-      objectReference: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
-        type: 2}
-    - target: {fileID: 114792838928127104, guid: cb1d51c33f6e33e45bbd85dccd75c73b,
-        type: 2}
-      propertyPath: shardPrefab
-      value: 
-      objectReference: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
-        type: 2}
-    - target: {fileID: 114082148103665936, guid: cb1d51c33f6e33e45bbd85dccd75c73b,
-        type: 2}
-      propertyPath: shardPrefab
-      value: 
-      objectReference: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
-        type: 2}
-    - target: {fileID: 114956483303710318, guid: cb1d51c33f6e33e45bbd85dccd75c73b,
-        type: 2}
-      propertyPath: shardPrefab
-      value: 
-      objectReference: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
-        type: 2}
-    - target: {fileID: 114911343204269176, guid: cb1d51c33f6e33e45bbd85dccd75c73b,
-        type: 2}
-      propertyPath: shardPrefab
-      value: 
-      objectReference: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
-        type: 2}
-    - target: {fileID: 114441724296405332, guid: cb1d51c33f6e33e45bbd85dccd75c73b,
-        type: 2}
-      propertyPath: shardPrefab
-      value: 
-      objectReference: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
-        type: 2}
-    - target: {fileID: 114467352441074630, guid: cb1d51c33f6e33e45bbd85dccd75c73b,
-        type: 2}
-      propertyPath: shardPrefab
-      value: 
-      objectReference: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
-        type: 2}
-    - target: {fileID: 114126257783315550, guid: cb1d51c33f6e33e45bbd85dccd75c73b,
-        type: 2}
-      propertyPath: shardPrefab
-      value: 
-      objectReference: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
-        type: 2}
-    - target: {fileID: 114321347078472148, guid: cb1d51c33f6e33e45bbd85dccd75c73b,
-        type: 2}
-      propertyPath: shardPrefab
-      value: 
-      objectReference: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
-        type: 2}
-    - target: {fileID: 114105348060056562, guid: cb1d51c33f6e33e45bbd85dccd75c73b,
-        type: 2}
-      propertyPath: shardPrefab
-      value: 
-      objectReference: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
-        type: 2}
-    - target: {fileID: 114957298205397472, guid: cb1d51c33f6e33e45bbd85dccd75c73b,
-        type: 2}
-      propertyPath: shardPrefab
-      value: 
-      objectReference: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
-        type: 2}
-    - target: {fileID: 114729756482725392, guid: cb1d51c33f6e33e45bbd85dccd75c73b,
-        type: 2}
-      propertyPath: shardPrefab
-      value: 
-      objectReference: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
-        type: 2}
-    - target: {fileID: 114581276038077844, guid: cb1d51c33f6e33e45bbd85dccd75c73b,
-        type: 2}
-      propertyPath: shardPrefab
-      value: 
-      objectReference: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
-        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cb1d51c33f6e33e45bbd85dccd75c73b, type: 2}
   m_IsPrefabParent: 0

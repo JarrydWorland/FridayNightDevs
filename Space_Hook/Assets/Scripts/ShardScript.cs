@@ -18,7 +18,7 @@ public class ShardScript : MonoBehaviour {
         if (collision.collider.gameObject.tag == "Player")
         {
             sMan.PlaySound(sMan.bounceCol);
-            Destroy(this);
+            Destroy(this.gameObject);
         }
     }
 
