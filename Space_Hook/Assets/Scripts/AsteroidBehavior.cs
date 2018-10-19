@@ -91,6 +91,10 @@ public class AsteroidBehavior : MonoBehaviour {
             if (attatchedTo.tag == "Bouncy")
             {
                 //Bounce();
+                GameObject p = Instantiate(Resources.Load<GameObject>("BounceCol"), transform.position, transform.rotation);
+
+                p.GetComponent<ParticleSystem>().Play();
+
                 sMan.PlaySound(sMan.bounceCol);
                 player.GetComponent<ConstantSpeed>().Speed += 2;
             }

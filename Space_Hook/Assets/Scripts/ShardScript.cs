@@ -5,6 +5,7 @@ using UnityEngine;
 public class ShardScript : MonoBehaviour {
     
     private SoundManager sMan;
+    public GameObject particles;
 
     // Use this for initialization
     void Start () {
@@ -16,6 +17,9 @@ public class ShardScript : MonoBehaviour {
         if (collision.gameObject.tag == "Player")
         {
             sMan.PlaySound(sMan.bounceCol);
+            GameObject p = Instantiate(Resources.Load<GameObject>("ShardCol"), transform.position, transform.rotation);
+
+            p.GetComponent<ParticleSystem>().Play();
             Destroy(this.gameObject);
         }
         
