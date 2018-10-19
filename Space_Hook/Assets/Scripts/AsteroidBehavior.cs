@@ -101,13 +101,13 @@ public class AsteroidBehavior : MonoBehaviour {
             if (attatchedTo.tag == "Damage")
             {
                 //Damage();
-                sMan.PlaySound(sMan.dmgCol);
+                sMan.PlaySound(sMan.explosion);
                
                     CreateShard();
 
                 if (player.GetComponent<ConstantSpeed>().max - player.GetComponent<ConstantSpeed>().Speed < player.GetComponent<ConstantSpeed>().Speed)
                 {
-                    player.GetComponent<ConstantSpeed>().Speed = player.GetComponent<ConstantSpeed>().max - player.GetComponent<ConstantSpeed>().Speed;
+                    player.GetComponent<ConstantSpeed>().Speed = (player.GetComponent<ConstantSpeed>().max - player.GetComponent<ConstantSpeed>().Speed)*2;
                 }
                 else
                 {

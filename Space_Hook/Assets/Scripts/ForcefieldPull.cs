@@ -81,7 +81,7 @@ public class ForcefieldPull : MonoBehaviour {
         }
        
 
-    Pull();
+    
 	}
 
     private void LateUpdate()
@@ -90,6 +90,7 @@ public class ForcefieldPull : MonoBehaviour {
         {
             transform.position = playerC.attatchedTo.transform.position;
         }
+        Pull();
     }
 
     void Pull()
@@ -113,6 +114,11 @@ public class ForcefieldPull : MonoBehaviour {
             Vector2 newPullDirection = playerC.Rotate(pullDirection, degreeChange);
             playerC.rb2d.velocity = Vector2.zero;
             playerC.rb2d.AddForce(pullForce * /*((1-howClose)*10) **/ newPullDirection);
+        }
+
+        if(playerC.attatchedTo.GetComponent<Rigidbody2D>().velocity.magnitude != 0)
+        {
+            playerC.transform.position += (Vector3)playerC.attatchedTo.GetComponent<Rigidbody2D>().velocity * Time.deltaTime;
         }
     }
 

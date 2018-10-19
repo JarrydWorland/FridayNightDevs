@@ -291,13 +291,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1191893099145134}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 431dd4910eafd554fb05c0f2e2cd783f, type: 3}
+  m_Script: {fileID: 11500000, guid: 1798392ff9930994dacd1ee2dcfe4ee0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dmgCol: {fileID: 0}
-  bounceCol: {fileID: 0}
-  SpeedUp: {fileID: 0}
-  Forcefield: {fileID: 0}
-  soundToPlay: {fileID: 0}
-  SecondsoundToPlay: {fileID: 0}
+  dmgCol: {fileID: 8300000, guid: f9706f85aff89114a9ec64b59d6a7f03, type: 3}
+  bounceCol: {fileID: 8300000, guid: 879bc7425a09576419f2d4e9b0d6c6e8, type: 3}
+  SpeedUp: {fileID: 8300000, guid: 6612963080962da4f90b39ba2ffe26d5, type: 3}
+  Forcefield: {fileID: 8300000, guid: 0e62f70b31f88b94e96bcabf54d53bbd, type: 3}
+  explosion: {fileID: 8300000, guid: 539bc9251e9f0cf4db233cbdc4077232, type: 3}
+  soundToPlay: {fileID: 82936536760635676}
+  SecondsoundToPlay: {fileID: 82371455351980512}
   startingPitch: 1
