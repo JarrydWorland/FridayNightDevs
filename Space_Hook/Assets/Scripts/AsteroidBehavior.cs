@@ -9,26 +9,32 @@ public class AsteroidBehavior : MonoBehaviour {
     public bool rotating = true;
     public bool isMoving;
     public float movingSpeed = 100000;
-    public enum Directions {Up, Down, Left, Right, UpLeft, UpRight, DownLeft, DownRight  };
+    
     public Directions startDirection;
     public GameObject attatchedTo;
-    public GameObject forcefield;
-    public GameObject player;
+
     public bool imAttatched;
-    public GameObject SoundManager;
     private SoundManager sMan;
     public Vector3 startPosition;
-   // public List<GameObject> astShards;
-  //  public Sprite[] shardSprites;
-   // public GameObject Shard;
-    private Rigidbody2D astShardsBod;
-    private PlayerController playerC;
     public Collider2D myCol;
 
-	// Use this for initialization
-	void Start () {
+    // public List<GameObject> astShards;
+    //  public Sprite[] shardSprites;
+    // public GameObject Shard;
+
+    private Rigidbody2D astShardsBod;
+    private PlayerController player;
+    private GameObject forcefield;
+
+    public enum Directions { Up, Down, Left, Right, UpLeft, UpRight, DownLeft, DownRight };
+
+    // Use this for initialization
+    void Start ()
+    {
+        player = LevelManger.Instance.player;
+        forcefield = LevelManger.Instance.ForceField;
         startPosition = transform.position;
-        sMan = SoundManager.GetComponent<SoundManager>();
+	    sMan = SoundManager.Instance;
         //shardSprites = Resources.LoadAll<Sprite>("AstJagged");
         if(startDirection!= null && isMoving)
         {
@@ -62,10 +68,8 @@ public class AsteroidBehavior : MonoBehaviour {
             }
             GetComponent<Rigidbody2D>().AddForce(startD * movingSpeed);
         }
-
         forcefield.SetActive(false);
         imAttatched = false;
-        playerC = player.GetComponent<PlayerController>();
         myCol = attatchedTo.GetComponent<Collider2D>();
 	}
 
@@ -73,10 +77,10 @@ public class AsteroidBehavior : MonoBehaviour {
     {
         if(collision.collider.gameObject.tag == "Player")
         {
-            if (playerC.attatchedTo != null )
-                if (forcefield.GetComponent<ForcefieldPull>().howClose > 0.8f && playerC.attatchedTo != attatchedTo)
+            if (player.attatchedTo != null )
+                if (forcefield.GetComponent<ForcefieldPull>().howClose > 0.8f && player.attatchedTo != attatchedTo)
                 { forcefield.GetComponent<ForcefieldPull>().clockwise = !forcefield.GetComponent<ForcefieldPull>().clockwise; }
-                else { playerC.Detatch(); }
+                else { player.Detatch(); }
             
 
             if (attatchedTo.tag == "Bouncy")
@@ -171,15 +175,15 @@ public class AsteroidBehavior : MonoBehaviour {
     {
         sMan.PlaySound(sMan.Forcefield);
 
-        if(playerC.attatchedTo != null) //your already attatched
+        if(player.attatchedTo != null) //your already attatched
         {
             forcefield.GetComponent<ForcefieldPull>().checkRot = true;
-            playerC.attatchedTo.GetComponent<AsteroidBehavior>().imAttatched = false;
+            player.attatchedTo.GetComponent<AsteroidBehavior>().imAttatched = false;
 
-            if (playerC.attatchedTo != attatchedTo) //if what this object is not what youre currently attatched to
+            if (player.attatchedTo != attatchedTo) //if what this object is not what youre currently attatched to
             {
                 player.GetComponent<ConstantSpeed>().Speed += 3f;
-                playerC.attatchedTo = attatchedTo;
+                player.attatchedTo = attatchedTo;
                 imAttatched = true;
                 forcefield.SetActive(true);
                 forcefield.transform.position = transform.position;
@@ -188,12 +192,12 @@ public class AsteroidBehavior : MonoBehaviour {
             }
             else //if youre attacthed to this object and then click it - detatches
             {
-                playerC.Detatch();
+                player.Detatch();
             }
         }
         else //if in free fall - attatch
         {
-            playerC.attatchedTo = attatchedTo;
+            player.attatchedTo = attatchedTo;
             imAttatched = true;
             forcefield.SetActive(true);
             forcefield.transform.position = transform.position;
@@ -219,10 +223,10 @@ public class AsteroidBehavior : MonoBehaviour {
         if(imAttatched)
         {
             player.GetComponent<ConstantSpeed>().Speed += (0.1f * forcefield.GetComponent<ForcefieldPull>().howClose/2);
-            if (!playerC.attatched)
+            if (!player.attatched)
             {
-                playerC.attatched = true;
-                playerC.attatchedTo = attatchedTo;
+                player.attatched = true;
+                player.attatchedTo = attatchedTo;
             }
         }
     }

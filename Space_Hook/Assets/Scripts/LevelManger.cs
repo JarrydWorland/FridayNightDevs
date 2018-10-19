@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelManger : MonoBehaviour
+public class LevelManger : Singleton<LevelManger>
 {
     public PlayerController player;
+    public GameObject ForceField;
     public Vector3 StartPoint;
     public List<GameObject> Asteroids;
 

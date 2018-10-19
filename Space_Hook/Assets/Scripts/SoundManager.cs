@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoundManager : MonoBehaviour {
+public class SoundManager : Singleton<SoundManager> {
 
     public AudioClip dmgCol;
     public AudioClip bounceCol;
@@ -20,11 +20,21 @@ public class SoundManager : MonoBehaviour {
 	}
 	public void ChangePitch(float f)
     {
+        if (!soundToPlay && !SecondsoundToPlay)
+        {
+            Debug.Log("No sounds");
+            return;
+        }
         soundToPlay.pitch = f;
         SecondsoundToPlay.pitch = f;
     }
     public void PlaySound(AudioClip sound)
     {
+        if (!sound)
+        {
+            Debug.Log("No sounds");
+            return;
+        }
         if (sound == Forcefield)
         {
             SecondsoundToPlay.clip = sound;
@@ -38,7 +48,17 @@ public class SoundManager : MonoBehaviour {
             soundToPlay.Play();
         }
     }
-	// Update is called once per frame
+
+    public void StopSound(AudioSource soundSource)
+    {
+        // TODO FIX THIS;
+        if (soundSource.clip != null)
+        {
+            soundSource.clip = null;
+        }
+    }
+
+    // Update is called once per frame
 	void Update () {
 		
 	}

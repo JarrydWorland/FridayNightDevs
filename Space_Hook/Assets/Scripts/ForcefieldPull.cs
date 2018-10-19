@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class ForcefieldPull : MonoBehaviour {
 
-    
-    public GameObject player;
-    
-
     private Vector2 betweenFP;
     private Vector2 pullDirection;
     private PlayerController playerC;
@@ -24,14 +20,14 @@ public class ForcefieldPull : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        playerC = player.GetComponent<PlayerController>();
+        playerC = LevelManger.Instance.player;
     }
 	
     void CheckRotation()
     {
-        if (player.transform.position.x <= transform.position.x)//left - mid
+        if (playerC.transform.position.x <= transform.position.x)//left - mid
         {
-            if (player.transform.position.y >= transform.position.y) //top-mid
+            if (playerC.transform.position.y >= transform.position.y) //top-mid
             {
                 if (angle >= 0 && angle <= 180)
                 {
@@ -50,7 +46,7 @@ public class ForcefieldPull : MonoBehaviour {
         }
         else//right
         {
-            if (player.transform.position.y >= transform.position.y) //top-mid
+            if (playerC.transform.position.y >= transform.position.y) //top-mid
             {
                 if (angle >= 0 && angle <= 180)
                 {
@@ -70,8 +66,8 @@ public class ForcefieldPull : MonoBehaviour {
     }
 	void Update () {
 
-        pullForce = player.GetComponent<ConstantSpeed>().Speed * 5;
-        betweenFP = ((Vector2)transform.position - (Vector2)player.transform.position);
+        pullForce = playerC.GetComponent<ConstantSpeed>().Speed * 5;
+        betweenFP = ((Vector2)transform.position - (Vector2)playerC.transform.position);
         pullDirection = betweenFP.normalized;
         distBW = Mathf.Abs(betweenFP.magnitude);
 

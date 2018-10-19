@@ -4,7 +4,6 @@ using System.Collections;
 public class CompleteCameraController : MonoBehaviour
 {
 
-    public GameObject player;       //Public variable to store a reference to the player game object
     private PlayerController playerC; 
     private ForcefieldPull forcefieldC;
     public float transitionSpeed;
@@ -14,11 +13,11 @@ public class CompleteCameraController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        playerC = LevelManger.Instance.player;
         //Calculate and store the offset value by getting the distance between the player's position and camera's position.
-        offset = transform.position - player.transform.position;
-        playerC = player.GetComponent<PlayerController>();
-        forcefieldC = playerC.forcefield.GetComponent<ForcefieldPull>();
-        
+        offset = transform.position - playerC.transform.position;
+        forcefieldC = LevelManger.Instance.ForceField.GetComponent<ForcefieldPull>();
+
     }
 
     // LateUpdate is called after Update each frame
@@ -32,7 +31,7 @@ public class CompleteCameraController : MonoBehaviour
         }
         else
         {
-            transform.position += new Vector3((player.transform.position.x-transform.position.x)*transitionSpeed*2,(player.transform.position.y - transform.position.y) * transitionSpeed*2, 0f );
+            transform.position += new Vector3((playerC.transform.position.x-transform.position.x)*transitionSpeed*2,(playerC.transform.position.y - transform.position.y) * transitionSpeed*2, 0f );
         }
 
     }

@@ -5,20 +5,20 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D rb2d;
-    
     public float speed;
-    public GameObject forcefield;
-    public GameObject SoundManager;
-    private SoundManager sMan;
-    
+
     //Below is public for testing in Unity, otherwise would be private
     public GameObject attatchedTo;
     public bool attatched = false;
     public float playerVelocity;
-    
+
+    private GameObject forcefield;
+    private SoundManager sMan;
+
     void Start()
     {
-        sMan = SoundManager.GetComponent<SoundManager>();
+        forcefield = LevelManger.Instance.ForceField;
+        sMan = SoundManager.Instance;
         rb2d.AddForce(Vector2.right * 5f);
     }
     public void Detatch()
@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
         attatched = false;
         GetComponent<ConstantSpeed>().Speed += 3;
         sMan.PlaySound(sMan.SpeedUp);
-        sMan.SecondsoundToPlay.clip = null;
+        sMan.StopSound(sMan.SecondsoundToPlay);
     }
     void Attatched()
     {
