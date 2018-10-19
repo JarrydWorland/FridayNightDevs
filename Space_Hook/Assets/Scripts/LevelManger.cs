@@ -7,6 +7,8 @@ public class LevelManger : Singleton<LevelManger>
     public PlayerController player;
     public GameObject Forcefield;
     public Vector3 StartPoint;
+    public List<GameObject> Asteroids;
+
     void Awake()
     {
         StartPoint = player.transform.position;
@@ -17,13 +19,25 @@ public class LevelManger : Singleton<LevelManger>
         Debug.Log("Level Reset");
         player.Reset();
         player.transform.position = StartPoint;
+        foreach(GameObject ast in Asteroids)
+        {
+            foreach(Transform t in ast.transform)
+            {
+                t.gameObject.SetActive(true);
+                t.position = t.gameObject.GetComponent<AsteroidBehavior>().startPosition ;
+            }
+        }
     }
 
-    public void OnTriggerExit2D(Collider2D collider2D)
+    public void OnTriggerExit2D(Collider2D collision)
     {
-        if (collider2D.GetComponent<PlayerController>())
+        if(collision.GetComponent<PlayerController>())
         {
             ResetLevel();
         }
+        /*if (collision.GetComponent<AsteroidBehavior>())
+        {
+            collision.gameObject.transform.position = transform.position + (transform.position - collision.gameObject.transform.position);
+        }*/
     }
 }

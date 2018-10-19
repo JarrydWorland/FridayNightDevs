@@ -54,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1143979324355400}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22, y: -13, z: 0}
+  m_LocalPosition: {x: -10.7, y: 2.3, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 4842074749671772}
@@ -103,7 +103,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.016131401, y: 0}
@@ -117,16 +117,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1143979324355400}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e20f7be8d9915af4b9679783bc7dfbb2, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ebf2d393ace19344b2f602372f0d5e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
   clockwise: 1
   rotating: 1
   attatchedTo: {fileID: 1143979324355400}
-  forcfield: {fileID: 0}
+  forcefield: {fileID: 0}
   player: {fileID: 0}
   imAttatched: 0
+  SoundManager: {fileID: 0}
+  isMoving: 0
   myCol: {fileID: 0}
 --- !u!114 &114691654708501166
 MonoBehaviour:

@@ -5,10 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D rb2d;
-    
-    private float speed;
-    private GameObject forcfield;
-    //public GameObject SoundManager;
+    public float speed;
+    public GameObject forcefield;
     private SoundManager sMan;
     
     //Below is public for testing in Unity, otherwise would be private
@@ -18,20 +16,21 @@ public class PlayerController : MonoBehaviour
     
     void Start()
     {
-        forcfield = LevelManger.Instance.Forcefield;
+        forcefield = LevelManger.Instance.Forcefield;
         sMan = SoundManager.Instance;
         rb2d.AddForce(Vector2.right * 5f);
         speed = GetComponent<ConstantSpeed>().Speed;
     }
     public void Detatch()
     {
-        forcfield.SetActive(false);
-        forcfield.GetComponent<ForcefieldPull>().checkRot = true;
+        forcefield.SetActive(false);
+        forcefield.GetComponent<ForcefieldPull>().checkRot = true;
         attatchedTo.GetComponent<AsteroidBehavior>().imAttatched = false;
         attatchedTo = null;
         attatched = false;
-        this.GetComponent<ConstantSpeed>().Speed += 3;
+        GetComponent<ConstantSpeed>().Speed += 3;
         sMan.PlaySound(sMan.SpeedUp);
+        sMan.SecondsoundToPlay.clip = null;
     }
     void Attatched()
     {
@@ -48,6 +47,8 @@ public class PlayerController : MonoBehaviour
     void FreeFall()
     {
         this.GetComponent<ConstantSpeed>().Speed -= 0.03f;
+        forcefield.GetComponent<ForcefieldPull>().howClose = 0;
+
     }
     void Update()
     {
@@ -69,9 +70,10 @@ public class PlayerController : MonoBehaviour
     public void Reset()
     {
         // When the player die reset things the player needs.
-        attatched = false;
-        forcfield.SetActive(false);
-        if(attatchedTo !=null) attatchedTo.GetComponent<AsteroidBehavior>().imAttatched = false;
+        
+        GetComponent<ConstantSpeed>().Speed = GetComponent<ConstantSpeed>().StartSpeed;
+        if (attatchedTo != null)
+            Detatch();
         attatchedTo = null;
         rb2d.velocity = Vector2.zero;
     }

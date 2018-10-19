@@ -88,6 +88,14 @@ public class ForcefieldPull : MonoBehaviour {
     Pull();
 	}
 
+    private void LateUpdate()
+    {
+        if(playerC.attatchedTo.GetComponent<AsteroidBehavior>().isMoving)
+        {
+            transform.position = playerC.attatchedTo.transform.position;     
+        }
+    }
+
     void Pull()
     {
         if (distBW > startCurve)

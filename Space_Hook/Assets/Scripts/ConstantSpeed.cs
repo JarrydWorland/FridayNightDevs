@@ -5,6 +5,7 @@ using UnityEngine;
 public class ConstantSpeed : MonoBehaviour {
 
     public float Speed;
+    private float startSpeed;
     public float min;
     public float max;
     private Rigidbody2D rigidbody2D;
@@ -12,9 +13,13 @@ public class ConstantSpeed : MonoBehaviour {
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
-
+        startSpeed = Speed;
     }
 
+    public float StartSpeed
+    {
+        get { return startSpeed; }
+    }
     // Update is called once per frame
     void Update()
     {
