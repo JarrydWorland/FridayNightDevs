@@ -53,7 +53,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 7.114605, y: -0.7043991}
+  m_Offset: {x: 8.860443, y: 0.13879395}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -64,7 +64,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 137.96219, y: 116.82124}
+  m_Size: {x: 688.1314, y: 351.10056}
   m_EdgeRadius: 0
 --- !u!114 &114612693303612152
 MonoBehaviour:
@@ -78,4 +78,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  ForceField: {fileID: 0}
   StartPoint: {x: 0, y: 0, z: 0}
+  Asteroids:
+  - {fileID: 0}
+  - {fileID: 0}
