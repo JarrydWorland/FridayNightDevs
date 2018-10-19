@@ -54,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1143979324355400}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22, y: -13, z: 0}
+  m_LocalPosition: {x: -10.7, y: 2.3, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 4842074749671772}
@@ -124,7 +124,7 @@ MonoBehaviour:
   clockwise: 1
   rotating: 1
   attatchedTo: {fileID: 1143979324355400}
-  forcfield: {fileID: 0}
+  forcefield: {fileID: 0}
   player: {fileID: 0}
   imAttatched: 0
   SoundManager: {fileID: 0}

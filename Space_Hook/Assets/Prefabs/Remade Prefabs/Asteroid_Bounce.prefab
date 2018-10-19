@@ -123,7 +123,7 @@ MonoBehaviour:
   clockwise: 1
   rotating: 0
   attatchedTo: {fileID: 1589456598432462}
-  forcfield: {fileID: 0}
+  forcefield: {fileID: 0}
   player: {fileID: 0}
   imAttatched: 0
   SoundManager: {fileID: 0}

@@ -23,7 +23,7 @@ public class LevelManger : MonoBehaviour
             foreach(Transform t in ast.transform)
             {
                 t.gameObject.SetActive(true);
-
+                t.position = t.gameObject.GetComponent<AsteroidBehavior>().startPosition ;
             }
         }
     }
@@ -34,5 +34,9 @@ public class LevelManger : MonoBehaviour
         {
             ResetLevel();
         }
+        /*if (collision.GetComponent<AsteroidBehavior>())
+        {
+            collision.gameObject.transform.position = transform.position + (transform.position - collision.gameObject.transform.position);
+        }*/
     }
 }

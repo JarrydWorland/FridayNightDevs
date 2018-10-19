@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb2d;
     
     public float speed;
-    public GameObject forcfield;
+    public GameObject forcefield;
     public GameObject SoundManager;
     private SoundManager sMan;
     
@@ -23,8 +23,8 @@ public class PlayerController : MonoBehaviour
     }
     public void Detatch()
     {
-        forcfield.SetActive(false);
-        forcfield.GetComponent<ForcefieldPull>().checkRot = true;
+        forcefield.SetActive(false);
+        forcefield.GetComponent<ForcefieldPull>().checkRot = true;
         attatchedTo.GetComponent<AsteroidBehavior>().imAttatched = false;
         attatchedTo = null;
         attatched = false;
@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
     void FreeFall()
     {
         this.GetComponent<ConstantSpeed>().Speed -= 0.03f;
-        forcfield.GetComponent<ForcefieldPull>().howClose = 0;
+        forcefield.GetComponent<ForcefieldPull>().howClose = 0;
 
     }
     void Update()
@@ -70,11 +70,10 @@ public class PlayerController : MonoBehaviour
     public void Reset()
     {
         // When the player die reset things the player needs.
-        attatched = false;
-        forcfield.SetActive(false);
+        
         GetComponent<ConstantSpeed>().Speed = GetComponent<ConstantSpeed>().StartSpeed;
-        if (attatchedTo!= null)
-            attatchedTo.GetComponent<AsteroidBehavior>().imAttatched = false;
+        if (attatchedTo != null)
+            Detatch();
         attatchedTo = null;
         rb2d.velocity = Vector2.zero;
     }
