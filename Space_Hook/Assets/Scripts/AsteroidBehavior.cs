@@ -41,9 +41,20 @@ public class AsteroidBehavior : MonoBehaviour {
         startPosition = transform.position;
 	    sMan = SoundManager.Instance;
         //shardSprites = Resources.LoadAll<Sprite>("AstJagged");
-        if(startDirection!= null && isMoving)
+        Propell();
+        forcefield.SetActive(false);
+        imAttatched = false;
+        myCol = attatchedTo.GetComponent<Collider2D>();
+	}
+    public void Propell()
+    {
+        if (isMoving)
         {
-            Vector3 startD = new Vector3(0,0,0);
+            if (GetComponent<Rigidbody2D>().velocity.magnitude != 0)
+            {
+                GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            }
+            Vector3 startD = new Vector3(0, 0, 0);
             switch (startDirection)
             {
                 case Directions.Up:
@@ -73,11 +84,7 @@ public class AsteroidBehavior : MonoBehaviour {
             }
             GetComponent<Rigidbody2D>().AddForce(startD * movingSpeed);
         }
-        forcefield.SetActive(false);
-        imAttatched = false;
-        myCol = attatchedTo.GetComponent<Collider2D>();
-	}
-
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.collider.gameObject.tag == "Player")

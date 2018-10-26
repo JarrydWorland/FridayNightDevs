@@ -214,6 +214,20 @@ Prefab:
       propertyPath: endCurve
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1107995191449032, guid: 7ce767679b98959409686b2681a5cd8a, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114432258658205484, guid: 7ce767679b98959409686b2681a5cd8a,
+        type: 2}
+      propertyPath: visRep
+      value: 
+      objectReference: {fileID: 1678249151}
+    - target: {fileID: 212469974786709336, guid: 7ce767679b98959409686b2681a5cd8a,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 0.078
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ce767679b98959409686b2681a5cd8a, type: 2}
   m_IsPrefabParent: 0
@@ -1178,6 +1192,11 @@ GameObject:
   m_PrefabParentObject: {fileID: 1029234365719778, guid: cb1d51c33f6e33e45bbd85dccd75c73b,
     type: 2}
   m_PrefabInternal: {fileID: 571146307}
+--- !u!1 &1678249151 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1107995191449032, guid: 7ce767679b98959409686b2681a5cd8a,
+    type: 2}
+  m_PrefabInternal: {fileID: 464804854}
 --- !u!1 &1860583744 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1302442956098176, guid: cb1d51c33f6e33e45bbd85dccd75c73b,
