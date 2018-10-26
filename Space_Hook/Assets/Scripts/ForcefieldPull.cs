@@ -95,7 +95,6 @@ public class ForcefieldPull : MonoBehaviour {
             transform.position = playerC.attatchedTo.transform.position;
         }
         Pull();
-        
     }
 
     void Pull()
@@ -118,7 +117,7 @@ public class ForcefieldPull : MonoBehaviour {
             { degreeChange *= -1; }
             Vector2 newPullDirection = playerC.Rotate(pullDirection, degreeChange);
             playerC.rb2d.velocity = Vector2.zero;
-            playerC.rb2d.AddForce(pullForce * /*((1-howClose)*10) **/ newPullDirection);
+            playerC.rb2d.AddForce(pullForce * newPullDirection);
         }
 
         if(playerC.attatchedTo.GetComponent<Rigidbody2D>().velocity.magnitude != 0)

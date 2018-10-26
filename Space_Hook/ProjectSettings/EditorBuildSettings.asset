@@ -8,6 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: eec90392548a1cd4dbbc4680c9e5926d
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Jake's Scene.unity
-    guid: 17d4ec450f765a447b009a24b3fdce82
+    path: Assets/Scenes/SeanScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
