@@ -7,32 +7,39 @@ public class Collectable : MonoBehaviour {
     public GameObject attatchedTo;
     private SoundManager sMan;
     private PlayerController player;
-    
 
+    public float distFromObj;
+    public float setDistance;
+    public Vector2 between;
     public bool clockwise;
     public float speed;
 	// Use this for initialization
 	void Start () {
         sMan = SoundManager.Instance;
         player = PlayerController.Instance;
+        attatchedTo.GetComponent<AsteroidBehavior>().collectable = this.gameObject;
     }
 
     // Update is called once per frame
     void Update () {
-
-        //howClose = 1 - ((distBW - endCurve) / (startCurve - endCurve)); //percentage in decimal of how far between the start and end point you are
-        int degreeChange = 90;
-        if (!clockwise)
-        { degreeChange *= -1; }
-        Vector2 pullDirection = ((Vector2)attatchedTo.transform.position - (Vector2)transform.position);
-        Vector2 newPullDirection = player.Rotate(pullDirection, degreeChange);
-        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        GetComponent<Rigidbody2D>().AddForce(speed * newPullDirection);
-
+        //Moving around their attatched objects
+        transform.RotateAround(attatchedTo.transform.position, transform.forward, 100f * Time.deltaTime);
         if (attatchedTo.GetComponent<Rigidbody2D>().velocity.magnitude != 0)
         {
             transform.position += (Vector3)attatchedTo.GetComponent<Rigidbody2D>().velocity * Time.deltaTime;
         }
+        between = ((Vector2)transform.position - (Vector2)attatchedTo.transform.position);
+        distFromObj = between.magnitude;
+
+        if(distFromObj < setDistance)
+        {
+            transform.position += (Vector3)between * Time.deltaTime;
+        }
+        else if(distFromObj > setDistance)
+        {
+            transform.position -= (Vector3)between * Time.deltaTime;
+        }
+
     }
 
     private void  OnTriggerEnter2D(Collider2D collision)
@@ -40,8 +47,12 @@ public class Collectable : MonoBehaviour {
         if(collision.gameObject.tag == "Player")
         {
             sMan.PlaySound(sMan.bounceCol);
-
-            Destroy(this.gameObject);
+            attatchedTo.GetComponent<AsteroidBehavior>().collectable = null;
+            attatchedTo = player.gameObject;
+            player.GetComponent<PlayerController>().collectables.Add(this.gameObject);
+            //GetComponent<DistanceJoint2D>().maxDistanceOnly = false;
+            GetComponent<DistanceJoint2D>().distance = 0.005f;
+            //Destroy(this.gameObject);
         }
     }
 }

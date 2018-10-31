@@ -8,6 +8,7 @@ public class AsteroidBehavior : MonoBehaviour {
     public bool clockwise = true;
     public bool rotating = true;
     public bool isMoving;
+    public GameObject collectable;
     public float movingSpeed = 100000;
 
     public SpriteRenderer mySprite; 

@@ -6,7 +6,7 @@ public class PlayerController : Singleton<PlayerController>
 {
     public Rigidbody2D rb2d;
     public float speed;
-
+    public List<GameObject> collectables;
     //Below is public for testing in Unity, otherwise would be private
     public GameObject attatchedTo;
     public bool attatched = false;
