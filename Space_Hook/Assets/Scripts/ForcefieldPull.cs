@@ -8,8 +8,11 @@ public class ForcefieldPull : MonoBehaviour {
     private Vector2 pullDirection;
     private PlayerController playerC;
     private float pullForce;
-
+    public GameObject visRep;
+    private SpriteRenderer sR;
+    private bool increase = false;
     public bool clockwise = true;
+
     public bool checkRot = true;
     //variables to play with
     public float startCurve = 6, endCurve = 3;
@@ -20,6 +23,7 @@ public class ForcefieldPull : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+        sR = visRep.GetComponent<SpriteRenderer>();
         playerC = LevelManger.Instance.player;
     }
 	
@@ -79,9 +83,9 @@ public class ForcefieldPull : MonoBehaviour {
             CheckRotation();
             checkRot = false;
         }
-       
+        
 
-    Pull();
+        
 	}
 
     private void LateUpdate()
@@ -90,6 +94,7 @@ public class ForcefieldPull : MonoBehaviour {
         {
             transform.position = playerC.attatchedTo.transform.position;
         }
+        Pull();
     }
 
     void Pull()
@@ -112,7 +117,12 @@ public class ForcefieldPull : MonoBehaviour {
             { degreeChange *= -1; }
             Vector2 newPullDirection = playerC.Rotate(pullDirection, degreeChange);
             playerC.rb2d.velocity = Vector2.zero;
-            playerC.rb2d.AddForce(pullForce * /*((1-howClose)*10) **/ newPullDirection);
+            playerC.rb2d.AddForce(pullForce * newPullDirection);
+        }
+
+        if(playerC.attatchedTo.GetComponent<Rigidbody2D>().velocity.magnitude != 0)
+        {
+            playerC.transform.position += (Vector3)playerC.attatchedTo.GetComponent<Rigidbody2D>().velocity * Time.deltaTime;
         }
     }
 

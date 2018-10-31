@@ -25,6 +25,7 @@ public class LevelManger : Singleton<LevelManger>
             {
                 t.gameObject.SetActive(true);
                 t.transform.position = t.gameObject.GetComponent<AsteroidBehavior>().startPosition;
+                t.gameObject.GetComponent<AsteroidBehavior>().Propell();
             }
         }
     }

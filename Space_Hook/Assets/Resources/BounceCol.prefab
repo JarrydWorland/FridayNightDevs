@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 198612535328026944}
   - component: {fileID: 199662404871713616}
   m_Layer: 0
-  m_Name: AsteroidCollision_FX
+  m_Name: BounceCol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -8,6 +8,8 @@ public class SoundManager : Singleton<SoundManager> {
     public AudioClip bounceCol;
     public AudioClip SpeedUp;
     public AudioClip Forcefield;
+    public AudioClip explosion;
+
 
     public AudioSource soundToPlay;
     public AudioSource SecondsoundToPlay;
@@ -41,7 +43,7 @@ public class SoundManager : Singleton<SoundManager> {
             SecondsoundToPlay.loop = true;
             SecondsoundToPlay.Play();
         }
-
+        
         else
         {
             soundToPlay.clip = sound;
@@ -51,8 +53,6 @@ public class SoundManager : Singleton<SoundManager> {
 
     public void StopSound(AudioSource soundSource)
     {
-        return;
-        // TODO FIX THIS;
         if (soundSource.clip != null)
         {
             soundSource.clip = null;
