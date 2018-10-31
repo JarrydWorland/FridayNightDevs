@@ -37,12 +37,18 @@ public class WormLink : MonoBehaviour
         }
         if (WarpedTarget.GetComponent<PlayerController>())
         {
-            LevelManger.Instance.player.Detatch();
+            if (LevelManger.Instance.player.attatchedTo != null)
+            {
+                LevelManger.Instance.player.Detatch();
+            }
             CompleteCameraController.Instance.MoveCameraTo(WarpedTarget.transform.position);
         }
         else if (WarpedTarget.GetComponent<AsteroidBehavior>())
         {
-            LevelManger.Instance.player.Detatch();
+            if (LevelManger.Instance.player.attatchedTo != null)
+            {
+                LevelManger.Instance.player.Detatch();
+            }
         }
     }
 
