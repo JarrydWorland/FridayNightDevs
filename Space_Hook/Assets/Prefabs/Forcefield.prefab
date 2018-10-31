@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26f79f62f6b1fb548bd6feb8d45854ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  visRep: {fileID: 1340273178759790}
   clockwise: 1
   checkRot: 1
   startCurve: 100
