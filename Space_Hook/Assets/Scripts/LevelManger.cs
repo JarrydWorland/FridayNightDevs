@@ -6,6 +6,7 @@ public class LevelManger : Singleton<LevelManger>
 {
     public PlayerController player;
     public GameObject ForceField;
+    public Transform HomeBase;
     public Vector3 StartPoint;
     public List<GameObject> Asteroids;
 
