@@ -44,5 +44,6 @@ public class HomeBase : MonoBehaviour {
         playerC.rb2d.AddForce(pullForce * pullDirection);
 
         GetComponent<Animator>().SetTrigger("Clicked");
+        transform.GetChild(2).GetComponent<AudioSource>().Play();
     }
 }
