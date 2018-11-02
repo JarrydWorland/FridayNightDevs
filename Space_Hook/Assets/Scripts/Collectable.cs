@@ -22,6 +22,7 @@ public class Collectable : MonoBehaviour {
         player = PlayerController.Instance;
         attatchedTo.GetComponent<AsteroidBehavior>().collectable = this.gameObject;
         direction = new Vector2(Random.value, Random.value).normalized;
+        setDistance = attatchedTo.GetComponent<CircleCollider2D>().radius*4;
     }
 
     // Update is called once per frame
@@ -98,6 +99,8 @@ public class Collectable : MonoBehaviour {
             if (attatchedTo.GetComponent<AsteroidBehavior>())
             {
                 attatchedTo.GetComponent<AsteroidBehavior>().collectable = null;
+                attatchedTo = null;
+
             }
             if (attatchedTo.GetComponent<PlayerController>())
             {

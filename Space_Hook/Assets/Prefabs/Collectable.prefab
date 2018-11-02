@@ -66,7 +66,7 @@ Transform:
   m_GameObject: {fileID: 1460506431791632}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 42.02, y: 11.68, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 4266784842342530}
   m_Father: {fileID: 0}
@@ -120,11 +120,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attatchedTo: {fileID: 0}
   distFromObj: 0
-  setDistance: 8.5
+  setDistance: 12
   between: {x: 0, y: 0}
   clockwise: 0
   hitCollectable: 0
   speed: 0.05
+  direction: {x: 0, y: 0}
 --- !u!212 &212344412551698554
 SpriteRenderer:
   m_ObjectHideFlags: 1

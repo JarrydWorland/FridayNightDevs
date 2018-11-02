@@ -48,6 +48,10 @@ public class LevelManger : Singleton<LevelManger>
 
     public void CreateCollectable(int numberToGenerate)
     {
+        if(numberToGenerate>individualAsts.Count)
+        {
+            numberToGenerate = individualAsts.Count;
+        }
         System.Random rnd = new System.Random();
         Vector3 pos;
         List<int> asteroidIndex = new List<int>();
@@ -74,7 +78,6 @@ public class LevelManger : Singleton<LevelManger>
         Debug.Log("Level Reset");
         Application.LoadLevel(Application.loadedLevel);
     }
-
     public void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.transform.position.y >= GetComponent<BoxCollider2D>().size.y / 2)//up
