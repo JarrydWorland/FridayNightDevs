@@ -55,7 +55,6 @@ public class AsteroidBehavior : MonoBehaviour {
         transform.localScale = new Vector3(randomSize, randomSize, randomSize);
 	}
 
-    // returns a random float between given values
     public float RandomFloat(float min, float max)
     {
         return Random.Range(min, max);
