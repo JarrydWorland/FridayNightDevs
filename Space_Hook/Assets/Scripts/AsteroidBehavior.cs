@@ -31,6 +31,9 @@ public class AsteroidBehavior : MonoBehaviour {
     private PlayerController player;
     private GameObject forcefield;
 
+    [SerializeField]
+    private float randomSize;
+
     public enum Directions { Up, Down, Left, Right, UpLeft, UpRight, DownLeft, DownRight };
 
     // Use this for initialization
@@ -46,7 +49,18 @@ public class AsteroidBehavior : MonoBehaviour {
         forcefield.SetActive(false);
         imAttatched = false;
         myCol = attatchedTo.GetComponent<Collider2D>();
+
+        randomSize = RandomFloat(1, 2);
+
+        transform.localScale = new Vector3(randomSize, randomSize, randomSize);
 	}
+
+    // returns a random float between given values
+    public float RandomFloat(float min, float max)
+    {
+        return Random.Range(min, max);
+    }
+
     public void Propell()
     {
         if (isMoving)

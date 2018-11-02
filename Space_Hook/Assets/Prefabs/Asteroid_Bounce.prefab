@@ -121,18 +121,19 @@ MonoBehaviour:
   speed: 30
   clockwise: 0
   rotating: 0
-  isMoving: 1
+  isMoving: 0
   collectable: {fileID: 0}
   movingSpeed: 100000
   currentSpeed: 0
   mySprite: {fileID: 0}
-  startDirection: 3
+  startDirection: 0
   attatchedTo: {fileID: 1589456598432462}
   imAttatched: 0
   startPosition: {x: 0, y: 0, z: 0}
   shardPrefab: {fileID: 0}
   shard: {fileID: 0}
   myCol: {fileID: 0}
+  randomSize: 0
 --- !u!212 &212325228849807996
 SpriteRenderer:
   m_ObjectHideFlags: 1

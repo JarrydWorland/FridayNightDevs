@@ -12,17 +12,57 @@ public class PlayerController : Singleton<PlayerController>
     public bool attatched = false;
     public float playerVelocity;
 
+    public enum Directions { Up, Down, Left, Right, UpLeft, UpRight, DownLeft, DownRight };
+    public Directions startDirection;
+
     private GameObject forcefield;
     private SoundManager sMan;
     private Animator playerAnimator;
+
+    private bool playerMoving = false;
 
     void Start()
     {
         forcefield = LevelManger.Instance.ForceField;
         sMan = SoundManager.Instance;
-        rb2d.AddForce(Vector2.right * 5f);
         playerAnimator = GetComponentInChildren<Animator>();
     }
+
+    public void StartPlayerMovement()
+    {
+        playerMoving = true;
+
+        Vector3 startD = new Vector3(0, 0, 0);
+        switch (startDirection)
+        {
+            case Directions.Up:
+                startD = new Vector3(0, 1, 0);
+                break;
+            case Directions.Down:
+                startD = new Vector3(0, -1, 0);
+                break;
+            case Directions.Left:
+                startD = new Vector3(-1, 0, 0);
+                break;
+            case Directions.Right:
+                startD = new Vector3(1, 0, 0);
+                break;
+            case Directions.UpLeft:
+                startD = new Vector3(-1, 1, 0);
+                break;
+            case Directions.UpRight:
+                startD = new Vector3(1, 1, 0);
+                break;
+            case Directions.DownLeft:
+                startD = new Vector3(-1, -1, 0);
+                break;
+            case Directions.DownRight:
+                startD = new Vector3(1, -1, 0);
+                break;
+        }
+        GetComponent<Rigidbody2D>().AddForce(startD * 5f);
+    }
+
     public void Detatch()
     {
         forcefield.SetActive(false);
@@ -92,5 +132,13 @@ public class PlayerController : Singleton<PlayerController>
         v.y = (sin * tx) + (cos * ty);
         return v;
     }
-    
+
+    private void OnMouseDown()
+    {
+        if (!playerMoving)
+        {
+            StartPlayerMovement();
+        }
+    }
+
 }

@@ -93,7 +93,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 0
 --- !u!58 &58023093533441852
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -123,12 +123,17 @@ MonoBehaviour:
   speed: 30
   clockwise: 1
   rotating: 1
-  attatchedTo: {fileID: 1143979324355400}
-  forcefield: {fileID: 0}
-  player: {fileID: 0}
-  imAttatched: 0
-  SoundManager: {fileID: 0}
   isMoving: 0
+  collectable: {fileID: 0}
+  movingSpeed: 100000
+  currentSpeed: 0
+  mySprite: {fileID: 0}
+  startDirection: 0
+  attatchedTo: {fileID: 1143979324355400}
+  imAttatched: 0
+  startPosition: {x: 0, y: 0, z: 0}
+  shardPrefab: {fileID: 0}
+  shard: {fileID: 0}
   myCol: {fileID: 0}
 --- !u!114 &114691654708501166
 MonoBehaviour:
