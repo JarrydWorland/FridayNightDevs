@@ -177,7 +177,7 @@ public class AsteroidBehavior : MonoBehaviour {
         }
     }
         void OnMouseDown()
-    {
+        {
         sMan.PlaySound(sMan.Forcefield);
 
         if(player.attatchedTo != null) //your already attatched
