@@ -19,7 +19,15 @@ public class LevelManger : Singleton<LevelManger>
 
     private void Update()
     {
-        
+        //if (HomeBase.gameObject.GetComponent<HomeBase>().collected.Count == 0)
+        //{
+
+            //collectionCount.text = "Shards Collected: 0/10";
+       // }
+       // else
+        //{
+            collectionCount.text = "Shards Collected: " + HomeBase.gameObject.GetComponent<HomeBase>().collected.Count + "/" + numOfCollectables;
+       // }
     }
     void Awake()
     {

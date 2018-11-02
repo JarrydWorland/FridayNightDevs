@@ -53,7 +53,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 8.860443, y: 0.13879395}
+  m_Offset: {x: 6.8380737, y: 3.5091705}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -64,7 +64,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 688.1314, y: 351.10056}
+  m_Size: {x: 654.4281, y: 314.70062}
   m_EdgeRadius: 0
 --- !u!114 &114612693303612152
 MonoBehaviour:
@@ -79,7 +79,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   ForceField: {fileID: 0}
+  HomeBase: {fileID: 0}
   StartPoint: {x: 0, y: 0, z: 0}
-  Asteroids:
+  AsteroidContainers:
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  individualAsts: []
+  collectables: []
+  collectablePrefab: {fileID: 1460506431791632, guid: 850478d24bceb9e4c8f5300d6a6c3c8e,
+    type: 2}
+  numOfCollectables: 10
+  collectionCount: {fileID: 0}

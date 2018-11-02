@@ -47,12 +47,12 @@ public class Collectable : MonoBehaviour {
         if(collision.gameObject.tag == "Player")
         {
             sMan.PlaySound(sMan.bounceCol);
-            attatchedTo.GetComponent<AsteroidBehavior>().collectable = null;
-            attatchedTo = player.gameObject;
-            player.GetComponent<PlayerController>().collectables.Add(this.gameObject);
-            //GetComponent<DistanceJoint2D>().maxDistanceOnly = false;
-            GetComponent<DistanceJoint2D>().distance = 0.005f;
-            //Destroy(this.gameObject);
+            if (attatchedTo.GetComponent<AsteroidBehavior>())
+            {
+                attatchedTo.GetComponent<AsteroidBehavior>().collectable = null;
+                attatchedTo = player.gameObject;
+                player.GetComponent<PlayerController>().collectables.Add(this.gameObject);
+            }
         }
     }
 }

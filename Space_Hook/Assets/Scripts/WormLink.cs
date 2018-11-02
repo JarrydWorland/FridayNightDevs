@@ -56,7 +56,7 @@ public class WormLink : MonoBehaviour
                 LevelManger.Instance.player.Detatch();
             }
             // TODO fix Camera to zoom to then  telaport;
-            CompleteCameraController.Instance.MoveCameraTo(WarpedTarget.transform.position);
+            // CompleteCameraController.Instance.MoveCameraTo(WarpedTarget.transform.position);
         }
         else if (WarpedTarget.GetComponent<AsteroidBehavior>())
         {
