@@ -46,6 +46,19 @@ public class LevelManger : Singleton<LevelManger>
         CreateCollectable(numOfCollectables);
     }
 
+    public void TogglePause()
+    {
+        if (Time.timeScale == 1)
+        {
+            Time.timeScale = 0;
+        }
+
+        else
+        {
+            Time.timeScale = 1;
+        }
+    }
+
     public void CreateCollectable(int numberToGenerate)
     {
         if(numberToGenerate>individualAsts.Count)
