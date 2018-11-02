@@ -41,7 +41,6 @@ public class WormLink : MonoBehaviour
             {
                 LevelManger.Instance.player.Detatch();
             }
-            CompleteCameraController.Instance.MoveCameraTo(WarpedTarget.transform.position);
         }
         else if (WarpedTarget.GetComponent<AsteroidBehavior>())
         {
