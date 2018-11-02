@@ -63,31 +63,33 @@ public class Collectable : MonoBehaviour
     {
         if (attatchedTo != null)
         {
-            if (collision.GetComponent<Collectable>())
+            if (collision.gameObject.tag =="item")
+            {
 
-            hitCollectable = true;
-            if (attatchedTo == null)
-            {
-                return;
-            }
-            if (attatchedTo.GetComponent<PlayerController>())
-            {
-                hitCollectable = true;
+                if (attatchedTo == null)
+                {
+                    return;
+                }
                 if (attatchedTo.GetComponent<PlayerController>())
                 {
-                    int index = attatchedTo.GetComponent<PlayerController>().collectables.FindIndex(x => x == this.gameObject);
-                    transform.RotateAround(attatchedTo.transform.position, transform.forward, index);
-                }
-                else if (attatchedTo.GetComponent<HomeBase>())
-                {
-                    int index = attatchedTo.GetComponent<HomeBase>().collected.FindIndex(x => x == this.gameObject);
-                    transform.RotateAround(attatchedTo.transform.position, transform.forward, index);
+                    hitCollectable = true;
+                    if (attatchedTo.GetComponent<PlayerController>())
+                    {
+                        int index = attatchedTo.GetComponent<PlayerController>().collectables.FindIndex(x => x == this.gameObject);
+                        transform.RotateAround(attatchedTo.transform.position, transform.forward, index*2);
+                    }
+                    else if (attatchedTo.GetComponent<HomeBase>())
+                    {
+                        int index = attatchedTo.GetComponent<HomeBase>().collected.FindIndex(x => x == this.gameObject);
+                        transform.RotateAround(attatchedTo.transform.position, transform.forward, index);
+                    }
                 }
             }
             else
             {
                 hitCollectable = false;
             }
+        
         }
     }
 
