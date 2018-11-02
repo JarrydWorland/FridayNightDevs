@@ -596,7 +596,7 @@ GameObject:
   - component: {fileID: 26477885}
   m_Layer: 0
   m_Name: Asteroid_Sharp (2)
-  m_TagString: Damage
+  m_TagString: Bouncy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -655,7 +655,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 26477883}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 2bf9a25ffec31284586c7a30645a2671, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -707,8 +707,7 @@ MonoBehaviour:
   attatchedTo: {fileID: 26477883}
   imAttatched: 0
   startPosition: {x: 0, y: 0, z: 0}
-  shardPrefab: {fileID: 1517165495517946, guid: 8c3edcccd4d6e764d80e140412678c22,
-    type: 2}
+  shardPrefab: {fileID: 0}
   shard: {fileID: 0}
   myCol: {fileID: 0}
   randomSize: 0
@@ -1007,7 +1006,7 @@ GameObject:
   - component: {fileID: 63061284}
   m_Layer: 0
   m_Name: Asteroid_Sharp
-  m_TagString: Damage
+  m_TagString: Bouncy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1066,7 +1065,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 63061282}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 2bf9a25ffec31284586c7a30645a2671, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1118,8 +1117,7 @@ MonoBehaviour:
   attatchedTo: {fileID: 63061282}
   imAttatched: 0
   startPosition: {x: 0, y: 0, z: 0}
-  shardPrefab: {fileID: 1517165495517946, guid: 8c3edcccd4d6e764d80e140412678c22,
-    type: 2}
+  shardPrefab: {fileID: 0}
   shard: {fileID: 0}
   myCol: {fileID: 0}
   randomSize: 0
@@ -4078,7 +4076,7 @@ GameObject:
   - component: {fileID: 230653996}
   m_Layer: 0
   m_Name: Asteroid_Sharp (2)
-  m_TagString: Damage
+  m_TagString: Bouncy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4137,7 +4135,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 230653994}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 2bf9a25ffec31284586c7a30645a2671, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -4189,8 +4187,7 @@ MonoBehaviour:
   attatchedTo: {fileID: 230653994}
   imAttatched: 0
   startPosition: {x: 0, y: 0, z: 0}
-  shardPrefab: {fileID: 1517165495517946, guid: 8c3edcccd4d6e764d80e140412678c22,
-    type: 2}
+  shardPrefab: {fileID: 0}
   shard: {fileID: 0}
   myCol: {fileID: 0}
   randomSize: 0
@@ -4286,7 +4283,7 @@ GameObject:
   - component: {fileID: 255115592}
   m_Layer: 0
   m_Name: Asteroid_Sharp
-  m_TagString: Damage
+  m_TagString: Bouncy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4345,7 +4342,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 255115590}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 2bf9a25ffec31284586c7a30645a2671, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -4397,8 +4394,7 @@ MonoBehaviour:
   attatchedTo: {fileID: 255115590}
   imAttatched: 0
   startPosition: {x: 0, y: 0, z: 0}
-  shardPrefab: {fileID: 1517165495517946, guid: 8c3edcccd4d6e764d80e140412678c22,
-    type: 2}
+  shardPrefab: {fileID: 0}
   shard: {fileID: 0}
   myCol: {fileID: 0}
   randomSize: 0
@@ -4981,7 +4977,7 @@ GameObject:
   - component: {fileID: 284068562}
   m_Layer: 0
   m_Name: Asteroid_Sharp
-  m_TagString: Damage
+  m_TagString: Bouncy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5040,7 +5036,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 284068560}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 2bf9a25ffec31284586c7a30645a2671, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -5092,8 +5088,7 @@ MonoBehaviour:
   attatchedTo: {fileID: 284068560}
   imAttatched: 0
   startPosition: {x: 0, y: 0, z: 0}
-  shardPrefab: {fileID: 1517165495517946, guid: 8c3edcccd4d6e764d80e140412678c22,
-    type: 2}
+  shardPrefab: {fileID: 0}
   shard: {fileID: 0}
   myCol: {fileID: 0}
   randomSize: 0
@@ -5987,7 +5982,7 @@ GameObject:
   - component: {fileID: 361700492}
   m_Layer: 0
   m_Name: Asteroid_Sharp
-  m_TagString: Damage
+  m_TagString: Bouncy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6046,7 +6041,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 361700490}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 2bf9a25ffec31284586c7a30645a2671, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -6098,8 +6093,7 @@ MonoBehaviour:
   attatchedTo: {fileID: 361700490}
   imAttatched: 0
   startPosition: {x: 0, y: 0, z: 0}
-  shardPrefab: {fileID: 1517165495517946, guid: 8c3edcccd4d6e764d80e140412678c22,
-    type: 2}
+  shardPrefab: {fileID: 0}
   shard: {fileID: 0}
   myCol: {fileID: 0}
   randomSize: 0
@@ -7321,7 +7315,7 @@ GameObject:
   - component: {fileID: 479366666}
   m_Layer: 0
   m_Name: Asteroid_Sharp (2)
-  m_TagString: Damage
+  m_TagString: Bouncy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7380,7 +7374,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 479366664}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 2bf9a25ffec31284586c7a30645a2671, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -7432,8 +7426,7 @@ MonoBehaviour:
   attatchedTo: {fileID: 479366664}
   imAttatched: 0
   startPosition: {x: 0, y: 0, z: 0}
-  shardPrefab: {fileID: 1517165495517946, guid: 8c3edcccd4d6e764d80e140412678c22,
-    type: 2}
+  shardPrefab: {fileID: 0}
   shard: {fileID: 0}
   myCol: {fileID: 0}
   randomSize: 0
@@ -9933,7 +9926,7 @@ GameObject:
   - component: {fileID: 664902112}
   m_Layer: 0
   m_Name: Asteroid_Sharp
-  m_TagString: Damage
+  m_TagString: Bouncy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9992,7 +9985,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 664902110}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 2bf9a25ffec31284586c7a30645a2671, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -10044,8 +10037,7 @@ MonoBehaviour:
   attatchedTo: {fileID: 664902110}
   imAttatched: 0
   startPosition: {x: 0, y: 0, z: 0}
-  shardPrefab: {fileID: 1517165495517946, guid: 8c3edcccd4d6e764d80e140412678c22,
-    type: 2}
+  shardPrefab: {fileID: 0}
   shard: {fileID: 0}
   myCol: {fileID: 0}
   randomSize: 0
@@ -10909,7 +10901,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1123645816865896, guid: ba92b75b3f396e84f8381aa1962c3b63, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ba92b75b3f396e84f8381aa1962c3b63, type: 2}
@@ -11518,7 +11510,7 @@ GameObject:
   - component: {fileID: 764852404}
   m_Layer: 0
   m_Name: Asteroid_Sharp
-  m_TagString: Damage
+  m_TagString: Bouncy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11577,7 +11569,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 764852402}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 2bf9a25ffec31284586c7a30645a2671, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -11629,8 +11621,7 @@ MonoBehaviour:
   attatchedTo: {fileID: 764852402}
   imAttatched: 0
   startPosition: {x: 0, y: 0, z: 0}
-  shardPrefab: {fileID: 1517165495517946, guid: 8c3edcccd4d6e764d80e140412678c22,
-    type: 2}
+  shardPrefab: {fileID: 0}
   shard: {fileID: 0}
   myCol: {fileID: 0}
   randomSize: 0
@@ -11944,7 +11935,7 @@ GameObject:
   - component: {fileID: 798118124}
   m_Layer: 0
   m_Name: Asteroid_Sharp
-  m_TagString: Damage
+  m_TagString: Bouncy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12003,7 +11994,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 798118122}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 2bf9a25ffec31284586c7a30645a2671, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -12055,8 +12046,7 @@ MonoBehaviour:
   attatchedTo: {fileID: 798118122}
   imAttatched: 0
   startPosition: {x: 0, y: 0, z: 0}
-  shardPrefab: {fileID: 1517165495517946, guid: 8c3edcccd4d6e764d80e140412678c22,
-    type: 2}
+  shardPrefab: {fileID: 0}
   shard: {fileID: 0}
   myCol: {fileID: 0}
   randomSize: 0
@@ -13399,7 +13389,7 @@ Prefab:
     - target: {fileID: 114687418107251062, guid: 6b1e2d1d9aab40b4b8b24e99e9c49504,
         type: 2}
       propertyPath: max
-      value: 30
+      value: 35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6b1e2d1d9aab40b4b8b24e99e9c49504, type: 2}
@@ -13902,7 +13892,7 @@ GameObject:
   - component: {fileID: 906506467}
   m_Layer: 0
   m_Name: Asteroid_Sharp (1)
-  m_TagString: Damage
+  m_TagString: Bouncy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13961,7 +13951,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 906506465}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 2bf9a25ffec31284586c7a30645a2671, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -14013,8 +14003,7 @@ MonoBehaviour:
   attatchedTo: {fileID: 906506465}
   imAttatched: 0
   startPosition: {x: 0, y: 0, z: 0}
-  shardPrefab: {fileID: 1517165495517946, guid: 8c3edcccd4d6e764d80e140412678c22,
-    type: 2}
+  shardPrefab: {fileID: 0}
   shard: {fileID: 0}
   myCol: {fileID: 0}
   randomSize: 0
@@ -14329,7 +14318,7 @@ GameObject:
   - component: {fileID: 934603055}
   m_Layer: 0
   m_Name: Asteroid_Sharp
-  m_TagString: Damage
+  m_TagString: Bouncy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14388,7 +14377,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 934603053}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 2bf9a25ffec31284586c7a30645a2671, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -14440,8 +14429,7 @@ MonoBehaviour:
   attatchedTo: {fileID: 934603053}
   imAttatched: 0
   startPosition: {x: 0, y: 0, z: 0}
-  shardPrefab: {fileID: 1517165495517946, guid: 8c3edcccd4d6e764d80e140412678c22,
-    type: 2}
+  shardPrefab: {fileID: 0}
   shard: {fileID: 0}
   myCol: {fileID: 0}
   randomSize: 0
@@ -15129,7 +15117,7 @@ GameObject:
   - component: {fileID: 995115896}
   m_Layer: 0
   m_Name: Asteroid_Sharp
-  m_TagString: Damage
+  m_TagString: Bouncy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15188,7 +15176,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 995115894}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 2bf9a25ffec31284586c7a30645a2671, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -15240,8 +15228,7 @@ MonoBehaviour:
   attatchedTo: {fileID: 995115894}
   imAttatched: 0
   startPosition: {x: 0, y: 0, z: 0}
-  shardPrefab: {fileID: 1517165495517946, guid: 8c3edcccd4d6e764d80e140412678c22,
-    type: 2}
+  shardPrefab: {fileID: 0}
   shard: {fileID: 0}
   myCol: {fileID: 0}
   randomSize: 0
@@ -18647,7 +18634,7 @@ GameObject:
   - component: {fileID: 1243110737}
   m_Layer: 0
   m_Name: Asteroid_Sharp
-  m_TagString: Damage
+  m_TagString: Bouncy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18706,7 +18693,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1243110735}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 2bf9a25ffec31284586c7a30645a2671, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -18758,8 +18745,7 @@ MonoBehaviour:
   attatchedTo: {fileID: 1243110735}
   imAttatched: 0
   startPosition: {x: 0, y: 0, z: 0}
-  shardPrefab: {fileID: 1517165495517946, guid: 8c3edcccd4d6e764d80e140412678c22,
-    type: 2}
+  shardPrefab: {fileID: 0}
   shard: {fileID: 0}
   myCol: {fileID: 0}
   randomSize: 0
@@ -22687,7 +22673,7 @@ Prefab:
     - target: {fileID: 114612693303612152, guid: e055b9b4012092e44baec97709eb7f23,
         type: 2}
       propertyPath: numOfCollectables
-      value: 25
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 114612693303612152, guid: e055b9b4012092e44baec97709eb7f23,
         type: 2}
@@ -26518,7 +26504,7 @@ GameObject:
   - component: {fileID: 1796796997}
   m_Layer: 0
   m_Name: Asteroid_Sharp
-  m_TagString: Damage
+  m_TagString: Bouncy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26577,7 +26563,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1796796995}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 2bf9a25ffec31284586c7a30645a2671, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -26629,8 +26615,7 @@ MonoBehaviour:
   attatchedTo: {fileID: 1796796995}
   imAttatched: 0
   startPosition: {x: 0, y: 0, z: 0}
-  shardPrefab: {fileID: 1517165495517946, guid: 8c3edcccd4d6e764d80e140412678c22,
-    type: 2}
+  shardPrefab: {fileID: 0}
   shard: {fileID: 0}
   myCol: {fileID: 0}
   randomSize: 0
@@ -27069,7 +27054,7 @@ GameObject:
   - component: {fileID: 1861372611}
   m_Layer: 0
   m_Name: Asteroid_Sharp (2)
-  m_TagString: Damage
+  m_TagString: Bouncy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27128,7 +27113,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1861372609}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 2bf9a25ffec31284586c7a30645a2671, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -27180,8 +27165,7 @@ MonoBehaviour:
   attatchedTo: {fileID: 1861372609}
   imAttatched: 0
   startPosition: {x: 0, y: 0, z: 0}
-  shardPrefab: {fileID: 1517165495517946, guid: 8c3edcccd4d6e764d80e140412678c22,
-    type: 2}
+  shardPrefab: {fileID: 0}
   shard: {fileID: 0}
   myCol: {fileID: 0}
   randomSize: 0
@@ -28003,7 +27987,7 @@ GameObject:
   - component: {fileID: 1935928641}
   m_Layer: 0
   m_Name: Asteroid_Sharp
-  m_TagString: Damage
+  m_TagString: Bouncy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28062,7 +28046,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1935928639}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 2bf9a25ffec31284586c7a30645a2671, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -28114,8 +28098,7 @@ MonoBehaviour:
   attatchedTo: {fileID: 1935928639}
   imAttatched: 0
   startPosition: {x: 0, y: 0, z: 0}
-  shardPrefab: {fileID: 1517165495517946, guid: 8c3edcccd4d6e764d80e140412678c22,
-    type: 2}
+  shardPrefab: {fileID: 0}
   shard: {fileID: 0}
   myCol: {fileID: 0}
   randomSize: 0
@@ -28419,7 +28402,7 @@ GameObject:
   - component: {fileID: 1954411539}
   m_Layer: 0
   m_Name: Asteroid_Sharp (1)
-  m_TagString: Damage
+  m_TagString: Bouncy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28478,7 +28461,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1954411537}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 2bf9a25ffec31284586c7a30645a2671, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -28530,8 +28513,7 @@ MonoBehaviour:
   attatchedTo: {fileID: 1954411537}
   imAttatched: 0
   startPosition: {x: 0, y: 0, z: 0}
-  shardPrefab: {fileID: 1517165495517946, guid: 8c3edcccd4d6e764d80e140412678c22,
-    type: 2}
+  shardPrefab: {fileID: 0}
   shard: {fileID: 0}
   myCol: {fileID: 0}
   randomSize: 0
@@ -29028,7 +29010,7 @@ GameObject:
   - component: {fileID: 1994762068}
   m_Layer: 0
   m_Name: Asteroid_Sharp
-  m_TagString: Damage
+  m_TagString: Bouncy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29087,7 +29069,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1994762066}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 2bf9a25ffec31284586c7a30645a2671, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -29139,8 +29121,7 @@ MonoBehaviour:
   attatchedTo: {fileID: 1994762066}
   imAttatched: 0
   startPosition: {x: 0, y: 0, z: 0}
-  shardPrefab: {fileID: 1517165495517946, guid: 8c3edcccd4d6e764d80e140412678c22,
-    type: 2}
+  shardPrefab: {fileID: 0}
   shard: {fileID: 0}
   myCol: {fileID: 0}
   randomSize: 0
@@ -29160,7 +29141,7 @@ GameObject:
   - component: {fileID: 2013869687}
   m_Layer: 0
   m_Name: Asteroid_Sharp
-  m_TagString: Damage
+  m_TagString: Bouncy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29219,7 +29200,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 2013869685}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 2bf9a25ffec31284586c7a30645a2671, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -29271,8 +29252,7 @@ MonoBehaviour:
   attatchedTo: {fileID: 2013869685}
   imAttatched: 0
   startPosition: {x: 0, y: 0, z: 0}
-  shardPrefab: {fileID: 1517165495517946, guid: 8c3edcccd4d6e764d80e140412678c22,
-    type: 2}
+  shardPrefab: {fileID: 0}
   shard: {fileID: 0}
   myCol: {fileID: 0}
   randomSize: 0
@@ -30470,7 +30450,7 @@ GameObject:
   - component: {fileID: 2108769345}
   m_Layer: 0
   m_Name: Asteroid_Sharp (4)
-  m_TagString: Damage
+  m_TagString: Bouncy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30529,7 +30509,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 2108769343}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 2bf9a25ffec31284586c7a30645a2671, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -30581,8 +30561,7 @@ MonoBehaviour:
   attatchedTo: {fileID: 2108769343}
   imAttatched: 0
   startPosition: {x: 0, y: 0, z: 0}
-  shardPrefab: {fileID: 1517165495517946, guid: 8c3edcccd4d6e764d80e140412678c22,
-    type: 2}
+  shardPrefab: {fileID: 0}
   shard: {fileID: 0}
   myCol: {fileID: 0}
   randomSize: 0
