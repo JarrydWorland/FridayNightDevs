@@ -64,6 +64,13 @@ public class Collectable : MonoBehaviour
         if (attatchedTo != null)
         {
             if (collision.GetComponent<Collectable>())
+
+            hitCollectable = true;
+            if (attatchedTo == null)
+            {
+                return;
+            }
+            if (attatchedTo.GetComponent<PlayerController>())
             {
                 hitCollectable = true;
                 if (attatchedTo.GetComponent<PlayerController>())
