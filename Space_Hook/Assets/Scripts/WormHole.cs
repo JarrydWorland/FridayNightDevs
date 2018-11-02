@@ -13,6 +13,9 @@ public class WormHole : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D coll)
     {
-        link.Warp(coll.gameObject, this);
+        if (coll.gameObject.tag != "item")
+        {
+            link.Warp(coll.gameObject, this);
+        }
     }
 }

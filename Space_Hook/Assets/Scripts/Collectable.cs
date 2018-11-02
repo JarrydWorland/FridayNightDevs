@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Collectable : MonoBehaviour {
+public class Collectable : MonoBehaviour
+{
 
     public GameObject attatchedTo;
     private SoundManager sMan;
@@ -15,18 +16,20 @@ public class Collectable : MonoBehaviour {
     public bool hitCollectable;
     public float speed;
     public Vector2 direction;
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         sMan = SoundManager.Instance;
         hitCollectable = false;
         player = PlayerController.Instance;
         attatchedTo.GetComponent<AsteroidBehavior>().collectable = this.gameObject;
         direction = new Vector2(Random.value, Random.value).normalized;
-        setDistance = attatchedTo.GetComponent<CircleCollider2D>().radius*4;
+        setDistance = attatchedTo.GetComponent<CircleCollider2D>().radius * 4;
     }
 
     // Update is called once per frame
-    void Update () {
+    void Update()
+    {
         //Moving around their attatched objects
         if (attatchedTo != null)
         {
@@ -48,7 +51,8 @@ public class Collectable : MonoBehaviour {
             else if (distFromObj > setDistance)
             {
                 transform.position -= (Vector3)between * Time.deltaTime;
-            } }
+            }
+        }
         else
         {
             transform.position += (Vector3)direction * 0.1f;
@@ -57,9 +61,10 @@ public class Collectable : MonoBehaviour {
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        
-        if (collision.GetComponent<Collectable>())
+        if (attatchedTo != null)
         {
+            if (collision.GetComponent<Collectable>())
+
             hitCollectable = true;
             if (attatchedTo == null)
             {
@@ -67,47 +72,40 @@ public class Collectable : MonoBehaviour {
             }
             if (attatchedTo.GetComponent<PlayerController>())
             {
-                int index = attatchedTo.GetComponent<PlayerController>().collectables.FindIndex(x => x == this.gameObject);
-                transform.RotateAround(attatchedTo.transform.position, transform.forward,  index);
+                hitCollectable = true;
+                if (attatchedTo.GetComponent<PlayerController>())
+                {
+                    int index = attatchedTo.GetComponent<PlayerController>().collectables.FindIndex(x => x == this.gameObject);
+                    transform.RotateAround(attatchedTo.transform.position, transform.forward, index);
+                }
+                else if (attatchedTo.GetComponent<HomeBase>())
+                {
+                    int index = attatchedTo.GetComponent<HomeBase>().collected.FindIndex(x => x == this.gameObject);
+                    transform.RotateAround(attatchedTo.transform.position, transform.forward, index);
+                }
             }
-            else if (attatchedTo.GetComponent<HomeBase>())
+            else
             {
-                int index = attatchedTo.GetComponent<HomeBase>().collected.FindIndex(x => x == this.gameObject);
-                transform.RotateAround(attatchedTo.transform.position, transform.forward,  index);
+                hitCollectable = false;
             }
-        }
-        else
-        {
-            hitCollectable = false;
         }
     }
 
-    private void  OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
             sMan.PlaySound(sMan.bounceCol);
-            if (attatchedTo.GetComponent<AsteroidBehavior>())
+            if (attatchedTo != null)
             {
-                attatchedTo.GetComponent<AsteroidBehavior>().collectable = null;
-                attatchedTo = player.gameObject;
-                player.GetComponent<PlayerController>().collectables.Add(this.gameObject);
-            }
-        }
-        if(collision.GetComponent<WormHole>())
-        {
-            if (attatchedTo.GetComponent<AsteroidBehavior>())
-            {
-                attatchedTo.GetComponent<AsteroidBehavior>().collectable = null;
-                attatchedTo = null;
-
-            }
-            if (attatchedTo.GetComponent<PlayerController>())
-            {
-                
-                attatchedTo.GetComponent<PlayerController>().collectables.Remove(this.gameObject);
-                attatchedTo = null;
+                if (attatchedTo.GetComponent<AsteroidBehavior>())
+                {
+                    attatchedTo.GetComponent<AsteroidBehavior>().collectable = null;
+                    attatchedTo = player.gameObject;
+                    player.GetComponent<PlayerController>().collectables.Add(this.gameObject);
+                }
             }
         }
     }
 }
+

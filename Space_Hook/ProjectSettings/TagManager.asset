@@ -9,6 +9,7 @@ TagManager:
   - item
   - Bouncy
   - Damage
+  - Wormhole
   layers:
   - Default
   - TransparentFX
