@@ -73,6 +73,7 @@ public class PlayerController : Singleton<PlayerController>
         attatched = false;
         sMan.PlaySound(sMan.SpeedUp);
         sMan.StopSound(sMan.SecondsoundToPlay);
+        GetComponent<ConstantSpeed>().Speed += GetComponent<ConstantSpeed>().max - GetComponent<ConstantSpeed>().Speed;
     }
     void Attatched()
     {
