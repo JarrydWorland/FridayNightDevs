@@ -75,32 +75,4 @@ public class LevelManger : Singleton<LevelManger>
         Debug.Log("Level Reset");
         Application.LoadLevel(Application.loadedLevel);
     }
-
-    public void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.transform.position.y >= GetComponent<BoxCollider2D>().size.y / 2)//up
-        {
-            collision.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(collision.gameObject.GetComponent<Rigidbody2D>().velocity.x, -collision.gameObject.GetComponent<Rigidbody2D>().velocity.y);
-            //player.transform.position = (Vector3)new Vector2(player.transform.position.x, -GetComponent<BoxCollider2D>().size.y / 2 + 6.82f + player.GetComponent<CircleCollider2D>().radius);
-        }
-        else if (collision.gameObject.transform.position.y <= -GetComponent<BoxCollider2D>().size.y / 2)//down
-        {
-            collision.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(collision.gameObject.GetComponent<Rigidbody2D>().velocity.x, -collision.gameObject.GetComponent<Rigidbody2D>().velocity.y);
-            //player.transform.position = (Vector3)new Vector2(player.transform.position.x, GetComponent<BoxCollider2D>().size.y / 2);
-        }
-        if (collision.gameObject.transform.position.x >= GetComponent<BoxCollider2D>().size.x / 2)//right
-        {
-            collision.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(-collision.gameObject.GetComponent<Rigidbody2D>().velocity.x, collision.gameObject.GetComponent<Rigidbody2D>().velocity.y);
-            //player.transform.position = (Vector3)new Vector2(-GetComponent<BoxCollider2D>().size.x / 2 + player.GetComponent<CircleCollider2D>().radius, player.transform.position.y);
-        }
-        else if (collision.gameObject.transform.position.x <= -GetComponent<BoxCollider2D>().size.x / 2)//left
-        {
-            collision.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(-collision.gameObject.GetComponent<Rigidbody2D>().velocity.x, collision.gameObject.GetComponent<Rigidbody2D>().velocity.y);
-            //player.transform.position = (Vector3)new Vector2(GetComponent<BoxCollider2D>().size.x / 2, player.transform.position.y);
-        }
-        //camera.MoveCameraTo(player.transform.position);
-
-        // player.rb2d.velocity = -player.rb2d.velocity;
-    }
-
 }

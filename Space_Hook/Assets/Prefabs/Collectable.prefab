@@ -120,11 +120,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attatchedTo: {fileID: 0}
   distFromObj: 0
-  setDistance: 8.5
+  setDistance: 12
   between: {x: 0, y: 0}
   clockwise: 0
   hitCollectable: 0
   speed: 0.05
+  direction: {x: 0, y: 0}
 --- !u!212 &212344412551698554
 SpriteRenderer:
   m_ObjectHideFlags: 1
