@@ -45,6 +45,10 @@ public class LevelManger : Singleton<LevelManger>
 
     public void CreateCollectable(int numberToGenerate)
     {
+        if(numberToGenerate>individualAsts.Count)
+        {
+            numberToGenerate = individualAsts.Count;
+        }
         System.Random rnd = new System.Random();
         Vector3 pos;
         List<int> asteroidIndex = new List<int>();

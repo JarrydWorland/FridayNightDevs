@@ -27,10 +27,18 @@ public class ConstantSpeed : MonoBehaviour {
         {
             Speed = min;
         }
-        if(Speed > max)
+        if (rigidbody2D.gameObject.GetComponent<PlayerController>().attatched)
+        {
+            if (Speed > max - (max / 3))
+            {
+                Speed = max - (max / 3);
+            }
+        }
+        if (Speed > max)
         {
             Speed = max;
         }
+      
         Vector3 normalizedVel = rigidbody2D.velocity.normalized;
         rigidbody2D.velocity = new Vector2(normalizedVel.x * Speed, normalizedVel.y * Speed);
 
