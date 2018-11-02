@@ -50,7 +50,7 @@ public class AsteroidBehavior : MonoBehaviour {
         imAttatched = false;
         myCol = attatchedTo.GetComponent<Collider2D>();
 
-        randomSize = RandomFloat(1, 2);
+        randomSize = RandomFloat(1.5f, 3);
 
         transform.localScale = new Vector3(randomSize, randomSize, randomSize);
 	}
