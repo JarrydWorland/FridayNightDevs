@@ -120,7 +120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attatchedTo: {fileID: 0}
   distFromObj: 0
-  setDistance: 8.5
+  setDistance: 12
   between: {x: 0, y: 0}
   clockwise: 0
   hitCollectable: 0

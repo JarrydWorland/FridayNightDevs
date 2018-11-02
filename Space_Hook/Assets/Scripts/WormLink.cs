@@ -51,6 +51,14 @@ public class WormLink : MonoBehaviour
         }
         if (WarpedTarget.GetComponent<PlayerController>())
         {
+            if(WarpedTarget.GetComponent<PlayerController>().collectables.Count != 0)
+            {
+                foreach(GameObject g in WarpedTarget.GetComponent<PlayerController>().collectables)
+                {
+                    WarpedTarget.GetComponent<PlayerController>().collectables.Remove(g);
+                    g.GetComponent<Collectable>().attatchedTo = null;
+                }
+            }
             if (LevelManger.Instance.player.attatchedTo != null)
             {
                 LevelManger.Instance.player.Detatch();
@@ -60,6 +68,12 @@ public class WormLink : MonoBehaviour
         }
         else if (WarpedTarget.GetComponent<AsteroidBehavior>())
         {
+            if (WarpedTarget.GetComponent<AsteroidBehavior>().collectable!= null)
+            {
+                WarpedTarget.GetComponent<AsteroidBehavior>().collectable.GetComponent<Collectable>().attatchedTo = null;
+                WarpedTarget.GetComponent<AsteroidBehavior>().collectable = null;
+
+            }
             if (LevelManger.Instance.player.attatchedTo != null)
             {
                 LevelManger.Instance.player.Detatch();
