@@ -36,6 +36,8 @@ public class WormLink : MonoBehaviour
     public void Warp(GameObject WarpedTarget, WormHole enterHole)
     {
         float temp = 0;
+        WormHole other;
+
         if (WrapedObjects.TryGetValue(WarpedTarget, out temp))
         {
             return;
@@ -43,20 +45,21 @@ public class WormLink : MonoBehaviour
         WrapedObjects.Add(WarpedTarget,Time.time);
         if (enterHole == hole1)
         {
-            WarpedTarget.transform.position = hole2.transform.position;
+            other = hole2;
+            WarpedTarget.transform.position = other.transform.position;
         }
         else
         {
-            WarpedTarget.transform.position = hole1.transform.position;
+            other = hole1;
+            WarpedTarget.transform.position = other.transform.position;
         }
-        if (WarpedTarget.GetComponent<PlayerController>())
+        if (WarpedTarget.GetComponent<PlayerController>())//if player enters wormhole
         {
             if(WarpedTarget.GetComponent<PlayerController>().collectables.Count != 0)
             {
                 foreach(GameObject g in WarpedTarget.GetComponent<PlayerController>().collectables)
                 {
-                    WarpedTarget.GetComponent<PlayerController>().collectables.Remove(g);
-                    g.GetComponent<Collectable>().attatchedTo = null;
+                    g.transform.position += (other.transform.position - enterHole.transform.position );
                 }
             }
             if (LevelManger.Instance.player.attatchedTo != null)
@@ -70,11 +73,9 @@ public class WormLink : MonoBehaviour
         {
             if (WarpedTarget.GetComponent<AsteroidBehavior>().collectable!= null)
             {
-                WarpedTarget.GetComponent<AsteroidBehavior>().collectable.GetComponent<Collectable>().attatchedTo = null;
-                WarpedTarget.GetComponent<AsteroidBehavior>().collectable = null;
-
+                WarpedTarget.GetComponent<AsteroidBehavior>().collectable.transform.position += (other.transform.position - enterHole.transform.position);
             }
-            if (LevelManger.Instance.player.attatchedTo != null)
+            if (LevelManger.Instance.player.attatchedTo == WarpedTarget)
             {
                 LevelManger.Instance.player.Detatch();
             }
