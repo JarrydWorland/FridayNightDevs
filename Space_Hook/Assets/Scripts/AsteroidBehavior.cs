@@ -10,7 +10,7 @@ public class AsteroidBehavior : MonoBehaviour {
     public bool isMoving;
     public GameObject collectable;
     public float movingSpeed = 100000;
-
+    public float currentSpeed;
     public SpriteRenderer mySprite; 
     public Directions startDirection;
     public GameObject attatchedTo;
@@ -214,6 +214,7 @@ public class AsteroidBehavior : MonoBehaviour {
 
     
     void Update () {
+        currentSpeed = GetComponent<Rigidbody2D>().velocity.magnitude;
         if (rotating)
         {
             if (!clockwise)

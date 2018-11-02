@@ -14,13 +14,14 @@ public class PlayerController : Singleton<PlayerController>
 
     private GameObject forcefield;
     private SoundManager sMan;
+    private Animator playerAnimator;
 
     void Start()
     {
         forcefield = LevelManger.Instance.ForceField;
         sMan = SoundManager.Instance;
         rb2d.AddForce(Vector2.right * 5f);
-        rb2d.AddForce(Vector2.up * 5f);
+        playerAnimator = GetComponentInChildren<Animator>();
     }
     public void Detatch()
     {
@@ -61,6 +62,7 @@ public class PlayerController : Singleton<PlayerController>
         {
             FreeFall();
         }
+        playerAnimator.SetBool("Attached",attatched);
     }
     private void FixedUpdate()
     {

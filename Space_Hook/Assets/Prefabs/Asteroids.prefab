@@ -3380,13 +3380,12 @@ MonoBehaviour:
   clockwise: 1
   rotating: 1
   isMoving: 1
+  collectable: {fileID: 0}
   movingSpeed: 100000
+  mySprite: {fileID: 0}
   startDirection: 7
   attatchedTo: {fileID: 1557801416211512}
-  forcefield: {fileID: 0}
-  player: {fileID: 0}
   imAttatched: 0
-  SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
   shardPrefab: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
     type: 2}
@@ -3407,13 +3406,12 @@ MonoBehaviour:
   clockwise: 1
   rotating: 1
   isMoving: 0
+  collectable: {fileID: 0}
   movingSpeed: 100000
+  mySprite: {fileID: 0}
   startDirection: 0
   attatchedTo: {fileID: 1869035804284540}
-  forcefield: {fileID: 0}
-  player: {fileID: 0}
   imAttatched: 0
-  SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
   shardPrefab: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
     type: 2}
@@ -3434,13 +3432,12 @@ MonoBehaviour:
   clockwise: 1
   rotating: 1
   isMoving: 0
+  collectable: {fileID: 0}
   movingSpeed: 100000
+  mySprite: {fileID: 0}
   startDirection: 0
   attatchedTo: {fileID: 1165200720027986}
-  forcefield: {fileID: 0}
-  player: {fileID: 0}
   imAttatched: 0
-  SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
   shardPrefab: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
     type: 2}
@@ -3483,13 +3480,12 @@ MonoBehaviour:
   clockwise: 1
   rotating: 0
   isMoving: 0
+  collectable: {fileID: 0}
   movingSpeed: 100000
+  mySprite: {fileID: 0}
   startDirection: 0
   attatchedTo: {fileID: 1051015346393396}
-  forcefield: {fileID: 0}
-  player: {fileID: 0}
   imAttatched: 0
-  SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
   shardPrefab: {fileID: 0}
   shard: {fileID: 0}
@@ -3509,13 +3505,12 @@ MonoBehaviour:
   clockwise: 1
   rotating: 0
   isMoving: 0
+  collectable: {fileID: 0}
   movingSpeed: 100000
+  mySprite: {fileID: 0}
   startDirection: 0
   attatchedTo: {fileID: 1704046525121338}
-  forcefield: {fileID: 0}
-  player: {fileID: 0}
   imAttatched: 0
-  SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
   shardPrefab: {fileID: 0}
   shard: {fileID: 0}
@@ -3535,13 +3530,12 @@ MonoBehaviour:
   clockwise: 1
   rotating: 0
   isMoving: 1
+  collectable: {fileID: 0}
   movingSpeed: 100000
+  mySprite: {fileID: 0}
   startDirection: 3
   attatchedTo: {fileID: 1647100333456120}
-  forcefield: {fileID: 0}
-  player: {fileID: 0}
   imAttatched: 0
-  SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
   shardPrefab: {fileID: 0}
   shard: {fileID: 0}
@@ -3583,13 +3577,12 @@ MonoBehaviour:
   clockwise: 1
   rotating: 0
   isMoving: 1
+  collectable: {fileID: 0}
   movingSpeed: 100000
+  mySprite: {fileID: 0}
   startDirection: 2
   attatchedTo: {fileID: 1751187583122372}
-  forcefield: {fileID: 0}
-  player: {fileID: 0}
   imAttatched: 0
-  SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
   shardPrefab: {fileID: 0}
   shard: {fileID: 0}
@@ -3609,13 +3602,12 @@ MonoBehaviour:
   clockwise: 1
   rotating: 1
   isMoving: 0
+  collectable: {fileID: 0}
   movingSpeed: 100000
+  mySprite: {fileID: 0}
   startDirection: 0
   attatchedTo: {fileID: 1451461389214290}
-  forcefield: {fileID: 0}
-  player: {fileID: 0}
   imAttatched: 0
-  SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
   shardPrefab: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
     type: 2}
@@ -3636,13 +3628,12 @@ MonoBehaviour:
   clockwise: 1
   rotating: 0
   isMoving: 0
+  collectable: {fileID: 0}
   movingSpeed: 100000
+  mySprite: {fileID: 0}
   startDirection: 0
   attatchedTo: {fileID: 1594813590755912}
-  forcefield: {fileID: 0}
-  player: {fileID: 0}
   imAttatched: 0
-  SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
   shardPrefab: {fileID: 0}
   shard: {fileID: 0}
@@ -3673,13 +3664,12 @@ MonoBehaviour:
   clockwise: 1
   rotating: 1
   isMoving: 1
+  collectable: {fileID: 0}
   movingSpeed: 100000
+  mySprite: {fileID: 0}
   startDirection: 5
   attatchedTo: {fileID: 1965204657332734}
-  forcefield: {fileID: 0}
-  player: {fileID: 0}
   imAttatched: 0
-  SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
   shardPrefab: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
     type: 2}
@@ -3700,13 +3690,12 @@ MonoBehaviour:
   clockwise: 1
   rotating: 0
   isMoving: 0
+  collectable: {fileID: 0}
   movingSpeed: 100000
+  mySprite: {fileID: 0}
   startDirection: 0
   attatchedTo: {fileID: 1954560336129012}
-  forcefield: {fileID: 0}
-  player: {fileID: 0}
   imAttatched: 0
-  SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
   shardPrefab: {fileID: 0}
   shard: {fileID: 0}
@@ -3726,13 +3715,12 @@ MonoBehaviour:
   clockwise: 1
   rotating: 1
   isMoving: 0
+  collectable: {fileID: 0}
   movingSpeed: 100000
+  mySprite: {fileID: 0}
   startDirection: 0
   attatchedTo: {fileID: 1278312029177086}
-  forcefield: {fileID: 0}
-  player: {fileID: 0}
   imAttatched: 0
-  SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
   shardPrefab: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
     type: 2}
@@ -3753,13 +3741,12 @@ MonoBehaviour:
   clockwise: 1
   rotating: 1
   isMoving: 0
+  collectable: {fileID: 0}
   movingSpeed: 100000
+  mySprite: {fileID: 0}
   startDirection: 0
   attatchedTo: {fileID: 1642086278591008}
-  forcefield: {fileID: 0}
-  player: {fileID: 0}
   imAttatched: 0
-  SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
   shardPrefab: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
     type: 2}
@@ -3780,13 +3767,12 @@ MonoBehaviour:
   clockwise: 1
   rotating: 0
   isMoving: 1
+  collectable: {fileID: 0}
   movingSpeed: 100000
+  mySprite: {fileID: 0}
   startDirection: 7
   attatchedTo: {fileID: 1776275889546524}
-  forcefield: {fileID: 0}
-  player: {fileID: 0}
   imAttatched: 0
-  SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
   shardPrefab: {fileID: 0}
   shard: {fileID: 0}
@@ -3817,13 +3803,12 @@ MonoBehaviour:
   clockwise: 1
   rotating: 0
   isMoving: 1
+  collectable: {fileID: 0}
   movingSpeed: 100000
+  mySprite: {fileID: 0}
   startDirection: 6
   attatchedTo: {fileID: 1296581951419814}
-  forcefield: {fileID: 0}
-  player: {fileID: 0}
   imAttatched: 0
-  SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
   shardPrefab: {fileID: 0}
   shard: {fileID: 0}
@@ -3843,13 +3828,12 @@ MonoBehaviour:
   clockwise: 1
   rotating: 1
   isMoving: 1
+  collectable: {fileID: 0}
   movingSpeed: 100000
+  mySprite: {fileID: 0}
   startDirection: 0
   attatchedTo: {fileID: 1651429383339444}
-  forcefield: {fileID: 0}
-  player: {fileID: 0}
   imAttatched: 0
-  SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
   shardPrefab: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
     type: 2}
@@ -3892,13 +3876,12 @@ MonoBehaviour:
   clockwise: 1
   rotating: 0
   isMoving: 0
+  collectable: {fileID: 0}
   movingSpeed: 100000
+  mySprite: {fileID: 0}
   startDirection: 0
   attatchedTo: {fileID: 1351740469363270}
-  forcefield: {fileID: 0}
-  player: {fileID: 0}
   imAttatched: 0
-  SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
   shardPrefab: {fileID: 0}
   shard: {fileID: 0}
@@ -3918,13 +3901,12 @@ MonoBehaviour:
   clockwise: 1
   rotating: 1
   isMoving: 0
+  collectable: {fileID: 0}
   movingSpeed: 100000
+  mySprite: {fileID: 0}
   startDirection: 0
   attatchedTo: {fileID: 1899941121075248}
-  forcefield: {fileID: 0}
-  player: {fileID: 0}
   imAttatched: 0
-  SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
   shardPrefab: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
     type: 2}
@@ -3956,13 +3938,12 @@ MonoBehaviour:
   clockwise: 1
   rotating: 0
   isMoving: 0
+  collectable: {fileID: 0}
   movingSpeed: 100000
+  mySprite: {fileID: 0}
   startDirection: 0
   attatchedTo: {fileID: 1240623293095834}
-  forcefield: {fileID: 0}
-  player: {fileID: 0}
   imAttatched: 0
-  SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
   shardPrefab: {fileID: 0}
   shard: {fileID: 0}
@@ -3993,13 +3974,12 @@ MonoBehaviour:
   clockwise: 1
   rotating: 0
   isMoving: 1
+  collectable: {fileID: 0}
   movingSpeed: 100000
+  mySprite: {fileID: 0}
   startDirection: 1
   attatchedTo: {fileID: 1104697939625704}
-  forcefield: {fileID: 0}
-  player: {fileID: 0}
   imAttatched: 0
-  SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
   shardPrefab: {fileID: 0}
   shard: {fileID: 0}
@@ -4019,13 +3999,12 @@ MonoBehaviour:
   clockwise: 1
   rotating: 0
   isMoving: 0
+  collectable: {fileID: 0}
   movingSpeed: 100000
+  mySprite: {fileID: 0}
   startDirection: 0
   attatchedTo: {fileID: 1750009274209840}
-  forcefield: {fileID: 0}
-  player: {fileID: 0}
   imAttatched: 0
-  SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
   shardPrefab: {fileID: 0}
   shard: {fileID: 0}
@@ -4045,13 +4024,12 @@ MonoBehaviour:
   clockwise: 1
   rotating: 0
   isMoving: 1
+  collectable: {fileID: 0}
   movingSpeed: 100000
+  mySprite: {fileID: 0}
   startDirection: 5
   attatchedTo: {fileID: 1731491306555280}
-  forcefield: {fileID: 0}
-  player: {fileID: 0}
   imAttatched: 0
-  SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
   shardPrefab: {fileID: 0}
   shard: {fileID: 0}
@@ -4071,13 +4049,12 @@ MonoBehaviour:
   clockwise: 1
   rotating: 1
   isMoving: 1
+  collectable: {fileID: 0}
   movingSpeed: 100000
+  mySprite: {fileID: 0}
   startDirection: 4
   attatchedTo: {fileID: 1320986915509218}
-  forcefield: {fileID: 0}
-  player: {fileID: 0}
   imAttatched: 0
-  SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
   shardPrefab: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
     type: 2}
@@ -4109,13 +4086,12 @@ MonoBehaviour:
   clockwise: 1
   rotating: 1
   isMoving: 0
+  collectable: {fileID: 0}
   movingSpeed: 100000
+  mySprite: {fileID: 0}
   startDirection: 0
   attatchedTo: {fileID: 1231930681916518}
-  forcefield: {fileID: 0}
-  player: {fileID: 0}
   imAttatched: 0
-  SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
   shardPrefab: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
     type: 2}
@@ -4147,13 +4123,12 @@ MonoBehaviour:
   clockwise: 1
   rotating: 0
   isMoving: 0
+  collectable: {fileID: 0}
   movingSpeed: 100000
+  mySprite: {fileID: 0}
   startDirection: 0
   attatchedTo: {fileID: 1697716758437184}
-  forcefield: {fileID: 0}
-  player: {fileID: 0}
   imAttatched: 0
-  SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
   shardPrefab: {fileID: 0}
   shard: {fileID: 0}
@@ -4184,13 +4159,12 @@ MonoBehaviour:
   clockwise: 1
   rotating: 1
   isMoving: 1
+  collectable: {fileID: 0}
   movingSpeed: 100000
+  mySprite: {fileID: 0}
   startDirection: 6
   attatchedTo: {fileID: 1490409453811918}
-  forcefield: {fileID: 0}
-  player: {fileID: 0}
   imAttatched: 0
-  SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
   shardPrefab: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
     type: 2}
@@ -4211,13 +4185,12 @@ MonoBehaviour:
   clockwise: 1
   rotating: 0
   isMoving: 1
+  collectable: {fileID: 0}
   movingSpeed: 100000
+  mySprite: {fileID: 0}
   startDirection: 0
   attatchedTo: {fileID: 1076824573846274}
-  forcefield: {fileID: 0}
-  player: {fileID: 0}
   imAttatched: 0
-  SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
   shardPrefab: {fileID: 0}
   shard: {fileID: 0}
@@ -4237,13 +4210,12 @@ MonoBehaviour:
   clockwise: 1
   rotating: 1
   isMoving: 1
+  collectable: {fileID: 0}
   movingSpeed: 100000
+  mySprite: {fileID: 0}
   startDirection: 2
   attatchedTo: {fileID: 1132959747195212}
-  forcefield: {fileID: 0}
-  player: {fileID: 0}
   imAttatched: 0
-  SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
   shardPrefab: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
     type: 2}
@@ -4275,13 +4247,12 @@ MonoBehaviour:
   clockwise: 1
   rotating: 1
   isMoving: 1
+  collectable: {fileID: 0}
   movingSpeed: 100000
+  mySprite: {fileID: 0}
   startDirection: 3
   attatchedTo: {fileID: 1505484708884752}
-  forcefield: {fileID: 0}
-  player: {fileID: 0}
   imAttatched: 0
-  SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
   shardPrefab: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
     type: 2}
@@ -4302,13 +4273,12 @@ MonoBehaviour:
   clockwise: 1
   rotating: 1
   isMoving: 0
+  collectable: {fileID: 0}
   movingSpeed: 100000
+  mySprite: {fileID: 0}
   startDirection: 0
   attatchedTo: {fileID: 1883271316858728}
-  forcefield: {fileID: 0}
-  player: {fileID: 0}
   imAttatched: 0
-  SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
   shardPrefab: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
     type: 2}
@@ -4329,13 +4299,12 @@ MonoBehaviour:
   clockwise: 1
   rotating: 0
   isMoving: 1
+  collectable: {fileID: 0}
   movingSpeed: 100000
+  mySprite: {fileID: 0}
   startDirection: 4
   attatchedTo: {fileID: 1609171741971362}
-  forcefield: {fileID: 0}
-  player: {fileID: 0}
   imAttatched: 0
-  SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
   shardPrefab: {fileID: 0}
   shard: {fileID: 0}
@@ -4377,13 +4346,12 @@ MonoBehaviour:
   clockwise: 1
   rotating: 1
   isMoving: 1
+  collectable: {fileID: 0}
   movingSpeed: 100000
+  mySprite: {fileID: 0}
   startDirection: 1
   attatchedTo: {fileID: 1838832116844838}
-  forcefield: {fileID: 0}
-  player: {fileID: 0}
   imAttatched: 0
-  SoundManager: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
   shardPrefab: {fileID: 1074642225348552, guid: aeccc082764bd4f41ac5cc74cf070f7a,
     type: 2}
@@ -5347,7 +5315,7 @@ SpriteRenderer:
   m_SortingLayerID: 2052522789
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 659d76a9154b07f4e9f82349fb07bd76, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4c6085bbfbe044d4b8829e7d27651535, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
