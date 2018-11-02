@@ -60,6 +60,10 @@ public class Collectable : MonoBehaviour {
         if (collision.GetComponent<Collectable>())
         {
             hitCollectable = true;
+            if (attatchedTo == null)
+            {
+                return;
+            }
             if (attatchedTo.GetComponent<PlayerController>())
             {
                 int index = attatchedTo.GetComponent<PlayerController>().collectables.FindIndex(x => x == this.gameObject);

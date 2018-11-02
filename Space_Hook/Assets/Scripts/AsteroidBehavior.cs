@@ -192,7 +192,11 @@ public class AsteroidBehavior : MonoBehaviour {
     }
         void OnMouseDown()
         {
-        sMan.PlaySound(sMan.Forcefield);
+            if (LevelManger.Instance.DisableControl)
+            {
+                return;
+            }
+            sMan.PlaySound(sMan.Forcefield);
 
         if(player.attatchedTo != null) //your already attatched
         {

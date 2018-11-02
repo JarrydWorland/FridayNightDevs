@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.UIElements;
 using UnityEngine.UI;
 
 public class LevelManger : Singleton<LevelManger>
@@ -16,6 +17,8 @@ public class LevelManger : Singleton<LevelManger>
     public int numOfCollectables;
     public Text collectionCount;
     public CompleteCameraController camera;
+    public GameObject EndPanel;
+    public bool DisableControl = false;
 
     private void Update()
     {
@@ -99,4 +102,10 @@ public class LevelManger : Singleton<LevelManger>
         // player.rb2d.velocity = -player.rb2d.velocity;
     }
 
+    public void EndGame()
+    {
+        EndPanel.SetActive(true);
+        player.rb2d.velocity = Vector2.zero;
+        DisableControl = true;
+    }
 }

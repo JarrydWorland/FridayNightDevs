@@ -26,8 +26,12 @@ public class HomeBase : MonoBehaviour {
                 foreach (GameObject g in playerC.collectables)
                 {
                     g.GetComponent<Collectable>().attatchedTo = this.gameObject;
-                    collected.Add(g);
                     g.GetComponent<Collectable>().speed = 0.03f;
+                    collected.Add(g);
+                    if (collected.Count >= LevelManger.Instance.numOfCollectables)
+                    {
+                        LevelManger.Instance.EndGame();
+                    }
                 }
                 playerC.collectables.Clear();
             }
@@ -36,6 +40,10 @@ public class HomeBase : MonoBehaviour {
 
     private void OnMouseDown()
     {
+        if (LevelManger.Instance.DisableControl)
+        {
+            return;
+        }
         float pullForce = playerC.GetComponent<ConstantSpeed>().Speed * 5;
         Vector2 betweenFP = ((Vector2)transform.position - (Vector2)playerC.transform.position);
         Vector2 pullDirection = betweenFP.normalized;
