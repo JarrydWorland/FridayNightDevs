@@ -42,5 +42,7 @@ public class HomeBase : MonoBehaviour {
 
         playerC.rb2d.velocity = Vector2.zero;
         playerC.rb2d.AddForce(pullForce * pullDirection);
+
+        GetComponent<Animator>().SetTrigger("Clicked");
     }
 }
