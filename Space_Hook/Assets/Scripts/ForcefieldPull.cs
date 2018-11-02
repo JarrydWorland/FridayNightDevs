@@ -104,26 +104,27 @@ public class ForcefieldPull : MonoBehaviour {
             playerC.rb2d.velocity = Vector2.zero;
             playerC.rb2d.AddForce(pullForce * pullDirection);
         }
-        else if(distBW <= endCurve)
+        else if (distBW <= endCurve)
         {
             playerC.rb2d.velocity = Vector2.zero;
             playerC.rb2d.AddForce(pullForce * playerC.Rotate(pullDirection, 90));
         }
         else
         {
-            howClose = 1-((distBW-endCurve)/(startCurve-endCurve)); //percentage in decimal of how far between the start and end point you are
-            degreeChange = 90*howClose;
-            if(!clockwise)
+            howClose = 1 - ((distBW - endCurve) / (startCurve - endCurve)); //percentage in decimal of how far between the start and end point you are
+            degreeChange = 90 * howClose;
+            if (!clockwise)
             { degreeChange *= -1; }
             Vector2 newPullDirection = playerC.Rotate(pullDirection, degreeChange);
             playerC.rb2d.velocity = Vector2.zero;
             playerC.rb2d.AddForce(pullForce * newPullDirection);
-        }
+            float currentVelocity = pullForce;
+            playerC.playerVelocity = currentVelocity;
 
-        if(playerC.attatchedTo.GetComponent<Rigidbody2D>().velocity.magnitude != 0)
-        {
-            playerC.transform.position += (Vector3)playerC.attatchedTo.GetComponent<Rigidbody2D>().velocity * Time.deltaTime;
+            if (playerC.attatchedTo.GetComponent<Rigidbody2D>().velocity.magnitude != 0)
+            {
+                playerC.transform.position += (Vector3)playerC.attatchedTo.GetComponent<Rigidbody2D>().velocity * Time.deltaTime;
+            }
         }
     }
-
 }

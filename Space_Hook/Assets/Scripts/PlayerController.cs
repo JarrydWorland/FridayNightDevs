@@ -65,12 +65,12 @@ public class PlayerController : Singleton<PlayerController>
 
     public void Detatch()
     {
+        float currentspeed = rb2d.velocity.magnitude;
         forcefield.SetActive(false);
         forcefield.GetComponent<ForcefieldPull>().checkRot = true;
         attatchedTo.GetComponent<AsteroidBehavior>().imAttatched = false;
         attatchedTo = null;
         attatched = false;
-        GetComponent<ConstantSpeed>().Speed += 3;
         sMan.PlaySound(sMan.SpeedUp);
         sMan.StopSound(sMan.SecondsoundToPlay);
     }
@@ -106,7 +106,10 @@ public class PlayerController : Singleton<PlayerController>
     }
     private void FixedUpdate()
     {
-        playerVelocity = rb2d.velocity.magnitude;
+        if (!attatched)
+        {
+            playerVelocity = rb2d.velocity.magnitude;
+        }
         sMan.ChangePitch((this.GetComponent<ConstantSpeed>().Speed / 10) - 0.5f);
     }
 
