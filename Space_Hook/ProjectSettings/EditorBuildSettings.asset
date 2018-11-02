@@ -11,12 +11,3 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: 29033ec22c7caca42b53ee15e914562e
-  - enabled: 0
-    path: Assets/Scenes/SeanScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/Jacques Scene.unity
-    guid: 5181b6124ffe62d4583cc57b6a16737e
-  - enabled: 0
-    path: Assets/Scenes/Jake - FX + UI.unity
-    guid: 7489703bda76bda47b97ceb85e027b6b
