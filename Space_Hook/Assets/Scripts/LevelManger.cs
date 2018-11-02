@@ -55,7 +55,7 @@ public class LevelManger : Singleton<LevelManger>
 
         else
         {
-            Time.timeScale = 1;
+            Time.timeScale = 1; 
         }
     }
 
